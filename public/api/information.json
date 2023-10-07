@@ -1,0 +1,28 @@
+{
+    "firstName": "Max",
+    "lastName": "Balukh",
+    "fullName": "Max Balukh",
+    "thumbImage": "/images/formal-image.png",
+    "largeImage": "/images/about-image.jpg",
+    "bio": "I am a mobile app developer. I specialize in creating clean and efficient code, ensuring pixel-perfect designs, and enhancing user experiences with interactive mobile animations.",
+    "age": 39,
+    "nationality": "Ukrainian",
+    "languages": [
+        "Ukrainian",
+        "English"
+    ],
+    "address": "Odesa, Ukraine",
+    "freelance": "Available",
+    "socialAddress": {
+        "facebook": "https://facebook.com",
+        "twitter": "https://twitter.com",
+        "github": "https://github.com",
+        "linkedin": "https://linkedin.com"
+    },
+    "phoneNumbers": [
+        "+380-96-931-08-96"
+    ],
+    "emailAddress": [
+        "maxbsoft@gmail.com"
+    ]
+}

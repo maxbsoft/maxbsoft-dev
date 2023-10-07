@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 const About = () => {
   return (
-    <div>
+    <div className="previewpage bg-grey-darken">
       test
     </div>
   )
