@@ -1,13 +1,14 @@
-import Image from "next/image";
-import { RiArrowDownLine } from "react-icons/ri";
-import { Link } from "react-scroll";
-import { SocialIcons } from "@/components/elements";
-import { imageLoader, shimmer, toBase64 } from "@/lib/utils";
-import { motion } from "framer-motion";
-import { childrenAnimation } from "@/lib/motion";
-import { useQuery } from "react-query";
-import { getInformation } from "@/fetchers";
-import ReactTyped from "react-typed";
+import React from 'react';
+import Image from 'next/image';
+import { RiArrowDownLine } from 'react-icons/ri';
+import { Link } from 'react-scroll';
+import { SocialIcons } from '@/components/elements';
+import { imageLoader, shimmer, toBase64 } from '@/lib/utils';
+import { motion } from 'framer-motion';
+import { childrenAnimation } from '@/lib/motion';
+import { useQuery } from 'react-query';
+import { getInformation } from '@/fetchers';
+import ReactTyped from 'react-typed';
 
 interface HeroSectionProps {
   blurred: boolean;
@@ -18,9 +19,9 @@ interface HeroSectionProps {
 const HeroSection = ({
   blurred = false,
   scroll = true,
-  typed = true
+  typed = true,
 }: HeroSectionProps) => {
-  const { data } = useQuery("information", getInformation);
+  const { data } = useQuery('information', getInformation);
 
   if (!data) return null;
 
@@ -31,7 +32,7 @@ const HeroSection = ({
       )}
       <div
         className={`herosection-content relative z-20 bg-grey-darken  ${
-          blurred ? "bg-opacity-20" : "bg-opacity-90"
+          blurred ? 'bg-opacity-20' : 'bg-opacity-90'
         }`}
       >
         <div className="container relative mx-auto">
@@ -70,7 +71,7 @@ const HeroSection = ({
                 variants={childrenAnimation}
                 className="mb-5 text-heading"
               >
-                <span className="block sm:inline">Hi, I am</span>{" "}
+                <span className="block sm:inline">Hi, I am</span>{' '}
                 {typed ? (
                   <ReactTyped
                     loop
@@ -79,9 +80,9 @@ const HeroSection = ({
                     backDelay={2000}
                     strings={[
                       data.fullName,
-                      "Mobile App Developer",
-                      "Front-End Developer",
-                      "Software Engineer",
+                      'Mobile App Developer',
+                      'Front-End Developer',
+                      'Software Engineer',
                     ]}
                     className="text-primary"
                   />

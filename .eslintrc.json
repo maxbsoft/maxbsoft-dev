@@ -1,3 +1,26 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "prettier"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["react", "react-hooks", "@typescript-eslint", "prettier", "import"],
+  "root": true,
+  "rules": {
+    "indent": ["error", 2, { "SwitchCase": 1 }],
+    "linebreak-style": ["error", "unix"],
+    "quotes": ["error", "single", { "avoidEscape": true }],
+    "no-empty-function": "off",
+    "@typescript-eslint/no-empty-function": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "prettier/prettier": "error",
+    "react/display-name": "off",
+    "react/prop-types": "off",
+    // I suggest you add those two rules:
+    "@typescript-eslint/no-unused-vars": "error",
+    "prefer-const": "off", // Turn rule off
+    "no-multiple-empty-lines": ["error", { "max": 2, "maxEOF": 0 }]
+  }
 }

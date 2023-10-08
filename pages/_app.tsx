@@ -1,10 +1,11 @@
+import React from 'react';
 import Head from 'next/head';
 import Router from 'next/router';
 import NProgress from 'nprogress';
 import { useRef } from 'react';
 import { AppProvider } from '@/context/appContext';
 import { Hydrate, QueryClient, QueryClientProvider } from 'react-query';
-import { ReactQueryDevtools } from 'react-query/devtools';
+// import { ReactQueryDevtools } from 'react-query/devtools';
 import { ParallaxProvider } from 'react-scroll-parallax';
 import 'normalize.css';
 import 'nprogress/nprogress.css';
@@ -17,10 +18,14 @@ Router.events.on('routeChangeStart', () => NProgress.start());
 Router.events.on('routeChangeComplete', () => NProgress.done());
 Router.events.on('routeChangeError', () => NProgress.done());
 
-export interface MyAppProps {
-  Component: any;
-  pageProps: any;
-};
+interface MyAppProps {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  Component: React.ComponentType<any>;
+  pageProps: {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    dehydratedState: any;
+  };
+}
 function MyApp({ Component, pageProps }: MyAppProps) {
   const queryClientRef = useRef<QueryClient | null>(null);
 
@@ -28,7 +33,7 @@ function MyApp({ Component, pageProps }: MyAppProps) {
     queryClientRef.current = new QueryClient();
   }
 
-  console.log('RENDER <MyApp />', pageProps.dehydratedState);
+  console.log('RENDER <MyApp />', pageProps);
 
   return (
     <QueryClientProvider client={queryClientRef.current}>

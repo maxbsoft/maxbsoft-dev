@@ -1,18 +1,18 @@
-import Link from "next/link";
-import { RiCloseLine } from "react-icons/ri";
-import { Logo } from "@/components/utils";
-
+import React from 'react';
+import Link from 'next/link';
+import { RiCloseLine } from 'react-icons/ri';
+import { Logo } from '@/components/utils';
 
 export interface MobileFullmenuProps {
   fullMenuHandler: (value: boolean) => void;
-};
+}
 
 const MobileFullmenu = ({ fullMenuHandler }: MobileFullmenuProps) => {
   return (
     <>
       <button
         className="btn btn-small btn-transparent absolute left-auto right-4 top-4 z-10 h-10 w-10 rounded-full p-0 text-center text-3xl"
-        onClick={(e) => fullMenuHandler(false)}
+        onClick={() => fullMenuHandler(false)}
       >
         <RiCloseLine className="inline" />
       </button>
@@ -24,7 +24,7 @@ const MobileFullmenu = ({ fullMenuHandler }: MobileFullmenuProps) => {
               <Link legacyBehavior href="/">
                 <a
                   className="group relative inline-block cursor-pointer overflow-hidden py-2 text-lg uppercase tracking-wider text-heading before:text-primary"
-                  onClick={(e) => fullMenuHandler(false)}
+                  onClick={() => fullMenuHandler(false)}
                 >
                   Home
                   <span className="absolute left-0 top-auto bottom-5 inline-block h-px w-full origin-top-right scale-0 bg-primary align-middle transition-transform duration-500 group-hover:origin-top-left group-hover:scale-100"></span>
@@ -35,7 +35,7 @@ const MobileFullmenu = ({ fullMenuHandler }: MobileFullmenuProps) => {
               <Link legacyBehavior href="/about">
                 <a
                   className="group relative inline-block cursor-pointer overflow-hidden py-2 text-lg uppercase tracking-wider text-heading before:text-primary"
-                  onClick={(e) => fullMenuHandler(false)}
+                  onClick={() => fullMenuHandler(false)}
                 >
                   About
                   <span className="absolute left-0 top-auto bottom-5 inline-block h-px w-full origin-top-right scale-0 bg-primary align-middle transition-transform duration-500 group-hover:origin-top-left group-hover:scale-100"></span>
@@ -46,7 +46,7 @@ const MobileFullmenu = ({ fullMenuHandler }: MobileFullmenuProps) => {
               <Link legacyBehavior href="/resume">
                 <a
                   className="group relative inline-block cursor-pointer overflow-hidden py-2 text-lg uppercase tracking-wider text-heading before:text-primary"
-                  onClick={(e) => fullMenuHandler(false)}
+                  onClick={() => fullMenuHandler(false)}
                 >
                   Resume
                   <span className="absolute left-0 top-auto bottom-5 inline-block h-px w-full origin-top-right scale-0 bg-primary align-middle transition-transform duration-500 group-hover:origin-top-left group-hover:scale-100"></span>
@@ -57,7 +57,7 @@ const MobileFullmenu = ({ fullMenuHandler }: MobileFullmenuProps) => {
               <Link legacyBehavior href="/works">
                 <a
                   className="group relative inline-block cursor-pointer overflow-hidden py-2 text-lg uppercase tracking-wider text-heading before:text-primary"
-                  onClick={(e) => fullMenuHandler(false)}
+                  onClick={() => fullMenuHandler(false)}
                 >
                   Works
                   <span className="absolute left-0 top-auto bottom-5 inline-block h-px w-full origin-top-right scale-0 bg-primary align-middle transition-transform duration-500 group-hover:origin-top-left group-hover:scale-100"></span>
@@ -68,7 +68,7 @@ const MobileFullmenu = ({ fullMenuHandler }: MobileFullmenuProps) => {
               <Link legacyBehavior href="/posts/1">
                 <a
                   className="group relative inline-block cursor-pointer overflow-hidden py-2 text-lg uppercase tracking-wider text-heading before:text-primary"
-                  onClick={(e) => fullMenuHandler(false)}
+                  onClick={() => fullMenuHandler(false)}
                 >
                   Blogs
                   <span className="absolute left-0 top-auto bottom-5 inline-block h-px w-full origin-top-right scale-0 bg-primary align-middle transition-transform duration-500 group-hover:origin-top-left group-hover:scale-100"></span>
@@ -79,7 +79,7 @@ const MobileFullmenu = ({ fullMenuHandler }: MobileFullmenuProps) => {
               <Link legacyBehavior href="/contact">
                 <a
                   className="group relative inline-block cursor-pointer overflow-hidden py-2 text-lg uppercase tracking-wider text-heading before:text-primary"
-                  onClick={(e) => fullMenuHandler(false)}
+                  onClick={() => fullMenuHandler(false)}
                 >
                   Contact
                   <span className="absolute left-0 top-auto bottom-5 inline-block h-px w-full origin-top-right scale-0 bg-primary align-middle transition-transform duration-500 group-hover:origin-top-left group-hover:scale-100"></span>
@@ -90,7 +90,7 @@ const MobileFullmenu = ({ fullMenuHandler }: MobileFullmenuProps) => {
         </nav>
         <p className="">
           <span className="whitespace-nowrap">
-            &copy; {new Date().getFullYear()}{" "}
+            &copy; {new Date().getFullYear()}{' '}
           </span>
           <Link legacyBehavior href="/">
             <a className="font-medium text-heading no-underline hover:text-primary">

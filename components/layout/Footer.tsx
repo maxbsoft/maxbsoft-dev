@@ -1,10 +1,11 @@
-import Link from "next/link";
-import { useQuery } from "react-query";
-import { getInformation } from "@/fetchers";
-import { SocialIcons } from "@/components/elements";
+import React from 'react';
+import Link from 'next/link';
+import { useQuery } from 'react-query';
+import { getInformation } from '@/fetchers';
+import { SocialIcons } from '@/components/elements';
 
 const Footer = () => {
-  const { data } = useQuery("information", getInformation);
+  const { data } = useQuery('information', getInformation);
 
   if (!data) return null;
 

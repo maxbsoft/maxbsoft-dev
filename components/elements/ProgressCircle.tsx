@@ -1,6 +1,15 @@
-import { motion } from "framer-motion";
+import React from 'react';
+import { motion } from 'framer-motion';
 
-const ProgressCircle = ({ skill: { title, percentage } }) => {
+export interface ProgressCircleProps {
+  skill: {
+    title?: string;
+    percentage: number;
+  };
+}
+const ProgressCircle = ({
+  skill: { title, percentage },
+}: ProgressCircleProps) => {
   const draw = {
     hidden: { pathLength: 0, opacity: 0 },
     visible: {

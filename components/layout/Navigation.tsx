@@ -1,11 +1,12 @@
-import { Link as ScrollLink } from "react-scroll";
-import Link from "next/link";
-import { useRouter } from "next/router";
+import React from 'react';
+import { Link as ScrollLink } from 'react-scroll';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 const Navigation = () => {
   const router = useRouter();
   const checkroute =
-    router.route !== "/homepage2" && router.route !== "/homepage3";
+    router.route !== '/homepage2' && router.route !== '/homepage3';
 
   return (
     <nav className="flex-grow px-5 text-center">

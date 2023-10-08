@@ -1,30 +1,30 @@
-import fs from "fs";
-import matter from "gray-matter";
-import path from "path";
-import { createSlug, filterPostsByPage, sortPostByDate } from ".";
+import fs from 'fs';
+import matter from 'gray-matter';
+import path from 'path';
+import { filterPostsByPage, sortPostByDate } from '.';
 
 const LIMIT = 6;
 
 // Get all post
 const getAllPosts = () => {
-  return fs.readdirSync(path.join(process.cwd(), "src/posts"));
+  return fs.readdirSync(path.join(process.cwd(), 'src/posts'));
 };
 
 // get all posts slug
 const getAllPostsSlug = () => {
   const files = getAllPosts();
-  return files.map((filename) => filename.replace(/\.(md|mdx)$/, ""));
+  return files.map((filename) => filename.replace(/\.(md|mdx)$/, ''));
 };
 
 // Get all posts data
 const getAllPostsData = () => {
   const files = getAllPosts();
   const posts = files.map((filename) => {
-    const slug = filename.replace(/\.(md|mdx)$/, "");
+    const slug = filename.replace(/\.(md|mdx)$/, '');
 
     const markdownWithMeta = fs.readFileSync(
-      path.join(process.cwd(), "src/posts", filename),
-      "utf-8"
+      path.join(process.cwd(), 'src/posts', filename),
+      'utf-8'
     );
 
     const { data: frontmatter } = matter(markdownWithMeta);
@@ -79,10 +79,10 @@ const getPostsPath = () => {
 };
 
 // Get single post data
-const getSinglePost = (slug) => {
+const getSinglePost = (slug: string) => {
   const post = fs.readFileSync(
-    path.join(process.cwd(), "src/posts", slug + ".md"),
-    "utf-8"
+    path.join(process.cwd(), 'src/posts', slug + '.md'),
+    'utf-8'
   );
   const { data: frontmatter, content } = matter(post);
   return {
@@ -93,56 +93,63 @@ const getSinglePost = (slug) => {
 
 // Get all Categories
 const getAllCategories = () => {
+  /*
   const posts = getAllPostsData();
-
-  const categories = posts.map((post) => post.category);
+  // eslint-disable-next-line
+  const categories = posts.map((post) => post.category)
 
   return categories.flat();
+  */
+  return [];
 };
 
 // Get category paths (for nextjs getStaticPaths)
 const getCategoryPaths = () => {
-  const allPosts = getAllPostsData();
-  const allCategories = getAllCategories();
-  const categories = [...new Set(allCategories)];
+  /*
+  const allPosts = getAllPostsData()
+  const allCategories = getAllCategories()
+  const categories = [...new Set<any>(allCategories)]
   const paths = categories.map((category) => {
     const filteredPosts = allPosts.filter((post) => {
-      const temp = post.category.map((cat) => createSlug(cat));
-      return temp.includes(category.toLowerCase());
-    });
-    const pages = Math.ceil(filteredPosts.length / LIMIT);
+      const temp = post.category.map((cat: any) => createSlug(cat))
+      return temp.includes(category.toLowerCase())
+    })
+    const pages = Math.ceil(filteredPosts.length / LIMIT)
 
-    let tempPath = [];
+    let tempPath = []
     for (let i = 1; i <= pages; i++) {
       tempPath.push({
         params: {
           slug: category.toLowerCase(),
           page: String(i),
         },
-      });
+      })
     }
-    return tempPath;
-  });
+    return tempPath
+  })
 
-  return paths.flat();
+  return paths.flat()
+  */
 };
 
 // Get all posts by category
+/*
 const getPostsByCategory = (category, page = 1, limit = 6) => {
-  const allPosts = getAllPostsData();
+  const allPosts = getAllPostsData()
 
   const filteredPosts = allPosts.filter((post) => {
-    const temp = post.category.map((cat) => createSlug(cat));
-    return temp.includes(category);
-  });
+    const temp = post.category.map((cat) => createSlug(cat))
+    return temp.includes(category)
+  })
 
-  const posts = filterPostsByPage(filteredPosts, page, limit);
+  const posts = filterPostsByPage(filteredPosts, page, limit)
 
   return {
     posts,
     hasMore: limit * page < filteredPosts.length,
-  };
-};
+  }
+}
+*/
 
 // Get recent posts
 const getRecentPosts = () => {
@@ -153,7 +160,7 @@ const getRecentPosts = () => {
 
 export {
   getPostsByPage,
-  getPostsByCategory,
+  // getPostsByCategory,
   getPostsPath,
   getPagesPath,
   getSinglePost,

@@ -1,16 +1,15 @@
-import { motion } from "framer-motion";
-import { useState, ReactNode } from "react";
-import Scroll from "react-scroll";
-import Footer from "./Footer";
-import Header from "./Header";
-import { RiArrowUpSLine } from "react-icons/ri";
-import useEventListener from "../../hooks/useEventListener";
-
+import { motion } from 'framer-motion';
+import React, { useState, ReactNode } from 'react';
+import Scroll from 'react-scroll';
+import Footer from './Footer';
+import Header from './Header';
+import { RiArrowUpSLine } from 'react-icons/ri';
+import useEventListener from '@/hooks/useEventListener';
 
 export interface LayoutProps {
   children: ReactNode;
   blurred?: boolean;
-};
+}
 const Layout = ({ children, blurred = false }: LayoutProps) => {
   const [backToTop, setBackToTop] = useState(false);
 
@@ -21,18 +20,18 @@ const Layout = ({ children, blurred = false }: LayoutProps) => {
     scrollTop > 500 ? setBackToTop(true) : setBackToTop(false);
   };
 
-  useEventListener("scroll", isVisible);
+  useEventListener('scroll', isVisible);
 
   return (
     <div
       className={`wrapper relative min-h-screen w-full bg-grey ${
-        blurred ? "blurredBg" : ""
+        blurred ? 'blurredBg' : ''
       }`}
     >
       <Header />
       <main
         className={`page-content relative bg-grey bg-opacity-95 ${
-          blurred ? "backdrop-blur-lg backdrop-filter" : ""
+          blurred ? 'backdrop-blur-lg backdrop-filter' : ''
         }`}
       >
         <div className="bglines fixed left-0 top-0 z-20 flex h-screen w-full justify-around">

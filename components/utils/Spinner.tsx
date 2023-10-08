@@ -1,3 +1,5 @@
+import React from 'react';
+
 const Spinner = () => {
   return (
     <div className="spinner relative inline-flex h-24 w-24 items-center justify-center overflow-hidden rounded-full border border-white border-opacity-20">

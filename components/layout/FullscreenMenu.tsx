@@ -1,9 +1,9 @@
-import Link from "next/link";
-
+import React from 'react';
+import Link from 'next/link';
 
 export interface FullscreenMenuProps {
   fullMenuHandler: (value: boolean) => void;
-};
+}
 const FullscreenMenu = ({ fullMenuHandler }: FullscreenMenuProps) => {
   return (
     <ul className="fullscreen-menulist pl-0 mb-0 flex h-screen items-center justify-between">
@@ -11,7 +11,7 @@ const FullscreenMenu = ({ fullMenuHandler }: FullscreenMenuProps) => {
         <Link legacyBehavior href="/">
           <a
             className="flex w-full items-center justify-center self-stretch p-5 text-5xl xl:text-6xl font-bold uppercase text-heading group-hover:text-primary"
-            onClick={(e) => fullMenuHandler(false)}
+            onClick={() => fullMenuHandler(false)}
           >
             <span className="fullmenuitem rotate-180">Home</span>
           </a>
@@ -21,7 +21,7 @@ const FullscreenMenu = ({ fullMenuHandler }: FullscreenMenuProps) => {
         <Link legacyBehavior href="/about">
           <a
             className="flex w-full items-center justify-center self-stretch p-5 text-5xl xl:text-6xl font-bold uppercase text-heading group-hover:text-primary"
-            onClick={(e) => fullMenuHandler(false)}
+            onClick={() => fullMenuHandler(false)}
           >
             <span className="fullmenuitem rotate-180">About</span>
           </a>
@@ -31,7 +31,7 @@ const FullscreenMenu = ({ fullMenuHandler }: FullscreenMenuProps) => {
         <Link legacyBehavior href="/resume">
           <a
             className="flex w-full items-center justify-center self-stretch p-5 text-5xl xl:text-6xl font-bold uppercase text-heading group-hover:text-primary"
-            onClick={(e) => fullMenuHandler(false)}
+            onClick={() => fullMenuHandler(false)}
           >
             <span className="fullmenuitem rotate-180">Resume</span>
           </a>
@@ -41,7 +41,7 @@ const FullscreenMenu = ({ fullMenuHandler }: FullscreenMenuProps) => {
         <Link legacyBehavior href="/works">
           <a
             className="flex w-full items-center justify-center self-stretch p-5 text-5xl xl:text-6xl font-bold uppercase text-heading group-hover:text-primary"
-            onClick={(e) => fullMenuHandler(false)}
+            onClick={() => fullMenuHandler(false)}
           >
             <span className="fullmenuitem rotate-180">Works</span>
           </a>
@@ -51,7 +51,7 @@ const FullscreenMenu = ({ fullMenuHandler }: FullscreenMenuProps) => {
         <Link legacyBehavior href="/posts/1">
           <a
             className="flex w-full items-center justify-center self-stretch p-5 text-5xl xl:text-6xl font-bold uppercase text-heading group-hover:text-primary"
-            onClick={(e) => fullMenuHandler(false)}
+            onClick={() => fullMenuHandler(false)}
           >
             <span className="fullmenuitem rotate-180">Blogs</span>
           </a>
@@ -61,7 +61,7 @@ const FullscreenMenu = ({ fullMenuHandler }: FullscreenMenuProps) => {
         <Link legacyBehavior href="/contact">
           <a
             className="flex w-full items-center justify-center self-stretch p-5 text-5xl xl:text-6xl font-bold uppercase text-heading group-hover:text-primary"
-            onClick={(e) => fullMenuHandler(false)}
+            onClick={() => fullMenuHandler(false)}
           >
             <span className="fullmenuitem rotate-180">Contact</span>
           </a>

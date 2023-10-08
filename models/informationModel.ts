@@ -1,4 +1,11 @@
-export type SocialNetworks = 'facebook' | 'twitter' | 'github' | 'linkedin' | 'dribbble' | 'stackoverflow' | 'instagram';
+export type SocialNetworks =
+  | 'facebook'
+  | 'twitter'
+  | 'github'
+  | 'linkedin'
+  | 'dribbble'
+  | 'stackoverflow'
+  | 'instagram';
 
 export type SocialAddressMapModel = {
   [key in SocialNetworks]: string;
@@ -16,7 +23,7 @@ export interface InformationModel {
   languages?: Array<string>;
   address?: string;
   freelance?: string | boolean;
-  socialAddress: SocialAddressMapModel; 
+  socialAddress: SocialAddressMapModel;
   phoneNumbers: Array<string>;
   emailAddress: Array<string>;
 }

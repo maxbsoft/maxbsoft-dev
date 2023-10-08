@@ -1,18 +1,18 @@
-import { Link as ScrollLink } from "react-scroll";
-import Link from "next/link";
-import { useRouter } from "next/router";
-import { RiCloseLine } from "react-icons/ri";
-
+import React from 'react';
+import { Link as ScrollLink } from 'react-scroll';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { RiCloseLine } from 'react-icons/ri';
 
 export interface MobileNavigationProps {
   changeState: (value: boolean) => void;
-};
+}
 
 const MobileNavigation = ({ changeState }: MobileNavigationProps) => {
   const router = useRouter();
 
   const checkroute =
-    router.route !== "/homepage2" && router.route !== "/homepage3";
+    router.route !== '/homepage2' && router.route !== '/homepage3';
 
   const handleClick = () => {
     changeState(false);

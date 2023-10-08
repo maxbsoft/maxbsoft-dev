@@ -1,18 +1,18 @@
-import Image from "next/image";
-import Link from "next/link";
-import { RiCloseLine, RiMenuLine } from "react-icons/ri";
-import { useQuery } from "react-query";
-import { getInformation } from "../../fetchers";
-import { imageLoader } from "../../lib/utils";
-
+import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { RiCloseLine, RiMenuLine } from 'react-icons/ri';
+import { useQuery } from 'react-query';
+import { getInformation } from '@/fetchers';
+import { imageLoader } from '@/lib/utils';
 
 export interface SidemenuProps {
   fullMenu: boolean;
   fullMenuHandler: (value: boolean) => void;
-};
+}
 
 const Sidemenu = ({ fullMenu, fullMenuHandler }: SidemenuProps) => {
-  const { data } = useQuery("information", getInformation);
+  const { data } = useQuery('information', getInformation);
 
   if (!data) return null;
 
@@ -45,7 +45,7 @@ const Sidemenu = ({ fullMenu, fullMenuHandler }: SidemenuProps) => {
       <div className="flex h-[40%] w-full items-end justify-center self-end">
         <p className="copyrightvertical rotate-180 text-left">
           <span className="whitespace-nowrap">
-            &copy; {new Date().getFullYear()}{" "}
+            &copy; {new Date().getFullYear()}{' '}
           </span>
           <Link legacyBehavior href="/">
             <a className="block font-medium text-heading no-underline hover:text-primary lg:inline">
