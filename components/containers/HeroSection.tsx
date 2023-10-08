@@ -9,7 +9,17 @@ import { useQuery } from "react-query";
 import { getInformation } from "@/fetchers";
 import ReactTyped from "react-typed";
 
-const HeroSection = ({ blurred, scroll = true, typed = true }) => {
+interface HeroSectionProps {
+  blurred: boolean;
+  scroll: boolean;
+  typed: boolean;
+}
+
+const HeroSection = ({
+  blurred = false,
+  scroll = true,
+  typed = true
+}: HeroSectionProps) => {
   const { data } = useQuery("information", getInformation);
 
   if (!data) return null;
@@ -40,7 +50,7 @@ const HeroSection = ({ blurred, scroll = true, typed = true }) => {
                   <Image
                     loader={imageLoader}
                     unoptimized={true}
-                    src={data.thumbImage}
+                    src={data.thumbImage || ''}
                     alt={data.fullName}
                     height={150}
                     width={150}

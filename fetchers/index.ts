@@ -1,8 +1,16 @@
+import { Axios, AxiosResponse } from "axios";
+import { InformationModel } from "@/models";
 import { http } from "./http";
 
-const getInformation = async () => {
-  let res = await http.get(`/information.json`);
-  return res.data;
+
+const getInformation = async (): Promise<InformationModel> => {
+  try {
+    let res: AxiosResponse<InformationModel> = await http.get(`/information.json`);
+    return res.data;
+  } catch (error) {
+    console.error('getInformation', error);
+    throw error;
+  }
 };
 
 const getServices = async () => {
