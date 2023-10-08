@@ -1,19 +1,6 @@
-import React, { createContext, useReducer, useContext, ReactNode } from 'react';
+import React, { createContext, useReducer, useContext } from 'react';
 import { appReducer } from './appReducer';
-
-export interface AppState {
-  blurredBg: boolean;
-}
-
-export type AppAction = {
-  type: string;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  payload?: any;
-};
-
-export interface AppProviderProps {
-  children?: ReactNode;
-}
+import { AppState, AppAction, AppProviderProps } from './types';
 
 const initialState: AppState = {
   blurredBg: false,
@@ -21,12 +8,10 @@ const initialState: AppState = {
 
 const AppContext = createContext(initialState);
 
-const appActions = (dispatch: React.Dispatch<AppAction>) => {
-  return {
-    setBlurred: (value: boolean) =>
-      dispatch({ type: 'SET_BLURRED', payload: value }),
-  };
-};
+const appActions = (dispatch: React.Dispatch<AppAction>) => ({
+  setBlurred: (value: boolean) =>
+    dispatch({ type: 'SET_BLURRED', payload: value }),
+});
 
 const AppProvider = ({ children }: AppProviderProps) => {
   const [state, dispatch] = useReducer(appReducer, initialState);
@@ -38,8 +23,6 @@ const AppProvider = ({ children }: AppProviderProps) => {
   );
 };
 
-const useAppContext = () => {
-  return useContext(AppContext);
-};
+const useAppContext = () => useContext(AppContext);
 
 export { AppProvider, AppContext, useAppContext };

@@ -13,7 +13,9 @@ const PortfolioFilters = ({
 }: PortfolioFiltersProps) => {
   const { data } = useQuery('portfolio-filters', getPortfolioFilters);
 
-  if (!data) return null;
+  if (!data) {
+    return null;
+  }
 
   return (
     <div className="portfolio-filters flex flex-wrap justify-center gap-4">

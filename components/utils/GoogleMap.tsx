@@ -28,7 +28,7 @@ const GoogleMap = () => {
         scrolling="no"
         marginHeight={0}
         marginWidth={0}
-      ></iframe>
+      />
     </div>
   );
 };

@@ -6,9 +6,7 @@ import { filterPostsByPage, sortPostByDate } from '.';
 const LIMIT = 6;
 
 // Get all post
-const getAllPosts = () => {
-  return fs.readdirSync(path.join(process.cwd(), 'src/posts'));
-};
+const getAllPosts = () => fs.readdirSync(path.join(process.cwd(), 'src/posts'));
 
 // get all posts slug
 const getAllPostsSlug = () => {
@@ -67,13 +65,11 @@ const getPagesPath = () => {
 const getPostsPath = () => {
   const postsSlug = getAllPostsSlug();
 
-  const paths = postsSlug.map((slug) => {
-    return {
-      params: {
-        slug,
-      },
-    };
-  });
+  const paths = postsSlug.map((slug) => ({
+    params: {
+      slug,
+    },
+  }));
 
   return paths;
 };
@@ -81,7 +77,7 @@ const getPostsPath = () => {
 // Get single post data
 const getSinglePost = (slug: string) => {
   const post = fs.readFileSync(
-    path.join(process.cwd(), 'src/posts', slug + '.md'),
+    path.join(process.cwd(), 'src/posts', `${slug}.md`),
     'utf-8'
   );
   const { data: frontmatter, content } = matter(post);
@@ -92,7 +88,7 @@ const getSinglePost = (slug: string) => {
 };
 
 // Get all Categories
-const getAllCategories = () => {
+const getAllCategories = () =>
   /*
   const posts = getAllPostsData();
   // eslint-disable-next-line
@@ -100,9 +96,7 @@ const getAllCategories = () => {
 
   return categories.flat();
   */
-  return [];
-};
-
+  [];
 // Get category paths (for nextjs getStaticPaths)
 const getCategoryPaths = () => {
   /*

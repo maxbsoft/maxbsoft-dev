@@ -13,9 +13,10 @@ export interface SocialIconsProps {
   data: SocialAddressMapModel;
   rounded?: boolean;
 }
-
 const SocialIcons = ({ data, rounded }: SocialIconsProps) => {
-  if (!data) return null;
+  if (!data) {
+    return null;
+  }
 
   return (
     <ul className="mb-0 inline-flex list-none flex-wrap gap-3 pl-0 sm:gap-4">

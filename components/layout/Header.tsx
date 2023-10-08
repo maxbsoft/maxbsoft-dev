@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { RiMenuLine } from 'react-icons/ri';
 import { Link as ScrollLink } from 'react-scroll';
-import useEventListener from '../../hooks/useEventListener';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Logo } from '@/components/utils';
+import useEventListener from '@/hooks/useEventListener';
 import MobileNavigation from './MobileNavigation';
 import Navigation from './Navigation';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Logo } from '../utils';
 
 const Header = () => {
   const [sticky, setSticky] = useState(false);
@@ -28,7 +28,10 @@ const Header = () => {
     >
       <div className="container mx-auto">
         <div className="header-inner flex items-center justify-between">
-          <Logo url="/" text />
+          <Logo
+            url="/"
+            text
+          />
           <div className="header-mobilenav block lg:hidden">
             <button
               className="btn btn-small btn-transparent px-3 text-3xl"

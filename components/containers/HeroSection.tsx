@@ -23,12 +23,14 @@ const HeroSection = ({
 }: HeroSectionProps) => {
   const { data } = useQuery('information', getInformation);
 
-  if (!data) return null;
+  if (!data) {
+    return null;
+  }
 
   return (
     <div className="herosection relative overflow-hidden">
       {!blurred && (
-        <div className="herosection-bg absolute left-0 top-0 h-full w-full"></div>
+        <div className="herosection-bg absolute left-0 top-0 h-full w-full" />
       )}
       <div
         className={`herosection-content relative z-20 bg-grey-darken  ${
@@ -46,7 +48,7 @@ const HeroSection = ({
                 variants={childrenAnimation}
                 className="herosection-imagewrapper relative mb-5 inline-block overflow-hidden rounded-full align-middle"
               >
-                <span className="herosection-imageanimation absolute left-0 top-0 z-10 h-full w-full animate-spin rounded-full bg-gradient-to-tr from-primary to-transparent"></span>
+                <span className="herosection-imageanimation absolute left-0 top-0 z-10 h-full w-full animate-spin rounded-full bg-gradient-to-tr from-primary to-transparent" />
                 <div className="herosection-image fiximage relative z-20 inline-block h-[150px] w-[150px] overflow-hidden rounded-full border-6 border-primary border-opacity-10 align-middle">
                   <Image
                     loader={imageLoader}

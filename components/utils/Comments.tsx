@@ -7,19 +7,20 @@ export interface CommentsProps {
 }
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-const Comments = ({ title, slug }: CommentsProps) => {
+const Comments = ({ title = '', slug = '' }: CommentsProps) => {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     setMounted(true);
   }, []);
 
-  if (!mounted)
+  if (!mounted) {
     return (
       <div className="block py-20 text-center">
         <Spinner />
       </div>
     );
+  }
 
   return null;
 };

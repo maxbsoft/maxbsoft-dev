@@ -19,7 +19,7 @@ const SectionHeading = ({
     <div className="section-heading relative overflow-hidden pb-14 text-center">
       <h2 className="relative z-10 mb-2 uppercase">{title}</h2>
       <span className="relative z-10 inline-block h-1.5 w-32 overflow-hidden rounded-full bg-primary bg-opacity-20">
-        <span className="absolute left-0 top-0 inline-block h-full w-1.5 animate-lefttoright rounded-full bg-primary"></span>
+        <span className="absolute left-0 top-0 inline-block h-full w-1.5 animate-lefttoright rounded-full bg-primary" />
       </span>
       <span
         ref={parallax.ref}

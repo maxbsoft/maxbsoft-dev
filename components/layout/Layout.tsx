@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion';
 import React, { useState, ReactNode } from 'react';
 import Scroll from 'react-scroll';
-import Footer from './Footer';
-import Header from './Header';
 import { RiArrowUpSLine } from 'react-icons/ri';
 import useEventListener from '@/hooks/useEventListener';
+import Footer from './Footer';
+import Header from './Header';
 
 export interface LayoutProps {
   children: ReactNode;
@@ -35,11 +35,11 @@ const Layout = ({ children, blurred = false }: LayoutProps) => {
         }`}
       >
         <div className="bglines fixed left-0 top-0 z-20 flex h-screen w-full justify-around">
-          <span className="border-r border-white border-opacity-5"></span>
-          <span className="border-r border-white border-opacity-5"></span>
-          <span className="border-r border-white border-opacity-5"></span>
-          <span className="border-r border-white border-opacity-5"></span>
-          <span className="border-r border-white border-opacity-5"></span>
+          <span className="border-r border-white border-opacity-5" />
+          <span className="border-r border-white border-opacity-5" />
+          <span className="border-r border-white border-opacity-5" />
+          <span className="border-r border-white border-opacity-5" />
+          <span className="border-r border-white border-opacity-5" />
         </div>
         <div className="sitedata relative z-30 min-h-screen">{children}</div>
       </main>
