@@ -1,7 +1,13 @@
 import { useState, useEffect } from 'react';
 import Spinner from './Spinner';
 
-const Comments = ({ title, slug }) => {
+
+export interface CommentsProps {
+  title?: string;
+  slug?: string;
+}
+
+const Comments = ({ title, slug }: CommentsProps) => {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {

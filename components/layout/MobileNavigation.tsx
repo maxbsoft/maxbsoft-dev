@@ -3,7 +3,12 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { RiCloseLine } from "react-icons/ri";
 
-const MobileNavigation = ({ changeState }) => {
+
+export interface MobileNavigationProps {
+  changeState: (value: boolean) => void;
+};
+
+const MobileNavigation = ({ changeState }: MobileNavigationProps) => {
   const router = useRouter();
 
   const checkroute =

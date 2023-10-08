@@ -1,6 +1,10 @@
 import Link from "next/link";
 
-const FullscreenMenu = ({ fullMenuHandler }) => {
+
+export interface FullscreenMenuProps {
+  fullMenuHandler: (value: boolean) => void;
+};
+const FullscreenMenu = ({ fullMenuHandler }: FullscreenMenuProps) => {
   return (
     <ul className="fullscreen-menulist pl-0 mb-0 flex h-screen items-center justify-between">
       <li className="section group flex basis-1/5 items-center justify-center self-stretch border-l border-white border-opacity-10 text-center transition-all duration-500 first:border-l-0 hover:basis-2/5">

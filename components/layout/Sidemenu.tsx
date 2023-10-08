@@ -5,7 +5,13 @@ import { useQuery } from "react-query";
 import { getInformation } from "../../fetchers";
 import { imageLoader } from "../../lib/utils";
 
-const Sidemenu = ({ fullMenu, fullMenuHandler }) => {
+
+export interface SidemenuProps {
+  fullMenu: boolean;
+  fullMenuHandler: (value: boolean) => void;
+};
+
+const Sidemenu = ({ fullMenu, fullMenuHandler }: SidemenuProps) => {
   const { data } = useQuery("information", getInformation);
 
   if (!data) return null;
@@ -18,7 +24,7 @@ const Sidemenu = ({ fullMenu, fullMenuHandler }) => {
             <Image
               loader={imageLoader}
               unoptimized={true}
-              src={data.thumbImage}
+              src={data.thumbImage || ''}
               alt={data.fullName}
               height={60}
               width={60}

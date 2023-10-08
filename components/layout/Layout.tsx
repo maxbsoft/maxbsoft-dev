@@ -1,12 +1,17 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useState, ReactNode } from "react";
 import Scroll from "react-scroll";
 import Footer from "./Footer";
 import Header from "./Header";
 import { RiArrowUpSLine } from "react-icons/ri";
 import useEventListener from "../../hooks/useEventListener";
 
-const Layout = ({ children, blurred }) => {
+
+export interface LayoutProps {
+  children: ReactNode;
+  blurred?: boolean;
+};
+const Layout = ({ children, blurred = false }: LayoutProps) => {
   const [backToTop, setBackToTop] = useState(false);
 
   const scroll = Scroll.animateScroll;

@@ -16,7 +16,7 @@ export default function Home() {
 
       {/* Start Hero Section */}
       <Section name="section-home">
-        <HeroSection blurred />
+        <HeroSection blurred scroll={false} typed={false} />
       </Section>
       {/* End Hero Section */}
     </Layout>

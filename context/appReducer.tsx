@@ -1,4 +1,6 @@
-export const appReducer = (state, action) => {
+import { AppState, AppAction } from "./appContext";
+
+export const appReducer = (state: AppState, action: AppAction) => {
   switch (action.type) {
       case "SET_BLURRED":
           typeof window !== "undefined"

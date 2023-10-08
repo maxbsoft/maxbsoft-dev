@@ -1,7 +1,12 @@
 import { useQuery } from "react-query";
 import { getPortfolioFilters } from "@/fetchers";
 
-const PortfolioFilters = ({ currentFilter, filterHandler }) => {
+export interface PortfolioFiltersProps {
+    currentFilter?: string;
+    filterHandler:  (value: string) => void;
+}
+
+const PortfolioFilters = ({ currentFilter, filterHandler }: PortfolioFiltersProps) => {
     const { data } = useQuery("portfolio-filters", getPortfolioFilters);
 
     if (!data) return null;

@@ -1,5 +1,5 @@
 import { Axios, AxiosResponse } from "axios";
-import { InformationModel } from "@/models";
+import { InformationModel, PortfolioFiltersModel } from "@/models";
 import { http } from "./http";
 
 
@@ -28,9 +28,14 @@ const getLanguageskills = async () => {
   return res.data;
 };
 
-const getPortfolioFilters = async () => {
-  let res = await http.get(`/portfoliofilters.json`);
-  return res.data;
+const getPortfolioFilters = async (): Promise<PortfolioFiltersModel> => {
+  try {
+    let res: AxiosResponse<PortfolioFiltersModel> = await http.get(`/portfoliofilters.json`);
+    return res.data;
+  } catch (error) {
+    console.error('getPortfolioFilters', error);
+    throw error;
+  }
 };
 
 const getPortfolios = async () => {

@@ -13,12 +13,16 @@ import 'swiper/css/navigation';
 import '@/styles/globals.scss';
 
 NProgress.configure({ showSpinner: true });
-Router.events.on("routeChangeStart", () => NProgress.start());
-Router.events.on("routeChangeComplete", () => NProgress.done());
-Router.events.on("routeChangeError", () => NProgress.done());
+Router.events.on('routeChangeStart', () => NProgress.start());
+Router.events.on('routeChangeComplete', () => NProgress.done());
+Router.events.on('routeChangeError', () => NProgress.done());
 
-function MyApp({ Component, pageProps }) {
-  const queryClientRef = useRef();
+export interface MyAppProps {
+  Component: any;
+  pageProps: any;
+};
+function MyApp({ Component, pageProps }: MyAppProps) {
+  const queryClientRef = useRef<QueryClient | null>(null);
 
   if (!queryClientRef.current) {
     queryClientRef.current = new QueryClient();

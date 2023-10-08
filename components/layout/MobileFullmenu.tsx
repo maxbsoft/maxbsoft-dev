@@ -1,8 +1,13 @@
 import Link from "next/link";
 import { RiCloseLine } from "react-icons/ri";
-import { Logo } from "../utils";
+import { Logo } from "@/components/utils";
 
-const MobileFullmenu = ({ fullMenuHandler }) => {
+
+export interface MobileFullmenuProps {
+  fullMenuHandler: (value: boolean) => void;
+};
+
+const MobileFullmenu = ({ fullMenuHandler }: MobileFullmenuProps) => {
   return (
     <>
       <button
