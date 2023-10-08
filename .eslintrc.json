@@ -8,14 +8,8 @@
   ],
   "ignorePatterns": ["next.config.js"],
   "rules": {
-    "arrow-parens": [
-      "error",
-      "always"
-    ],
-    "arrow-body-style": [
-      2,
-      "as-needed"
-    ],
+    "arrow-parens": ["error", "always"],
+    "arrow-body-style": [2, "as-needed"],
     "import/no-cycle": [2, { "maxDepth": 1 }],
     "class-methods-use-this": ["error"],
     // "linebreak-style": ["error", "unix"],
@@ -28,10 +22,7 @@
     // I suggest you add those two rules:
     "@typescript-eslint/no-unused-vars": "error",
     "prefer-const": "off", // Turn rule off
-    "comma-dangle": [
-      2,
-      "always-multiline"
-    ],
+    "comma-dangle": [2, "always-multiline"],
     "curly": ["error", "all"],
     "no-mixed-operators": "error",
     "no-multiple-empty-lines": ["error", { "max": 2, "maxEOF": 0 }],
@@ -67,10 +58,7 @@
         "children": true
       }
     ],
-    "react/jsx-first-prop-new-line": [
-      2,
-      "multiline"
-    ],
+    "react/jsx-first-prop-new-line": [2, "multiline"],
     "react/static-property-placement": 0,
     "react/state-in-constructor": 0,
     "react/jsx-props-no-spreading": 0,
@@ -94,6 +82,7 @@
         "named": "always",
         "asyncArrow": "always"
       }
-    ]
+    ],
+    "object-curly-spacing": ["error", "always"]
   }
 }
