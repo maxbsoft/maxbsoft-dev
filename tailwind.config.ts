@@ -31,9 +31,20 @@ const config: Config = {
         },
       },
       fontFamily: {
+        /*
+        body: ["'Roboto Condensed', sans-serif"],
+        display: ["'Roboto Condensed', sans-serif"],
+        segoe: ["'Segoe UI', sans-serif"],
+        */
+        body: ["'Noto Sans', sans-serif"],
+        display: ["'Noto Sans', sans-serif"],
+        segoe: ["'Segoe UI', sans-serif"],
+
+        /*
         body: ["'Radio Canada', sans-serif"],
         display: ["'Radio Canada', sans-serif"],
         segoe: ["'Segoe UI', sans-serif"],
+        */
       },
       fontSize: {
         sm: ['14px', '1.8'],
