@@ -1,6 +1,5 @@
 import { AppState, AppAction } from './types';
 
-
 export const appReducer = (state: AppState, action: AppAction) => {
   switch (action.type) {
     case 'SET_BLURRED':

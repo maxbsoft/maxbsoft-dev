@@ -13,7 +13,6 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import '@/styles/globals.scss';
 
-
 NProgress.configure({ showSpinner: true });
 Router.events.on('routeChangeStart', () => NProgress.start());
 Router.events.on('routeChangeComplete', () => NProgress.done());
@@ -27,7 +26,7 @@ interface MyAppProps {
     dehydratedState: any;
   };
 }
-function MyApp ({ Component, pageProps }: MyAppProps) {
+function MyApp({ Component, pageProps }: MyAppProps) {
   const queryClientRef = useRef<QueryClient | null>(null);
 
   if (!queryClientRef.current) {
@@ -42,43 +41,15 @@ function MyApp ({ Component, pageProps }: MyAppProps) {
             name="viewport"
             content="width=device-width, initial-scale=1 maximum-scale=1"
           />
-          <meta
-            name="description"
-            content="description"
-          />
-          <meta
-            name="robots"
-            content="noindex, nofollow"
-          />
-          <meta
-            name="keywords"
-            content="React Template, Portfolio Template"
-          />
-          <meta
-            name="author"
-            content="Nuclear Themes"
-          />
-          <meta
-            name="theme-color"
-            content="#72E2AE"
-          />
-          <meta
-            httpEquiv="X-UA-Compatible"
-            content="IE=edge"
-          />
-          <link
-            rel="manifest"
-            href="/manifest.json"
-          />
-          <link
-            rel="shortcut icon"
-            href="/favicon.ico"
-            type="image/x-icon"
-          />
-          <link
-            rel="apple-touch-icon"
-            href="/icon-192x192.png"
-          />
+          <meta name="description" content="description" />
+          <meta name="robots" content="noindex, nofollow" />
+          <meta name="keywords" content="React Template, Portfolio Template" />
+          <meta name="author" content="Nuclear Themes" />
+          <meta name="theme-color" content="#72E2AE" />
+          <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+          <link rel="manifest" href="/manifest.json" />
+          <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+          <link rel="apple-touch-icon" href="/icon-192x192.png" />
           <title>MaxBalukh - Mobile App Developer</title>
         </Head>
         <ParallaxProvider>

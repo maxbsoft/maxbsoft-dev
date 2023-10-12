@@ -7,9 +7,7 @@ export interface ProgressCircleProps {
     percentage: number;
   };
 }
-const ProgressCircle = ({
-  skill: { title, percentage },
-}: ProgressCircleProps) => {
+const ProgressCircle = ({ skill: { title, percentage } }: ProgressCircleProps) => {
   const draw = {
     hidden: { pathLength: 0, opacity: 0 },
     visible: {

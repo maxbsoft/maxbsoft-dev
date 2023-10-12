@@ -16,17 +16,11 @@ const Footer = () => {
       <div className="container mx-auto">
         <div className="footer-content flex flex-wrap items-center justify-between gap-y-5 gap-x-7 py-5 text-center md:flex-nowrap">
           <div className="w-full md:w-auto">
-            <SocialIcons
-              data={data.socialAddress}
-              rounded={undefined}
-            />
+            <SocialIcons data={data.socialAddress} rounded={undefined} />
           </div>
           <p className="mb-0 w-full md:w-auto">
             &copy; {new Date().getFullYear()}, All right reserved
-            <Link
-              legacyBehavior
-              href="/"
-            >
+            <Link legacyBehavior href="/">
               <a className="pl-1.5 font-medium text-heading no-underline hover:text-primary">
                 MaxBalukh
               </a>

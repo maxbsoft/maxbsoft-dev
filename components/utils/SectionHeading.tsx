@@ -3,14 +3,10 @@ import { useParallax } from 'react-scroll-parallax';
 
 export interface SectionHeadingProps {
   title: string;
-  watermark: any;
+  watermark: string;
   animated: boolean;
 }
-const SectionHeading = ({
-  title,
-  watermark,
-  animated = true,
-}: SectionHeadingProps) => {
+const SectionHeading = ({ title, watermark, animated = true }: SectionHeadingProps) => {
   const parallax = useParallax({
     translateX: animated ? [-200, 200] : undefined,
     easing: 'easeInOut',

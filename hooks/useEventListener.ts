@@ -1,9 +1,10 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useEffect, useRef } from 'react';
 
 const useEventListener = (
   eventType: any,
   callback: any,
-  element: Window = global.window
+  element: Window = global.window,
 ) => {
   const callbackRef = useRef(callback);
 

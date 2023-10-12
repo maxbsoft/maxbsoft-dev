@@ -7,10 +7,7 @@ export interface PortfolioFiltersProps {
   filterHandler: (value: string) => void;
 }
 
-const PortfolioFilters = ({
-  currentFilter,
-  filterHandler,
-}: PortfolioFiltersProps) => {
+const PortfolioFilters = ({ currentFilter, filterHandler }: PortfolioFiltersProps) => {
   const { data } = useQuery('portfolio-filters', getPortfolioFilters);
 
   if (!data) {
@@ -20,9 +17,7 @@ const PortfolioFilters = ({
   return (
     <div className="portfolio-filters flex flex-wrap justify-center gap-4">
       <button
-        className={`btn btn-small ${
-          currentFilter === '' ? '' : 'btn-transparent'
-        }`}
+        className={`btn btn-small ${currentFilter === '' ? '' : 'btn-transparent'}`}
         onClick={() => filterHandler('')}
       >
         <span>All</span>
@@ -30,9 +25,7 @@ const PortfolioFilters = ({
       {data?.map((filter) => (
         <button
           className={`btn btn-small ${
-            currentFilter === filter.value
-              ? 'before:invisible'
-              : 'btn-transparent'
+            currentFilter === filter.value ? 'before:invisible' : 'btn-transparent'
           }`}
           onClick={() => filterHandler(filter.value)}
           key={filter.id}

@@ -9,17 +9,14 @@ const initialState: AppState = {
 const AppContext = createContext(initialState);
 
 const appActions = (dispatch: React.Dispatch<AppAction>) => ({
-  setBlurred: (value: boolean) =>
-    dispatch({ type: 'SET_BLURRED', payload: value }),
+  setBlurred: (value: boolean) => dispatch({ type: 'SET_BLURRED', payload: value }),
 });
 
 const AppProvider = ({ children }: AppProviderProps) => {
   const [state, dispatch] = useReducer(appReducer, initialState);
   const actions = appActions(dispatch);
   return (
-    <AppContext.Provider value={{ ...state, ...actions }}>
-      {children}
-    </AppContext.Provider>
+    <AppContext.Provider value={{ ...state, ...actions }}>{children}</AppContext.Provider>
   );
 };
 

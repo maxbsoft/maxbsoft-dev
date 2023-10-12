@@ -22,7 +22,7 @@ const getAllPostsData = () => {
 
     const markdownWithMeta = fs.readFileSync(
       path.join(process.cwd(), 'src/posts', filename),
-      'utf-8'
+      'utf-8',
     );
 
     const { data: frontmatter } = matter(markdownWithMeta);
@@ -50,7 +50,7 @@ const getPagesPath = () => {
   const files = getAllPosts();
   const pages = Math.ceil(files.length / LIMIT);
 
-  let paths = [];
+  const paths = [];
   for (let i = 1; i <= pages; i++) {
     paths.push({
       params: {
@@ -78,7 +78,7 @@ const getPostsPath = () => {
 const getSinglePost = (slug: string) => {
   const post = fs.readFileSync(
     path.join(process.cwd(), 'src/posts', `${slug}.md`),
-    'utf-8'
+    'utf-8',
   );
   const { data: frontmatter, content } = matter(post);
   return {

@@ -20,10 +20,7 @@ export default function Home() {
       {/* End Hero Section */}
 
       {/* Start About Section */}
-      <Section
-        name="section-about"
-        className="about-section pt-24 lg:pt-28 xl:pt-32"
-      >
+      <Section name="section-about" className="about-section pt-24 lg:pt-28 xl:pt-32">
         <div className="container mx-auto">
           <SectionHeading animated={false} title="About Me" watermark="About" />
           <AboutSection />

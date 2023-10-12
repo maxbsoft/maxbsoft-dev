@@ -29,9 +29,7 @@ const HeroSection = ({
 
   return (
     <div className="herosection relative overflow-hidden">
-      {!blurred && (
-        <div className="herosection-bg absolute left-0 top-0 h-full w-full" />
-      )}
+      {!blurred && <div className="herosection-bg absolute left-0 top-0 h-full w-full" />}
       <div
         className={`herosection-content relative z-20 bg-grey-darken  ${
           blurred ? 'bg-opacity-20' : 'bg-opacity-90'
@@ -59,9 +57,7 @@ const HeroSection = ({
                     width={150}
                     layout="responsive"
                     placeholder="blur"
-                    blurDataURL={`data:image/svg+xml;base64,${toBase64(
-                      shimmer(150, 150)
-                    )}`}
+                    blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(150, 150))}`}
                   />
                 </div>
               </motion.div>

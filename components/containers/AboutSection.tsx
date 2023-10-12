@@ -38,9 +38,7 @@ const AboutSection = () => {
               layout="responsive"
               alt={data.fullName}
               placeholder="blur"
-              blurDataURL={`data:image/svg+xml;base64,${toBase64(
-                shimmer(660, 422)
-              )}`}
+              blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(660, 422))}`}
             />
           </div>
         </motion.div>
@@ -76,10 +74,8 @@ const AboutSection = () => {
             )}
             {data.age && (
               <li className="text-lg">
-                <strong className="inline-block min-w-[120px] font-medium">
-                  Age{' '}
-                </strong>
-                : {data.age} years
+                <strong className="inline-block min-w-[120px] font-medium">Age </strong>:{' '}
+                {data.age} years
               </li>
             )}
             {data.nationality && (
@@ -100,9 +96,7 @@ const AboutSection = () => {
             ) : null}
             {data.address && (
               <li className="text-lg">
-                <strong className="inline-block min-w-[120px] font-medium">
-                  Address{' '}
-                </strong>
+                <strong className="inline-block min-w-[120px] font-medium">Address </strong>
                 : {data.address}
               </li>
             )}
