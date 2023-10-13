@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "Mobile App Development",
+    "text": "I bring your mobile app visions to life by utilizing the potent capabilities of React Native, ensuring your application is seamless, engaging, and accessible across all platforms. Specializing in developing high-performance, secure, and scalable applications for both iOS and Android, I'm dedicated to tailoring each mobile app to meet the unique demands of your target audience and achieve your business objectives.",
+    "icon": "/icons/smartphone-line.svg"
+  },
+  {
+    "id": 2,
+    "title": "Web Development",
+    "text": "Elevate your online presence with my specialized web development services. With a foundation in advanced technologies like ReactJS and NextJS, I design and implement websites and web applications that are not only visually compelling but also robust, secure, and optimized for all devices. My focus is on delivering an outstanding user experience, ensuring SEO effectiveness, and providing a digital platform that truly stands out in the competitive online environment.",
+    "icon": "/icons/code-s-slash-line.svg"
+  },
+  {
+    "id": 3,
+    "title": "Product Maintenance and Support",
+    "text": "Ensure the enduring success and stability of your digital products with my meticulous product maintenance and support services. I prioritize keeping your platforms contemporary, secure, and functioning at peak performance through regular updates and vigilant problem management. With a commitment to preserving uninterrupted operation, I maintain user satisfaction and trust, guaranteeing your digital solution stands the test of time and evolves alongside technological advancements.",
+    "icon": "/icons/quill-pen-line.svg"
+  }
+]

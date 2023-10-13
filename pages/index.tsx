@@ -1,10 +1,9 @@
 import React from 'react';
 import Head from 'next/head';
 import { Element as Section } from 'react-scroll';
-import { HeroSection } from '@/components/containers';
+import { HeroSection, AboutSection, ServicesSection } from '@/components/containers';
 import { Layout } from '@/components/layout';
 import { SectionHeading } from '@/components/utils';
-import AboutSection from '@/components/containers/AboutSection';
 
 export default function Home() {
   return (
@@ -27,6 +26,15 @@ export default function Home() {
         </div>
       </Section>
       {/* End About Section */}
+
+      {/* Start Service Section */}
+      <Section name="section-service" className="services-section pt-24 lg:pt-28 xl:pt-32">
+        <div className="container mx-auto">
+          <SectionHeading animated={false} title="My Services" watermark="Services" />
+          <ServicesSection />
+        </div>
+      </Section>
+      {/* End Service Section */}
     </Layout>
   );
 }

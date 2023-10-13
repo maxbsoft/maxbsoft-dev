@@ -1,6 +1,7 @@
 import { AxiosResponse } from 'axios';
 import { InformationModel, PortfolioFiltersModel } from '@/models';
 import { http } from './http';
+import { ServicesModel } from '@/models/servicesModel';
 
 const getInformation = async (): Promise<InformationModel> => {
   try {
@@ -12,9 +13,14 @@ const getInformation = async (): Promise<InformationModel> => {
   }
 };
 
-const getServices = async () => {
-  const res = await http.get('/services.json');
-  return res.data;
+const getServices = async (): Promise<ServicesModel> => {
+  try {
+    const res: AxiosResponse<ServicesModel> = await http.get('/services.json');
+    return res.data;
+  } catch (error) {
+    console.error('getServices', error);
+    throw error;
+  }
 };
 
 const getTechskills = async () => {
