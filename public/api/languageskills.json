@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "title": "JavaScript",
+    "percentage": 95
+  },
+  {
+    "id": 2,
+    "title": "TypeScript",
+    "percentage": 90
+  },
+  {
+    "id": 3,
+    "title": "React Native",
+    "percentage": 95
+  },
+  {
+    "id": 4,
+    "title": "React Js",
+    "percentage": 90
+  },
+  {
+    "id": 5,
+    "title": "Next Js",
+    "percentage": 90
+  },
+  {
+    "id": 6,
+    "title": "Html & Css",
+    "percentage": 90
+  },
+  {
+    "id": 7,
+    "title": "Node Js",
+    "percentage": 80
+  },
+  {
+    "id": 8,
+    "title": "Objective C",
+    "percentage": 85
+  },
+  {
+    "id": 9,
+    "title": "Swift",
+    "percentage": 85
+  },
+  {
+    "id": 10,
+    "title": "Java",
+    "percentage": 85
+  },
+  {
+    "id": 11,
+    "title": "C++",
+    "percentage": 80
+  },
+  {
+    "id": 12,
+    "title": "Python",
+    "percentage": 70
+  }
+]

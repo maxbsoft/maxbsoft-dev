@@ -1,11 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { SkillModel } from '@/models';
 
 export interface ProgressCircleProps {
-  skill: {
-    title?: string;
-    percentage: number;
-  };
+  skill: SkillModel;
 }
 const ProgressCircle = ({ skill: { title, percentage } }: ProgressCircleProps) => {
   const draw = {

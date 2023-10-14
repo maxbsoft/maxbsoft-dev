@@ -2,6 +2,7 @@ import { AxiosResponse } from 'axios';
 import { InformationModel, PortfolioFiltersModel } from '@/models';
 import { http } from './http';
 import { ServicesModel } from '@/models/servicesModel';
+import { SkillsModel } from '@/models/skillsModel';
 
 const getInformation = async (): Promise<InformationModel> => {
   try {
@@ -23,14 +24,24 @@ const getServices = async (): Promise<ServicesModel> => {
   }
 };
 
-const getTechskills = async () => {
-  const res = await http.get('/techskills.json');
-  return res.data;
+const getTechskills = async (): Promise<SkillsModel> => {
+  try {
+    const res: AxiosResponse<SkillsModel> = await http.get('/techskills.json');
+    return res.data;
+  } catch (error) {
+    console.error('getTechskills', error);
+    throw error;
+  }
 };
 
-const getLanguageskills = async () => {
-  const res = await http.get('/languageskills.json');
-  return res.data;
+const getLanguageskills = async (): Promise<SkillsModel> => {
+  try {
+    const res: AxiosResponse<SkillsModel> = await http.get('/languageskills.json');
+    return res.data;
+  } catch (error) {
+    console.error('getLanguageskills', error);
+    throw error;
+  }
 };
 
 const getPortfolioFilters = async (): Promise<PortfolioFiltersModel> => {

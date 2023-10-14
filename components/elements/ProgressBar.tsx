@@ -1,11 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { SkillModel } from '@/models';
 
 export interface ProgressBarProps {
-  skill: {
-    title?: string;
-    percentage: number;
-  };
+  skill: SkillModel;
 }
 const ProgressBar = ({ skill: { title, percentage } }: ProgressBarProps) => (
   <div className="progress">
