@@ -1,0 +1,46 @@
+[
+  {
+    "id": 1,
+    "title": "Bachelor of Science",
+    "meta": "Odesa I.I. Mechnikov National University.",
+    "text": ["Faculty of Computer Networks and Systems"],
+    "year": "2002 - 2005"
+  },
+  {
+    "id": 2,
+    "title": "Associate's Degree",
+    "meta": "Odesa I.I. Mechnikov National University.",
+    "text": ["Faculty of Computer Networks and Systems"],
+    "year": "1999 - 2002"
+  },
+  {
+    "id": 3,
+    "title": "Programming Competition Award",
+    "meta": "Junior Academy of Sciences of Ukraine",
+    "text": [
+      "Awarded for creating a telephone directory database and its user interface for my city using Turbo Pascal. This implementation included easy navigation through the database, swift searches for names and phone numbers, and the ability to edit entries."
+    ],
+    "year": "2001"
+  },
+  {
+    "id": 4,
+    "title": "High School Diploma",
+    "meta": "Illichivsk School, No. 6",
+    "text": [],
+    "year": "1999 - 2001"
+  },
+  {
+    "id": 5,
+    "title": "Middle School Diploma",
+    "meta": "Illichivsk School, No. 4",
+    "text": [],
+    "year": "1994 - 1999"
+  },
+  {
+    "id": 6,
+    "title": "Elementary School Diploma",
+    "meta": "Illichivsk, Malodolynska School",
+    "text": [],
+    "year": "1991 - 1994"
+  }
+]

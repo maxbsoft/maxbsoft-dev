@@ -79,7 +79,9 @@ const HeroSection = ({
                     strings={[
                       data.fullName,
                       'Mobile App Developer',
+                      'React Native Developer',
                       'Front-End Developer',
+                      'React JS Developer',
                       'Software Engineer',
                     ]}
                     className="text-primary"

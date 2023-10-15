@@ -6,6 +6,7 @@ import {
   AboutSection,
   ServicesSection,
   SkillsSection,
+  ResumeSection,
 } from '@/components/containers';
 import { Layout } from '@/components/layout';
 import { SectionHeading } from '@/components/utils';
@@ -49,6 +50,15 @@ export default function Home() {
         </div>
       </Section>
       {/* End Service Section */}
+
+      {/* Start Resume Section */}
+      <Section name="section-resume" className="resume-section pt-24 lg:pt-28 xl:pt-32">
+        <div className="container mx-auto">
+          <SectionHeading animated={false} title="My Resume" watermark="Resume" />
+          <ResumeSection />
+        </div>
+      </Section>
+      {/* End Resume Section */}
     </Layout>
   );
 }

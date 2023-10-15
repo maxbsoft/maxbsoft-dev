@@ -1,5 +1,5 @@
 import { AxiosResponse } from 'axios';
-import { InformationModel, PortfolioFiltersModel } from '@/models';
+import { InformationModel, PortfolioFiltersModel, ResumeItemsModel } from '@/models';
 import { http } from './http';
 import { ServicesModel } from '@/models/servicesModel';
 import { SkillsModel } from '@/models/skillsModel';
@@ -61,14 +61,26 @@ const getPortfolios = async () => {
   return res.data;
 };
 
-const getJobExperience = async () => {
-  const res = await http.get('/jobexperience.json');
-  return res.data;
+const getJobExperience = async (): Promise<ResumeItemsModel> => {
+  try {
+    const res: AxiosResponse<ResumeItemsModel> = await http.get('/jobexperience.json');
+    return res.data;
+  } catch (error) {
+    console.error('getJobExperience', error);
+    throw error;
+  }
 };
 
-const getEducationBackground = async () => {
-  const res = await http.get('/educationbackground.json');
-  return res.data;
+const getEducationBackground = async (): Promise<ResumeItemsModel> => {
+  try {
+    const res: AxiosResponse<ResumeItemsModel> = await http.get(
+      '/educationbackground.json',
+    );
+    return res.data;
+  } catch (error) {
+    console.error('getEducationBackground', error);
+    throw error;
+  }
 };
 
 const getClientReviews = async () => {
