@@ -11,7 +11,7 @@ export interface MobileNavigationProps {
 const MobileNavigation = ({ changeState }: MobileNavigationProps) => {
   const router = useRouter();
 
-  const checkroute = router.route !== '/homepage2' && router.route !== '/homepage3';
+  const checkroute = router.route !== '/';
 
   const handleClick = () => {
     changeState(false);

@@ -4,7 +4,7 @@ import { useEffect, useRef } from 'react';
 const useEventListener = (
   eventType: any,
   callback: any,
-  element: Window = global.window,
+  element: Window | boolean = typeof window !== 'undefined' && window,
 ) => {
   const callbackRef = useRef(callback);
 
@@ -14,9 +14,15 @@ const useEventListener = (
 
   useEffect(() => {
     const handler = (e: any) => callbackRef.current(e);
-    element.addEventListener(eventType, handler);
+    if (typeof element !== 'boolean') {
+      element.addEventListener(eventType, handler);
+    }
 
-    return () => element.removeEventListener(eventType, handler);
+    return () => {
+      if (typeof element !== 'boolean') {
+        element.removeEventListener(eventType, handler);
+      }
+    };
   }, [eventType, element]);
 };
 
