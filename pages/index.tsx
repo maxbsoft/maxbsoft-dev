@@ -7,6 +7,7 @@ import {
   ServicesSection,
   SkillsSection,
   ResumeSection,
+  PortfoliosSection,
 } from '@/components/containers';
 import { Layout } from '@/components/layout';
 import { SectionHeading } from '@/components/utils';
@@ -59,6 +60,18 @@ export default function Home() {
         </div>
       </Section>
       {/* End Resume Section */}
+
+      {/* Start Portfolios Section */}
+      <Section
+        name="section-portfolios"
+        className="portfolios-section pt-24 lg:pt-28 xl:pt-32"
+      >
+        <div className="container mx-auto">
+          <SectionHeading animated={false} title="My Works" watermark="Works" />
+          <PortfoliosSection />
+        </div>
+      </Section>
+      {/* End Portfolios Section */}
     </Layout>
   );
 }

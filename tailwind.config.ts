@@ -72,9 +72,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [
-    require('tailwindcss-nested-groups'),
-    require('tailwindcss-debug-screens'),
-  ],
+  plugins: [require('tailwindcss-nested-groups'), require('tailwindcss-debug-screens')],
 };
 export default config;

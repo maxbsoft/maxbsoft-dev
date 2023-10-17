@@ -3,3 +3,4 @@ export type * from './portfolioFiltersModel';
 export type * from './servicesModel';
 export type * from './skillsModel';
 export type * from './resumeItemsModel';
+export type * from './portfolioItemsModel';
