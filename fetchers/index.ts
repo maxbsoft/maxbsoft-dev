@@ -4,6 +4,7 @@ import {
   PortfolioFiltersModel,
   ResumeItemsModel,
   PortfolioItemsModel,
+  ClientReviewItemsModel,
 } from '@/models';
 import { http } from './http';
 import { ServicesModel } from '@/models/servicesModel';
@@ -93,9 +94,15 @@ const getEducationBackground = async (): Promise<ResumeItemsModel> => {
   }
 };
 
-const getClientReviews = async () => {
-  const res = await http.get('/clientsreview.json');
-  return res.data;
+const getClientReviews = async (): Promise<ClientReviewItemsModel> => {
+  try {
+    const res: AxiosResponse<ClientReviewItemsModel> =
+      await http.get('/clientsreview.json');
+    return res.data;
+  } catch (error) {
+    console.error('getClientReviews', error);
+    throw error;
+  }
 };
 
 export {

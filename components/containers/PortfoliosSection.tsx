@@ -15,7 +15,9 @@ const PortfoliosSection = () => {
   const { data } = useQuery('portfolios', getPortfolios);
 
   useEffect(() => {
-    if (data) setVisiblePortfolios(data.slice(0, 6));
+    if (data) {
+      setVisiblePortfolios(data.slice(0, 6));
+    }
   }, [data]);
 
   // Portfolio Filter function

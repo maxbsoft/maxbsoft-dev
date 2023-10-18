@@ -4,6 +4,7 @@ import ServicesSection from './ServicesSection';
 import SkillsSection from './SkillsSection';
 import ResumeSection from './ResumeSection';
 import PortfoliosSection from './PortfoliosSection';
+import ReviewsSection from './ReviewsSection';
 
 export {
   HeroSection,
@@ -12,4 +13,5 @@ export {
   SkillsSection,
   ResumeSection,
   PortfoliosSection,
+  ReviewsSection,
 };
