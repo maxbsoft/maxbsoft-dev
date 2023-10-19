@@ -9,11 +9,29 @@ import {
   ResumeSection,
   PortfoliosSection,
   ReviewsSection,
+  BlogSection,
 } from '@/components/containers';
 import { Layout } from '@/components/layout';
 import { SectionHeading } from '@/components/utils';
+import { getPostsByPage } from '@/lib/blogging';
+import { PostItemsModel } from '@/models';
 
-export default function Home() {
+export function getStaticProps() {
+  const { posts } = getPostsByPage();
+
+  return {
+    props: {
+      posts,
+    },
+    revalidate: 10,
+  };
+}
+
+export interface HomeProps {
+  posts: PostItemsModel;
+}
+
+export default function Home({ posts }: HomeProps) {
   return (
     <Layout blurred>
       <Head>
@@ -82,6 +100,15 @@ export default function Home() {
         </div>
       </Section>
       {/* End Reviews Section */}
+
+      {/* Start Blog Section */}
+      <Section name="section-blog" className="news-section pt-24 lg:pt-28 xl:pt-32">
+        <div className="container mx-auto">
+          <SectionHeading animated={false} title="Latest Blogs" watermark="Blogs" />
+          <BlogSection posts={posts} />
+        </div>
+      </Section>
+      {/* End Blog Section */}
     </Layout>
   );
 }

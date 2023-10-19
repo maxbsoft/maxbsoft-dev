@@ -1,12 +1,13 @@
 import fs from 'fs';
 import matter from 'gray-matter';
 import path from 'path';
-import { filterPostsByPage, sortPostByDate } from '.';
+import { filterPostsByPage, sortPostByDate, createSlug } from '.';
+import { PostItemModel, PostItemsModel } from '@/models';
 
 const LIMIT = 6;
 
 // Get all post
-const getAllPosts = () => fs.readdirSync(path.join(process.cwd(), 'src/posts'));
+const getAllPosts = () => fs.readdirSync(path.join(process.cwd(), 'posts'));
 
 // get all posts slug
 const getAllPostsSlug = () => {
@@ -15,30 +16,35 @@ const getAllPostsSlug = () => {
 };
 
 // Get all posts data
-const getAllPostsData = () => {
+const getAllPostsData = (): PostItemsModel => {
   const files = getAllPosts();
-  const posts = files.map((filename) => {
+  const posts: PostItemsModel = files.map((filename) => {
     const slug = filename.replace(/\.(md|mdx)$/, '');
 
     const markdownWithMeta = fs.readFileSync(
-      path.join(process.cwd(), 'src/posts', filename),
+      path.join(process.cwd(), 'posts', filename),
       'utf-8',
     );
 
     const { data: frontmatter } = matter(markdownWithMeta);
-
     return {
       slug,
       ...frontmatter,
-    };
+    } as PostItemModel;
   });
   return posts.sort(sortPostByDate);
 };
 
+export interface PostPathType {
+  params: {
+    slug: string;
+  };
+}
+
 // Get posts by page
 const getPostsByPage = (page = 1, limit = 6) => {
-  const tempPosts = getAllPostsData();
-  const posts = filterPostsByPage(tempPosts, page, limit);
+  const tempPosts: PostItemsModel = getAllPostsData();
+  const posts: PostItemsModel = filterPostsByPage(tempPosts, page, limit);
   return {
     posts,
     hasMore: limit * page < tempPosts.length,
@@ -46,7 +52,7 @@ const getPostsByPage = (page = 1, limit = 6) => {
 };
 
 // Get Page Paths
-const getPagesPath = () => {
+const getPagesPath = (): PostPathType[] => {
   const files = getAllPosts();
   const pages = Math.ceil(files.length / LIMIT);
 
@@ -62,7 +68,7 @@ const getPagesPath = () => {
 };
 
 // Get all posts path (for nextjs getStaticPaths)
-const getPostsPath = () => {
+const getPostsPath = (): PostPathType[] => {
   const postsSlug = getAllPostsSlug();
 
   const paths = postsSlug.map((slug) => ({
@@ -75,86 +81,76 @@ const getPostsPath = () => {
 };
 
 // Get single post data
-const getSinglePost = (slug: string) => {
-  const post = fs.readFileSync(
-    path.join(process.cwd(), 'src/posts', `${slug}.md`),
-    'utf-8',
-  );
+const getSinglePost = (slug: string): PostItemModel => {
+  const post = fs.readFileSync(path.join(process.cwd(), 'posts', `${slug}.md`), 'utf-8');
   const { data: frontmatter, content } = matter(post);
   return {
     ...frontmatter,
     content,
-  };
+  } as PostItemModel;
 };
 
 // Get all Categories
-const getAllCategories = () =>
-  /*
+const getAllCategories = (): string[] => {
   const posts = getAllPostsData();
   // eslint-disable-next-line
-  const categories = posts.map((post) => post.category)
-
+  const categories = posts.map((post) => post.category);
   return categories.flat();
-  */
-  [];
+};
+
 // Get category paths (for nextjs getStaticPaths)
 const getCategoryPaths = () => {
-  /*
-  const allPosts = getAllPostsData()
-  const allCategories = getAllCategories()
-  const categories = [...new Set<any>(allCategories)]
+  const allPosts = getAllPostsData();
+  const allCategories = getAllCategories();
+  const categories = [...new Set<string>(allCategories)];
   const paths = categories.map((category) => {
     const filteredPosts = allPosts.filter((post) => {
-      const temp = post.category.map((cat: any) => createSlug(cat))
-      return temp.includes(category.toLowerCase())
-    })
-    const pages = Math.ceil(filteredPosts.length / LIMIT)
+      const temp = post.category.map((cat: string) => createSlug(cat));
+      return temp.includes(category.toLowerCase());
+    });
+    const pages = Math.ceil(filteredPosts.length / LIMIT);
 
-    let tempPath = []
+    const tempPath = [];
     for (let i = 1; i <= pages; i++) {
       tempPath.push({
         params: {
           slug: category.toLowerCase(),
           page: String(i),
         },
-      })
+      });
     }
-    return tempPath
-  })
-
-  return paths.flat()
-  */
+    return tempPath;
+  });
+  return paths.flat();
 };
 
 // Get all posts by category
-/*
-const getPostsByCategory = (category, page = 1, limit = 6) => {
-  const allPosts = getAllPostsData()
+const getPostsByCategory = (category: string, page = 1, limit = 6) => {
+  const allPosts: PostItemsModel = getAllPostsData();
 
   const filteredPosts = allPosts.filter((post) => {
-    const temp = post.category.map((cat) => createSlug(cat))
-    return temp.includes(category)
-  })
+    const temp = post.category.map((cat) => createSlug(cat));
+    return temp.includes(category);
+  });
 
-  const posts = filterPostsByPage(filteredPosts, page, limit)
+  const posts = filterPostsByPage(filteredPosts, page, limit);
 
   return {
     posts,
     hasMore: limit * page < filteredPosts.length,
-  }
-}
-*/
+  };
+};
 
 // Get recent posts
-const getRecentPosts = () => {
-  const allPosts = getAllPostsData();
+const getRecentPosts = (): PostItemsModel => {
+  const allPosts: PostItemsModel = getAllPostsData();
 
   return allPosts.slice(0, 5);
 };
 
 export {
   getPostsByPage,
-  // getPostsByCategory,
+  getPostsByCategory,
   getPostsPath,
   getPagesPath,
   getSinglePost,

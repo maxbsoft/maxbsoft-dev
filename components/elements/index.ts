@@ -5,6 +5,7 @@ import ProgressCircle from './ProgressCircle';
 import TimelineItem from './TimelineItem';
 import Portfolio from './Portfolio';
 import Review from './Review';
+import Blog from './Blog';
 
 export {
   SocialIcons,
@@ -14,4 +15,5 @@ export {
   TimelineItem,
   Portfolio,
   Review,
+  Blog,
 };
