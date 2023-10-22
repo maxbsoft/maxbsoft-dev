@@ -6,6 +6,7 @@ import TimelineItem from './TimelineItem';
 import Portfolio from './Portfolio';
 import Review from './Review';
 import Blog from './Blog';
+import Breadcrumb from './Breadcrumb';
 
 export {
   SocialIcons,
@@ -16,4 +17,5 @@ export {
   Portfolio,
   Review,
   Blog,
+  Breadcrumb,
 };
