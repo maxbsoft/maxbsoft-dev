@@ -1,3 +1,4 @@
 import Layout from './Layout';
+import Layout2 from './Layout2';
 
-export { Layout };
+export { Layout, Layout2 };

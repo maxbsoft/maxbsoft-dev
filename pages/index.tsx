@@ -10,6 +10,7 @@ import {
   PortfoliosSection,
   ReviewsSection,
   BlogSection,
+  ContactSection,
 } from '@/components/containers';
 import { Layout } from '@/components/layout';
 import { SectionHeading } from '@/components/utils';
@@ -40,7 +41,7 @@ export default function Home({ posts }: HomeProps) {
 
       {/* Start Hero Section */}
       <Section name="section-home">
-        <HeroSection blurred scroll={false} typed={true} />
+        <HeroSection blurred scroll={true} typed={true} />
       </Section>
       {/* End Hero Section */}
 
@@ -109,6 +110,17 @@ export default function Home({ posts }: HomeProps) {
         </div>
       </Section>
       {/* End Blog Section */}
+
+      {/* Start Contact Section */}
+      <Section name="section-contact" className="contact-section pt-24 lg:pt-28 xl:pt-32">
+        <div className="container mx-auto">
+          <SectionHeading animated={false} title="Contact Us" watermark="Contact" />
+          <ContactSection />
+        </div>
+      </Section>
+      {/* End Contact Section */}
+
+      <span className="block pb-24 lg:pb-28 xl:pb-32"></span>
     </Layout>
   );
 }
