@@ -1,8 +1,8 @@
 import fs from 'fs';
 import matter from 'gray-matter';
 import path from 'path';
-import { filterPostsByPage, sortPostByDate, createSlug } from '.';
 import { PostItemModel, PostItemsModel } from '@/models';
+import { filterPostsByPage, sortPostByDate, createSlug } from '.';
 
 const LIMIT = 6;
 
