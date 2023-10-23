@@ -40,7 +40,7 @@ const PostPage = ({ title, date, cover, category, content }: PostPageProps) => {
   return (
     <Layout>
       <Head>
-        <title>{title} - Bieber - React Personal Portfolio Template</title>
+        <title>{title} - Max Balukh - Mobile App Developer</title>
       </Head>
       <Breadcrumb
         title={title}

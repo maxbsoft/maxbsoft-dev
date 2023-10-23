@@ -68,5 +68,6 @@
     "tailwindcss-nested-groups": "^1.2.4",
     "typescript": "^5"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "proxy": "http://192.168.1.5:3002/api"
 }

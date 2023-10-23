@@ -6,7 +6,7 @@ export interface BreadcrumbPath {
 }
 export interface BreadcrumbProps {
   title: string;
-  paths: BreadcrumbPath[];
+  paths: BreadcrumbPath[] | undefined;
   blurred: boolean;
 }
 const Breadcrumb = ({ title, paths, blurred }: BreadcrumbProps) => {
