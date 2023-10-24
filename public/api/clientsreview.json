@@ -1,42 +1,416 @@
 [
   {
     "id": 1,
-    "name": "Client Name",
-    "meta": "client company",
-    "givenreview": 5.0,
-    "image": "/images/user-avatar-1.png",
-    "text": "Feedback text"
+    "name": "Солтан",
+    "nameLatin": "Soltan",
+    "profileUrl": "https://www.weblancer.net/users/MettSmith/",
+    "nickname": "MettSmith",
+    "meta": "weblancer.net",
+    "age": 45,
+    "country": "Канада",
+    "rate": 10,
+    "date": "2023-03-28",
+    "projectName": {
+      "ru": "Интеграция React Native приложения с SDK POS терминала.",
+      "uk": "Інтеграція React Native додатка з SDK POS терміналу.",
+      "en": "Integration of React Native application with SDK POS terminal."
+    },
+    "feedbackText": {
+      "ru": "Максим прекрасно справился с заданием. Все задачи выполнены быстро и профессионально. Обязательно будем ещё обращаться.",
+      "uk": "Максим чудово впорався з завданням. Усі завдання виконані швидко та професійно. Обов'язково будемо ще звертатися.",
+      "en": "Maxim did a great job. All tasks were completed quickly and professionally. We will definitely reach out again."
+    },
+    "avatar": "https://st.weblancer.net/download/5503579_120xs.jpeg"
   },
   {
     "id": 2,
-    "name": "Client Name",
-    "meta": "client company",
-    "givenreview": 4.2,
-    "image": "/images/user-avatar-4.png",
-    "text": "Feedback text"
+    "name": "Vitali Kaspler",
+    "nameLatin": "Vitali Kaspler",
+    "profileUrl": "https://freelancehunt.com/employer/mealco.html",
+    "meta": "freelancehunt.com",
+    "nickname": null,
+    "age": null,
+    "country": "Украина",
+    "rate": 10,
+    "date": "2023-03-09",
+    "projectName": {
+      "ru": "Доработка Android (RN) приложения для работы с POS-принтерами Epson",
+      "uk": "Доробка Android (RN) додатка для роботи з POS-принтерами Epson",
+      "en": "Improvement of Android (RN) application for working with Epson POS printers"
+    },
+    "feedbackText": {
+      "ru": "Максим реализовал все в соответствии с техническим заданием и в срок. Отличная коммуникация.",
+      "uk": "Максим реалізував все відповідно до технічного завдання і в термін. Відмінна комунікація.",
+      "en": "Maxim implemented everything according to the technical specifications and on time. Excellent communication."
+    },
+    "avatar": "https://content.freelancehunt.com/profile/photo/225/mealco.png"
   },
   {
     "id": 3,
-    "name": "Client Name",
-    "meta": "client company",
-    "givenreview": 4.2,
-    "image": "/images/user-avatar-3.png",
-    "text": "Feedback text"
+    "name": "Evgeniy K",
+    "nameLatin": "Evgeniy K",
+    "profileUrl": "https://freelancehunt.com/employer/ba9nist.html",
+    "meta": "freelancehunt.com",
+    "nickname": null,
+    "age": null,
+    "country": "Украина",
+    "rate": 10,
+    "date": "2022-10-27",
+    "projectName": {
+      "ru": "Приложения-заметки на React Native (iOS+android)",
+      "uk": "Додатки-нотатки на React Native (iOS+android)",
+      "en": "Note-taking apps on React Native (iOS+android)"
+    },
+    "feedbackText": {
+      "ru": "Максим адекватен в общении, все время был на связи, спокойно решил достаточно сложные нестандартные задачи по проекту и в целом кажется профессионалом. Рекомендую к сотрудничеству.",
+      "uk": "Максим адекватний у спілкуванні, все час був на зв'язку, спокійно вирішив досить складні нестандартні завдання за проектом і в цілому здається професіоналом. Рекомендую до співпраці.",
+      "en": "Maxim is reasonable in communication, was always available, calmly solved quite complex non-standard tasks for the project, and overall seems like a professional. I recommend for collaboration."
+    },
+    "avatar": null
   },
   {
     "id": 4,
-    "name": "Client Name",
-    "meta": "client company",
-    "givenreview": 4.7,
-    "image": "/images/user-avatar-2.png",
-    "text": "Feedback text"
+    "name": "Илья Суханов",
+    "nameLatin": "Ilya Sukhanov",
+    "profileUrl": "https://www.weblancer.net/users/illya_s/",
+    "meta": "weblancer.net",
+    "nickname": "illya_s",
+    "age": 37,
+    "country": "Украина",
+    "rate": 10,
+    "date": "2021-07-12",
+    "projectName": {
+      "ru": "React Native Приложение для Android",
+      "uk": "React Native Додаток для Android",
+      "en": "React Native Application for Android"
+    },
+    "feedbackText": {
+      "ru": "Максим справился с задачей быстро и качественно, без лишних пустых разговоров. Планирую дальнейшее сотрудничество с Максимом и рекомендую другим как ответственного и квалифицированного специалиста.",
+      "uk": "Максим впорався з завданням швидко та якісно, без зайвих порожніх розмов. Планую подальше співпрацю з Максимом і рекомендую іншим як відповідального та кваліфікованого спеціаліста.",
+      "en": "Maxim handled the task quickly and efficiently, without unnecessary chatter. I plan to continue collaborating with Maxim and recommend him to others as a responsible and qualified specialist."
+    },
+    "avatar": null
   },
   {
     "id": 5,
-    "name": "Client Name",
-    "meta": "client company",
-    "givenreview": 5,
-    "image": "/images/user-avatar-2.png",
-    "text": "Feedback text"
+    "name": "Коримов",
+    "nameLatin": "Korimov",
+    "profileUrl": "https://www.weblancer.net/users/ikorimov/",
+    "meta": "weblancer.net",
+    "nickname": "ikorimov",
+    "age": 42,
+    "country": "Беларусь",
+    "rate": 10,
+    "date": "2020-10-19",
+    "projectName": {
+      "ru": "Доработки проекта на React Native",
+      "uk": "Доробки проекту на React Native",
+      "en": "Improvements to the React Native project"
+    },
+    "feedbackText": {
+      "ru": "Отличный исполнитель, будем сотрудничать и в дальнейшем",
+      "uk": "Чудовий виконавець, будемо співпрацювати і в подальшому",
+      "en": "Excellent performer, we will cooperate in the future"
+    },
+    "avatar": null
+  },
+  {
+    "id": 6,
+    "name": "Алексей Бородин",
+    "nameLatin": "Aleksey Borodin",
+    "profileUrl": "https://www.weblancer.net/users/fromcar22/",
+    "meta": "weblancer.net",
+    "nickname": "fromcar22",
+    "age": 38,
+    "country": "Россия",
+    "rate": 10,
+    "date": "2019-02-16",
+    "projectName": {
+      "ru": "Парсер по API",
+      "uk": "Парсер за API",
+      "en": "Parser via API"
+    },
+    "feedbackText": {
+      "ru": "Грамотный специалист, задание всё время дополнялось появлялись дополнительные сложности, но всё было решено, причем очень быстро и качественно. Спасибо!",
+      "uk": "Грамотний спеціаліст, завдання все час доповнювалося, з'являлися додаткові складності, але все було вирішено, причому дуже швидко і якісно. Дякую!",
+      "en": "A competent specialist, the task was constantly supplemented, additional difficulties arose, but everything was resolved, and very quickly and efficiently. Thank you!"
+    },
+    "avatar": null
+  },
+  {
+    "id": 7,
+    "name": "Олег Иванов",
+    "nameLatin": "Oleg Ivanov",
+    "profileUrl": "https://www.weblancer.net/users/moder77/",
+    "meta": "weblancer.net",
+    "nickname": "moder77",
+    "age": 41,
+    "country": "Россия",
+    "rate": 10,
+    "date": "2018-10-10",
+    "projectName": {
+      "ru": "Сделать странички товаров по шаблону",
+      "uk": "Зробити сторінки товарів за шаблоном",
+      "en": "Create product pages based on a template"
+    },
+    "feedbackText": {
+      "ru": "Прекрасно поработали. Всё сделано на высшем уровне",
+      "uk": "Чудово пороботили. Все зроблено на найвищому рівні",
+      "en": "We worked wonderfully. Everything is done at the highest level"
+    },
+    "avatar": "https://st.weblancer.net/download/2636420_120xs.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Геннадий Рульцов",
+    "nameLatin": "Gennadiy Rultsov",
+    "profileUrl": "https://www.weblancer.net/users/cosmosok/",
+    "meta": "weblancer.net",
+    "nickname": "cosmosok",
+    "age": 44,
+    "country": "Россия",
+    "rate": 10,
+    "date": "2017-11-30",
+    "projectName": {
+      "ru": "Разрабoтка текстoвой игpы (iОS)",
+      "uk": "Розробка текстової гри (iОS)",
+      "en": "Development of a text game (iOS)"
+    },
+    "feedbackText": {
+      "ru": "Сильный отзывчивый исполнитель. Рекомендую",
+      "uk": "Сильний відгуковий виконавець. Рекомендую",
+      "en": "Strong responsive performer. Recommend"
+    },
+    "avatar": null
+  },
+  {
+    "id": 9,
+    "name": "Alexander Goncharenko",
+    "nameLatin": "Alexander Goncharenko",
+    "profileUrl": "https://freelancehunt.com/employer/axghouse.html",
+    "meta": "freelancehunt.com",
+    "nickname": null,
+    "age": null,
+    "country": "Украина",
+    "rate": 10,
+    "date": "2017-08-21",
+    "projectName": {
+      "ru": "Добавление функций в CRM системе на Framework codeigniter 3! Срочно!",
+      "uk": "Додавання функцій в CRM системі на Framework codeigniter 3! Терміново!",
+      "en": "Adding features to the CRM system on Framework codeigniter 3! Urgently!"
+    },
+    "feedbackText": {
+      "ru": "Все по высшему классу! Спасибо за работу.",
+      "uk": "Все за найвищим класом! Дякую за роботу.",
+      "en": "Everything is top-notch! Thank you for the work."
+    },
+    "avatar": null
+  },
+  {
+    "id": 10,
+    "name": "Дмитрий Конаш",
+    "nameLatin": "Dmitriy Konash",
+    "profileUrl": "https://www.weblancer.net/users/dkonash/",
+    "meta": "weblancer.net",
+    "nickname": "dkonash",
+    "age": 59,
+    "country": "Россия",
+    "rate": 10,
+    "date": "2017-09-23",
+    "projectName": {
+      "ru": "Разработка модуля снятия пульса с камеры смартфона",
+      "uk": "Розробка модуля зняття пульсу з камери смартфона",
+      "en": "Development of a module for measuring pulse from a smartphone camera"
+    },
+    "feedbackText": {
+      "ru": "Полностью удовлетворен сотрудничеством с Максимом! Проект выполнен с очень высоким качеством. Максим предложил и реализовал структуру хранения и администрирования обработанных данных в облаке, которая превысила мои ожидания. По срокам немного выбились из договоренного графика, но это объяснимо. Техническая задача по качественному снятию пульса с камеры смартфона - весьма сложна. Качество коммуникации - очень высоко, Максим быстро реагирует на вопросы и предоставляет качественные ответы. Однозначно буду продолжать сотрудничество с Максимом! Рекомендую",
+      "uk": "Повністю задоволений співпрацею з Максимом! Проект виконано з дуже високою якістю. Максим запропонував і реалізував структуру зберігання та адміністрування оброблених даних у хмарі, яка перевершила мої очікування. За термінами трохи вийшли з домовленого графіка, але це пояснюється. Технічне завдання по якісному зняттю пульсу з камери смартфона - досить складне. Якість комунікації - дуже висока, Максим швидко реагує на питання та надає якісні відповіді. Однозначно буду продовжувати співпрацю з Максимом! Рекомендую",
+      "en": "Fully satisfied with the collaboration with Maxim! The project was completed with very high quality. Maxim proposed and implemented a structure for storing and administering processed data in the cloud, which exceeded my expectations. We went a little off the agreed schedule in terms of timing, but it's understandable. The technical task of quality pulse capture from a smartphone camera is quite complex. The quality of communication is very high, Maxim quickly responds to questions and provides quality answers. I will definitely continue to cooperate with Maxim! Recommend"
+    },
+    "avatar": "https://st.weblancer.net/download/3058791_120xs.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Станислав",
+    "nameLatin": "Stanislav",
+    "profileUrl": "https://www.weblancer.net/users/sliak/",
+    "meta": "weblancer.net",
+    "nickname": "sliak",
+    "age": 48,
+    "country": "Россия",
+    "rate": 10,
+    "date": "2017-05-24",
+    "projectName": {
+      "ru": "Наполнить opencart с помощью xml или json импорта",
+      "uk": "Заповнити opencart за допомогою xml або json імпорту",
+      "en": "Fill opencart using xml or json import"
+    },
+    "feedbackText": {
+      "ru": "Работаю с фрилансерами уже не первый год, сейчас сижу и пытаюсь вспомнить, когда последний раз встречал на столько ответственного, и что самое главное - пунктуального программиста, который отвечает за свои слова. Задание выполнил быстро и в срок. Учтены все моменты, даже те, о которых я и не задумывался изначально. Качество работы на высоте. Крайне рекомендую!",
+      "uk": "Працюю з фрілансерами вже не перший рік, зараз сиджу і намагаюся згадати, коли востаннє зустрічав настільки відповідального, і що найголовніше - пунктуального програміста, який відповідає за свої слова. Завдання виконано швидко і в термін. Враховано всі моменти, навіть ті, про які я і не задумувався спочатку. Якість роботи на висоті. Дуже рекомендую!",
+      "en": "I've been working with freelancers for several years now, and I'm trying to remember the last time I met someone so responsible, and most importantly - punctual, who stands by their word. The task was completed quickly and on time. All aspects were considered, even those I hadn't initially thought of. The quality of work is top-notch. Highly recommend!"
+    },
+    "avatar": null
+  },
+  {
+    "id": 12,
+    "name": "Григорий",
+    "nameLatin": "Grigoriy",
+    "profileUrl": "https://www.weblancer.net/users/web-house/",
+    "meta": "weblancer.net",
+    "nickname": "web-house",
+    "age": 31,
+    "country": "Россия",
+    "rate": 10,
+    "date": "2016-04-26",
+    "projectName": {
+      "ru": "JAVA разработчик",
+      "uk": "JAVA розробник",
+      "en": "JAVA developer"
+    },
+    "feedbackText": {
+      "ru": "Отличный JAVA-программист. Хоть немного отошли от срока, но были внесены все поправки и доработки соблюдая ТЗ. Спасибо!",
+      "uk": "Чудовий JAVA-програміст. Хоч трохи відхилилися від терміну, але були внесені всі виправлення та доробки, дотримуючись ТЗ. Дякую!",
+      "en": "Excellent JAVA programmer. Although we deviated a bit from the deadline, all corrections and improvements were made according to the technical specifications. Thank you!"
+    },
+    "avatar": "https://st.weblancer.net/download/3867241_120xs.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Дмитрий",
+    "nameLatin": "Dmitriy",
+    "profileUrl": "https://www.weblancer.net/users/qwertydesign/",
+    "meta": "weblancer.net",
+    "nickname": "qwertydesign",
+    "age": 36,
+    "country": "Россия",
+    "rate": 9,
+    "date": "2016-04-06",
+    "projectName": {
+      "ru": "Мобильное приложение под ios и Android",
+      "uk": "Мобільний додаток під ios і Android",
+      "en": "Mobile application for ios and Android"
+    },
+    "feedbackText": {
+      "ru": "Работа в данный момент еще протекает, но у меня нет причин не рекомендовать Максима",
+      "uk": "Робота на даний момент ще триває, але у мене немає причин не рекомендувати Максима",
+      "en": "The work is still ongoing at the moment, but I have no reason not to recommend Maxim"
+    },
+    "avatar": null
+  },
+  {
+    "id": 14,
+    "name": "Виталий",
+    "nameLatin": "Vitaliy",
+    "profileUrl": "https://www.weblancer.net/users/maxstor2004/",
+    "meta": "weblancer.net",
+    "nickname": "maxstor2004",
+    "age": 39,
+    "country": "Беларусь",
+    "rate": 10,
+    "date": "2015-11-01",
+    "projectName": {
+      "ru": "Программа для видео обработки, запускаемая через командную строку.",
+      "uk": "Програма для відео обробки, яка запускається через командний рядок.",
+      "en": "Video processing software launched via command line."
+    },
+    "feedbackText": {
+      "ru": "Все супер! Постоянная коммуникация, обратная связь, все четко по срокам и по ТЗ. Рекомендую.",
+      "uk": "Все супер! Постійна комунікація, зворотний зв'язок, все чітко за термінами і за ТЗ. Рекомендую.",
+      "en": "Everything's great! Constant communication, feedback, everything is on time and according to the technical specifications. Recommend."
+    },
+    "avatar": null
+  },
+  {
+    "id": 15,
+    "name": "Евгений",
+    "nameLatin": "Evgeniy",
+    "profileUrl": "https://www.weblancer.net/users/wisenum/",
+    "meta": "weblancer.net",
+    "nickname": "wisenum",
+    "age": 43,
+    "country": "Россия",
+    "rate": 10,
+    "date": "2009-08-13",
+    "projectName": {
+      "ru": "Ну очень интересное Flash под red5",
+      "uk": "Дуже цікавий Flash під red5",
+      "en": "A very interesting Flash under red5"
+    },
+    "feedbackText": {
+      "ru": "Отличный исполнитель, настоящий профи, знает свое дело, быстро вникает в суть задачи, предлагает сам альтернативные решения и доработки, кот. могут улучшить результат, мастер на все руки: html flex flash java php mysql - в общем только положительные эмоции!",
+      "uk": "Чудовий виконавець, справжній профі, знає свою справу, швидко вникає в суть завдання, пропонує сам альтернативні рішення та доробки, які можуть покращити результат, майстер на всі руки: html flex flash java php mysql - загалом тільки позитивні емоції!",
+      "en": "Excellent performer, a real pro, knows his stuff, quickly delves into the essence of the task, offers alternative solutions and improvements himself, which can improve the result, a jack of all trades: html flex flash java php mysql - overall only positive emotions!"
+    },
+    "avatar": null
+  },
+  {
+    "id": 16,
+    "name": "Георгий Эпштейн",
+    "nameLatin": "Georgiy Epshteyn",
+    "profileUrl": "https://www.weblancer.net/users/itexus/",
+    "meta": "weblancer.net",
+    "nickname": "itexus",
+    "age": 44,
+    "country": "Беларусь",
+    "rate": 10,
+    "date": "2009-06-25",
+    "projectName": {
+      "ru": "Разработкa компонента whiteboard",
+      "uk": "Розробка компонента whiteboard",
+      "en": "Development of a whiteboard component"
+    },
+    "feedbackText": {
+      "ru": "Задача выполнена на отлично. Рекомендую.",
+      "uk": "Завдання виконано на відмінно. Рекомендую.",
+      "en": "The task was done excellently. Recommend."
+    },
+    "avatar": "https://st.weblancer.net/download/4154150_120xs.jpeg"
+  },
+  {
+    "id": 17,
+    "name": "Егор Русинов",
+    "nameLatin": "Egor Rusinov",
+    "profileUrl": "https://www.weblancer.net/users/Xopca/",
+    "meta": "weblancer.net",
+    "nickname": "Xopca",
+    "age": 43,
+    "country": "Россия",
+    "rate": 10,
+    "date": "2009-02-17",
+    "projectName": {
+      "ru": "Натянуть дизайн на два движка от Ласто",
+      "uk": "Натягнути дизайн на два двигуни від Ласто",
+      "en": "Apply design to two engines from Lasto"
+    },
+    "feedbackText": {
+      "ru": "Работа была сделана быстро и качественно, последующие вопросы по настойке также были оперативно даны, даже после оплаты. Человеку можно доверять. Рекомендую!!!",
+      "uk": "Робота була зроблена швидко та якісно, наступні питання по налаштуванню також були оперативно дані, навіть після оплати. Людині можна довіряти. Рекомендую!!!",
+      "en": "The work was done quickly and efficiently, subsequent questions about tuning were also promptly given, even after payment. You can trust this person. Highly recommend!!!"
+    },
+    "avatar": null
+  },
+  {
+    "id": 18,
+    "name": "Александр",
+    "nameLatin": "Aleksandr",
+    "profileUrl": "https://www.weblancer.net/users/AlexAntre/",
+    "meta": "weblancer.net",
+    "nickname": "AlexAntre",
+    "age": 55,
+    "country": "Россия",
+    "rate": 10,
+    "date": "2008-11-24",
+    "projectName": {
+      "ru": "Доработка Shop Script Free",
+      "uk": "Доробка Shop Script Free",
+      "en": "Improvement of Shop Script Free"
+    },
+    "feedbackText": {
+      "ru": "Приятно было работать с Максимом. Минимум вопросов от исполнителя. Все сделано КАЧЕСТВЕННО и в СРОК. В дальнейшем буду обращаться именно к Максиму. Рекомендую всем!",
+      "uk": "Приємно було працювати з Максимом. Мінімум питань від виконавця. Все зроблено ЯКІСНО і в ТЕРМІН. У подальшому буду звертатися саме до Максима. Рекомендую всім!",
+      "en": "It was a pleasure working with Maxim. Minimum questions from the contractor. Everything is done QUALITATIVELY and ON TIME. In the future, I will turn specifically to Maxim. Recommend to everyone!"
+    },
+    "avatar": null
   }
 ]

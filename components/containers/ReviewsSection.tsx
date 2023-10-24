@@ -48,7 +48,7 @@ const ReviewsSection = () => {
         {data?.map((review) => (
           <SwiperSlide key={review.id}>
             <div className="slider-item">
-              <Review review={review} />
+              <Review locale="en" review={review} />
             </div>
           </SwiperSlide>
         ))}
