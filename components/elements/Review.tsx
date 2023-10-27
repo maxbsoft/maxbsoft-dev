@@ -3,7 +3,8 @@ import StarRatings from 'react-star-ratings';
 import { imageLoader, shimmer, toBase64 } from '@/lib/utils';
 import { ClientReviewItemModel } from '@/models';
 import { Locale } from '@/types';
-import { useState } from 'react';
+import { useLayoutEffect, useState, useRef, useEffect } from 'react';
+import Link from 'next/link';
 
 export interface ReviewProps {
   locale: Locale;
@@ -11,16 +12,35 @@ export interface ReviewProps {
 }
 const Review = ({
   locale = 'en',
-  review: { nameLatin, meta, rate, avatar, projectName, feedbackText },
+  review: { name, meta, rate, avatar, projectName, profileUrl, originLocale, feedbackText },
 }: ReviewProps) => {
   const [isExpanded, setIsExpanded] = useState(false);
+  const [showMoreButton, setShowMoreButton] = useState(false);
+  const [currentLocale, setCurrentLocale] = useState(locale);
+  const textRef = useRef<HTMLParagraphElement>(null);
+
+  useEffect(() => setCurrentLocale(locale), [locale]);
+
+  const checkTextOverflow = () => {
+    if (textRef.current) {
+      const element = textRef.current;
+      const lineHeight = parseFloat(getComputedStyle(element).lineHeight);
+      const maxHeight = lineHeight * 3 + 12;
+      setShowMoreButton(element.scrollHeight > maxHeight);
+    }
+  };
+
+  useLayoutEffect(() => {
+    checkTextOverflow();
+  }, []);
+
   return (
     <div className="review card mt-11 p-4 md:p-5">
       <div className="review-image fiximage relative -mt-14 mb-4 inline-block h-20 w-20 overflow-hidden rounded-full border-4 border-primary md:-mt-16">
         <Image
           loader={imageLoader}
           unoptimized={true}
-          src={avatar ?? `https://ui-avatars.com/api/?name=${nameLatin}`}
+          src={avatar ?? `https://ui-avatars.com/api/?name=${name['en']}&background=random`}
           alt="user image"
           height={80}
           width={80}
@@ -29,9 +49,15 @@ const Review = ({
           blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(80, 80))}`}
         />
       </div>
-      <h5 className="mb-0">{nameLatin}</h5>
+      <h5 className="mb-0">{name[currentLocale]}</h5>
       <p className="mb-2 text-body">
-        <small>{meta}</small>
+        {profileUrl ? (
+          <Link href={profileUrl} target="_blank">
+            <small>{meta}</small>
+          </Link>
+        ) : (
+          <small>{meta}</small>
+        )}
       </p>
       <div className="review-stars mb-3">
         <StarRatings
@@ -43,16 +69,34 @@ const Review = ({
           starDimension="18px"
         />
       </div>
-      <h5>{projectName[locale]}</h5>
-      <p className={`overflow-hidden ${isExpanded ? '' : 'line-clamp-4'}`}>
-        {feedbackText[locale]}
+      <h5>{projectName[currentLocale]}</h5>
+      <p ref={textRef} className={`overflow-hidden ${isExpanded ? '' : `line-clamp-3`}`}>
+        {feedbackText[currentLocale]}
       </p>
-      <button
-        onClick={() => setIsExpanded(!isExpanded)}
-        className="text-primary mt-2 hover:underline focus:outline-none"
-      >
-        {isExpanded ? 'Hide' : 'Read more'}
-      </button>
+      <div className="flex w-full justify-between">
+        {showMoreButton && (
+          <a
+            className="text-primary mt-2 hover:underline focus:outline-none"
+            onClick={() => setIsExpanded(!isExpanded)}
+          >
+            <small>{isExpanded ? 'Hide' : 'Read more'}</small>
+          </a>
+        )}
+        {originLocale !== locale && (
+          <a
+            className=" mt-2 hover:underline focus:outline-none underline"
+            onClick={() =>
+              setCurrentLocale(originLocale !== currentLocale ? originLocale : locale)
+            }
+          >
+            <small>
+              {originLocale !== currentLocale
+                ? 'translated - show original'
+                : 'original - show translation'}
+            </small>
+          </a>
+        )}
+      </div>
     </div>
   );
 };

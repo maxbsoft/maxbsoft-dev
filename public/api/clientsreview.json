@@ -1,9 +1,14 @@
 [
   {
     "id": 1,
-    "name": "Солтан",
-    "nameLatin": "Soltan",
+    "name": {
+      "ru": "Солтан",
+      "uk": "Солтан",
+      "en": "Soltan"
+    },
     "profileUrl": "https://www.weblancer.net/users/MettSmith/",
+    "freelance": true,
+    "originLocale": "ru",
     "nickname": "MettSmith",
     "meta": "weblancer.net",
     "age": 45,
@@ -24,9 +29,14 @@
   },
   {
     "id": 2,
-    "name": "Vitali Kaspler",
-    "nameLatin": "Vitali Kaspler",
+    "name": {
+      "ru": "Vitali Kaspler",
+      "uk": "Vitali Kaspler",
+      "en": "Vitali Kaspler"
+    },
     "profileUrl": "https://freelancehunt.com/employer/mealco.html",
+    "freelance": true,
+    "originLocale": "ru",
     "meta": "freelancehunt.com",
     "nickname": null,
     "age": null,
@@ -34,9 +44,9 @@
     "rate": 10,
     "date": "2023-03-09",
     "projectName": {
-      "ru": "Доработка Android (RN) приложения для работы с POS-принтерами Epson",
-      "uk": "Доробка Android (RN) додатка для роботи з POS-принтерами Epson",
-      "en": "Improvement of Android (RN) application for working with Epson POS printers"
+      "ru": "Доработка Android (RN) приложения",
+      "uk": "Доробка Android (RN) додатка",
+      "en": "Improvement of Android (RN) application"
     },
     "feedbackText": {
       "ru": "Максим реализовал все в соответствии с техническим заданием и в срок. Отличная коммуникация.",
@@ -47,9 +57,14 @@
   },
   {
     "id": 3,
-    "name": "Evgeniy K",
-    "nameLatin": "Evgeniy K",
+    "name": {
+      "ru": "Evgeniy K",
+      "uk": "Evgeniy K",
+      "en": "Evgeniy K"
+    },
     "profileUrl": "https://freelancehunt.com/employer/ba9nist.html",
+    "freelance": true,
+    "originLocale": "ru",
     "meta": "freelancehunt.com",
     "nickname": null,
     "age": null,
@@ -70,9 +85,14 @@
   },
   {
     "id": 4,
-    "name": "Илья Суханов",
-    "nameLatin": "Ilya Sukhanov",
+    "name": {
+      "ru": "Илья Суханов",
+      "uk": "Ілля Суханов",
+      "en": "Ilya Sukhanov"
+    },
     "profileUrl": "https://www.weblancer.net/users/illya_s/",
+    "freelance": true,
+    "originLocale": "ru",
     "meta": "weblancer.net",
     "nickname": "illya_s",
     "age": 37,
@@ -93,9 +113,14 @@
   },
   {
     "id": 5,
-    "name": "Коримов",
-    "nameLatin": "Korimov",
+    "name": {
+      "ru": "Коримов",
+      "uk": "Корімов",
+      "en": "Korimov"
+    },
     "profileUrl": "https://www.weblancer.net/users/ikorimov/",
+    "freelance": true,
+    "originLocale": "ru",
     "meta": "weblancer.net",
     "nickname": "ikorimov",
     "age": 42,
@@ -116,9 +141,14 @@
   },
   {
     "id": 6,
-    "name": "Алексей Бородин",
-    "nameLatin": "Aleksey Borodin",
+    "name": {
+      "ru": "Алексей Бородин",
+      "uk": "Олексій Бородін",
+      "en": "Aleksey Borodin"
+    },
     "profileUrl": "https://www.weblancer.net/users/fromcar22/",
+    "freelance": true,
+    "originLocale": "ru",
     "meta": "weblancer.net",
     "nickname": "fromcar22",
     "age": 38,
@@ -139,9 +169,14 @@
   },
   {
     "id": 7,
-    "name": "Олег Иванов",
-    "nameLatin": "Oleg Ivanov",
+    "name": {
+      "ru": "Олег Иванов",
+      "uk": "Олег Іванов",
+      "en": "Oleg Ivanov"
+    },
     "profileUrl": "https://www.weblancer.net/users/moder77/",
+    "freelance": true,
+    "originLocale": "ru",
     "meta": "weblancer.net",
     "nickname": "moder77",
     "age": 41,
@@ -162,9 +197,14 @@
   },
   {
     "id": 8,
-    "name": "Геннадий Рульцов",
-    "nameLatin": "Gennadiy Rultsov",
+    "name": {
+      "ru": "Геннадий Рульцов",
+      "uk": "Геннадій Рульцов",
+      "en": "Gennadiy Rultsov"
+    },
     "profileUrl": "https://www.weblancer.net/users/cosmosok/",
+    "freelance": true,
+    "originLocale": "ru",
     "meta": "weblancer.net",
     "nickname": "cosmosok",
     "age": 44,
@@ -185,9 +225,14 @@
   },
   {
     "id": 9,
-    "name": "Alexander Goncharenko",
-    "nameLatin": "Alexander Goncharenko",
+    "name": {
+      "ru": "Alexander Goncharenko",
+      "uk": "Alexander Goncharenko",
+      "en": "Alexander Goncharenko"
+    },
     "profileUrl": "https://freelancehunt.com/employer/axghouse.html",
+    "freelance": true,
+    "originLocale": "ru",
     "meta": "freelancehunt.com",
     "nickname": null,
     "age": null,
@@ -208,9 +253,14 @@
   },
   {
     "id": 10,
-    "name": "Дмитрий Конаш",
-    "nameLatin": "Dmitriy Konash",
+    "name": {
+      "ru": "Дмитрий Конаш",
+      "uk": "Дмитро Конаш",
+      "en": "Dmitriy Konash"
+    },
     "profileUrl": "https://www.weblancer.net/users/dkonash/",
+    "freelance": true,
+    "originLocale": "ru",
     "meta": "weblancer.net",
     "nickname": "dkonash",
     "age": 59,
@@ -231,9 +281,14 @@
   },
   {
     "id": 11,
-    "name": "Станислав",
-    "nameLatin": "Stanislav",
+    "name": {
+      "ru": "Станислав",
+      "uk": "Станіслав",
+      "en": "Stanislav"
+    },
     "profileUrl": "https://www.weblancer.net/users/sliak/",
+    "freelance": true,
+    "originLocale": "ru",
     "meta": "weblancer.net",
     "nickname": "sliak",
     "age": 48,
@@ -254,9 +309,14 @@
   },
   {
     "id": 12,
-    "name": "Григорий",
-    "nameLatin": "Grigoriy",
+    "name": {
+      "ru": "Григорий",
+      "uk": "Григорій",
+      "en": "Grigoriy"
+    },
     "profileUrl": "https://www.weblancer.net/users/web-house/",
+    "freelance": true,
+    "originLocale": "ru",
     "meta": "weblancer.net",
     "nickname": "web-house",
     "age": 31,
@@ -277,9 +337,14 @@
   },
   {
     "id": 13,
-    "name": "Дмитрий",
-    "nameLatin": "Dmitriy",
+    "name": {
+      "ru": "Дмитрий",
+      "uk": "Дмитро",
+      "en": "Dmitriy"
+    },
     "profileUrl": "https://www.weblancer.net/users/qwertydesign/",
+    "freelance": true,
+    "originLocale": "ru",
     "meta": "weblancer.net",
     "nickname": "qwertydesign",
     "age": 36,
@@ -300,9 +365,14 @@
   },
   {
     "id": 14,
-    "name": "Виталий",
-    "nameLatin": "Vitaliy",
+    "name": {
+      "ru": "Виталий",
+      "uk": "Віталій",
+      "en": "Vitaliy"
+    },
     "profileUrl": "https://www.weblancer.net/users/maxstor2004/",
+    "freelance": true,
+    "originLocale": "ru",
     "meta": "weblancer.net",
     "nickname": "maxstor2004",
     "age": 39,
@@ -323,9 +393,14 @@
   },
   {
     "id": 15,
-    "name": "Евгений",
-    "nameLatin": "Evgeniy",
+    "name": {
+      "ru": "Евгений",
+      "uk": "Євген",
+      "en": "Evgeniy"
+    },
     "profileUrl": "https://www.weblancer.net/users/wisenum/",
+    "freelance": true,
+    "originLocale": "ru",
     "meta": "weblancer.net",
     "nickname": "wisenum",
     "age": 43,
@@ -346,9 +421,14 @@
   },
   {
     "id": 16,
-    "name": "Георгий Эпштейн",
-    "nameLatin": "Georgiy Epshteyn",
+    "name": {
+      "ru": "Георгий Эпштейн",
+      "uk": "Георгій Епштейн",
+      "en": "Georgiy Epshteyn"
+    },
     "profileUrl": "https://www.weblancer.net/users/itexus/",
+    "freelance": true,
+    "originLocale": "ru",
     "meta": "weblancer.net",
     "nickname": "itexus",
     "age": 44,
@@ -369,9 +449,14 @@
   },
   {
     "id": 17,
-    "name": "Егор Русинов",
-    "nameLatin": "Egor Rusinov",
+    "name": {
+      "ru": "Егор Русинов",
+      "uk": "Єгор Русинов",
+      "en": "Egor Rusinov"
+    },
     "profileUrl": "https://www.weblancer.net/users/Xopca/",
+    "freelance": true,
+    "originLocale": "ru",
     "meta": "weblancer.net",
     "nickname": "Xopca",
     "age": 43,
@@ -392,9 +477,14 @@
   },
   {
     "id": 18,
-    "name": "Александр",
-    "nameLatin": "Aleksandr",
+    "name": {
+      "ru": "Александр",
+      "uk": "Олександр",
+      "en": "Aleksandr"
+    },
     "profileUrl": "https://www.weblancer.net/users/AlexAntre/",
+    "freelance": true,
+    "originLocale": "ru",
     "meta": "weblancer.net",
     "nickname": "AlexAntre",
     "age": 55,

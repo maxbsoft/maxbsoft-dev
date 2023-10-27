@@ -1,10 +1,11 @@
-import { LocalizedText } from '@/types';
+import { Locale, LocalizedText } from '@/types';
 
 export interface ClientReviewItemModel {
   id: number;
-  name: string | null;
-  nameLatin: string | null;
+  name: LocalizedText;
   profileUrl: string | null;
+  freelance: boolean | null;
+  originLocale: Locale;
   meta: string | null;
   nickname: string | null;
   age: number | null;
