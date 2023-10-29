@@ -21,7 +21,6 @@ const Layout = ({ children, blurred = false }: LayoutProps) => {
   };
 
   useEventListener('scroll', isVisible);
-
   return (
     <div
       className={`wrapper relative min-h-screen w-full bg-grey ${

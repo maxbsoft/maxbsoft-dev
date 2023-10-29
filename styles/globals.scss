@@ -237,22 +237,22 @@
     @apply min-h-[150px] py-2.5 align-middle;
   }
   button,
-  [type="button"],
-  [type="reset"],
-  [type="submit"] {
+  [type='button'],
+  [type='reset'],
+  [type='submit'] {
     appearance: button;
   }
   label {
     @apply mb-1.5 block text-sm font-normal text-heading;
   }
 
-  input:not([type="checkbox"], [type="radio"]),
+  input:not([type='checkbox'], [type='radio']),
   select,
   button {
     @apply h-10 px-4;
   }
 
-  input[type="radio"] {
+  input[type='radio'] {
     @apply hidden;
 
     & ~ label,
@@ -261,7 +261,7 @@
 
       &::before,
       &::after {
-        content: "";
+        content: '';
         @apply absolute left-0 -top-0.5 h-5 w-5 cursor-pointer rounded-full bg-transparent transition-all;
       }
 
@@ -286,7 +286,7 @@
     }
   }
 
-  input[type="checkbox"] {
+  input[type='checkbox'] {
     @apply hidden;
 
     & ~ label,
@@ -295,7 +295,7 @@
 
       &::before,
       &::after {
-        content: "";
+        content: '';
         @apply absolute left-0 -top-0.5 cursor-pointer rounded-full bg-transparent transition-all;
       }
 
@@ -319,7 +319,7 @@
     }
   }
 
-  input[type="file"] {
+  input[type='file'] {
     @apply block w-full cursor-pointer border-none px-0 text-sm file:mr-4
         file:h-10 file:cursor-pointer file:rounded-full file:border-0
         file:bg-primary file:bg-opacity-10
@@ -341,7 +341,7 @@
     }
 
     &::after {
-      content: "";
+      content: '';
       @apply absolute left-0 top-0 inline-block h-full w-full origin-bottom scale-y-0 transform bg-white transition-transform duration-500;
     }
     &:hover {
@@ -366,7 +366,7 @@
       @apply hidden;
     }
     &::before {
-      content: "";
+      content: '';
       @apply mr-1 inline-block h-px w-5 bg-primary transition-all duration-500;
     }
     &:hover {
@@ -381,7 +381,7 @@
 @layer utilities {
   .clearfix {
     &::after {
-      content: "";
+      content: '';
       clear: both;
       @apply block;
     }
@@ -391,7 +391,7 @@
     li {
       @apply relative mb-1 pl-6 last:mb-0;
       &::before {
-        content: "";
+        content: '';
         @apply absolute top-2 left-0 h-2 w-2 rounded-full bg-primary;
       }
     }
@@ -400,7 +400,7 @@
     @apply px-4 2xl:max-w-[1350px];
   }
   .text-outline {
-    -webkit-text-stroke: 1px theme("colors.primary");
+    -webkit-text-stroke: 1px theme('colors.primary');
   }
   .fiximage {
     & > span {
@@ -427,7 +427,7 @@
   .title-text {
     @apply relative pb-3;
     &::after {
-      content: "";
+      content: '';
       @apply absolute left-0 top-auto bottom-0 h-0.5 w-14 rounded-full bg-primary;
     }
   }
@@ -537,11 +537,11 @@
 
 // Nprogress
 #nprogress .bar {
-  background: theme("colors.primary");
+  background: theme('colors.primary');
 }
 #nprogress .spinner-icon {
-  border-top-color: theme("colors.primary");
-  border-left-color: theme("colors.primary");
+  border-top-color: theme('colors.primary');
+  border-left-color: theme('colors.primary');
 }
 
 // Header & Menus
@@ -554,7 +554,7 @@
       a {
         &::before {
           counter-increment: section;
-          content: counter(section, decimal-leading-zero) ".";
+          content: counter(section, decimal-leading-zero) '.';
           @apply pr-1;
         }
       }
@@ -569,7 +569,7 @@
       span {
         &::before {
           counter-increment: section;
-          content: counter(section, decimal-leading-zero) ".";
+          content: counter(section, decimal-leading-zero) '.';
           @apply pb-3 text-primary;
         }
       }
@@ -580,7 +580,7 @@
 // Herosection & Breadcrumb
 .herosection-bg,
 .breadcrumb-bg {
-  background-image: url("/images/herosection-bg.png");
+  background-image: url('/images/herosection-bg.png');
   background-repeat: repeat;
   background-size: initial;
   background-position: 0 13px;
@@ -594,7 +594,7 @@
   ul {
     li {
       &::before {
-        content: "";
+        content: '';
         @apply mr-2 inline-block h-2 w-2 rounded-full bg-primary;
       }
     }
@@ -605,11 +605,11 @@
 .circleprogress {
   .circle {
     fill: none;
-    stroke: theme("colors.primary");
+    stroke: theme('colors.primary');
     @apply -rotate-90 transform;
   }
   .circlebg {
-    stroke: theme("colors.primary");
+    stroke: theme('colors.primary');
     opacity: 0.2;
   }
 }
@@ -638,13 +638,13 @@
   position: relative;
 
   &::before {
-    content: "";
+    content: '';
     position: fixed;
     height: 100%;
     width: 100%;
     left: 0;
     top: 0;
-    background-image: url("/images/body-bg.png");
+    background-image: url('/images/body-bg.jpg');
     background-size: cover;
   }
 

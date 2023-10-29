@@ -38,7 +38,7 @@ const PostPage = ({ title, date, cover, category, content }: PostPageProps) => {
     );
 
   return (
-    <Layout>
+    <Layout blurred>
       <Head>
         <title>{title} - Max Balukh - Mobile App Developer</title>
       </Head>

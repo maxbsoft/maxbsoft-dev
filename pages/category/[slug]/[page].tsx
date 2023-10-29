@@ -40,7 +40,7 @@ const CategoryPosts = ({ posts, hasMore, categories, recentPosts }: CategoryPost
   if (!posts) return null;
 
   return (
-    <Layout>
+    <Layout blurred>
       <Head>
         <title>Blogs - Max Balukh - Mobile App Developer</title>
       </Head>

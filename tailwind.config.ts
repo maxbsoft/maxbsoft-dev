@@ -70,6 +70,10 @@ const config: Config = {
         ledgerbottomtop: 'ledgerBottomTop 3s ease-in-out infinite',
         slidedown: 'slideDown 1s ease-in-out 1',
       },
+      backdropBlur: {
+        // md: '4px',
+        lg: '4px',
+      },
     },
   },
   plugins: [require('tailwindcss-nested-groups'), require('tailwindcss-debug-screens')],
