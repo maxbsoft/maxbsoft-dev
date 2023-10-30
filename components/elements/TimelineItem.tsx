@@ -16,16 +16,15 @@ const TimelineItem = ({ timeline: { title, meta, text, year } }: TimelineItemPro
         </span>
         <h5 className="mb-0 text-primary">{title}</h5>
         <p className="mb-2 text-heading">{meta}</p>
-
-        {Array.isArray(text) ? (
+        {Array.isArray(text) && (
           <ul>
             {text.map((item, index) => (
               <li key={`id${index}`}>{item}</li>
             ))}
           </ul>
-        ) : (
-          <p>{text}</p>
         )}
+
+        {!!text && !Array.isArray(text) && <p>{text}</p>}
       </div>
     </div>
   );
