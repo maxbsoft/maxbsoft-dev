@@ -3,6 +3,8 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
+import { GetStaticPaths } from 'next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { Blog, Breadcrumb } from '@/components/elements';
 import { createSlug } from '@/lib';
 import {
@@ -173,18 +175,22 @@ const Posts = ({ posts, hasMore, categories, recentPosts }: PostsProps) => {
   );
 };
 
-export default Posts;
-
-export function getStaticPaths() {
+export const getStaticPaths: GetStaticPaths = ({ locales = ['en'] }) => {
   const paths = getPagesPath();
 
   return {
-    paths,
+    paths: paths.flatMap((path) => locales.map((locale) => ({ ...path, locale }))),
     fallback: false,
   };
-}
+};
 
-export function getStaticProps({ params: { slug } }: { params: { slug: string } }) {
+interface StaticPostsProps {
+  params: {
+    slug: string;
+  };
+  locale: string;
+}
+export const getStaticProps = async ({ params: { slug }, locale }: StaticPostsProps) => {
   const { posts, hasMore } = getPostsByPage(parseInt(slug));
   const categories = getAllCategories();
   const recentPosts = getRecentPosts();
@@ -197,7 +203,12 @@ export function getStaticProps({ params: { slug } }: { params: { slug: string } 
   };
 
   return {
-    props: resultProps,
+    props: {
+      ...(await serverSideTranslations(locale ?? 'en', ['common', 'header', 'footer'])),
+      ...resultProps,
+    },
     revalidate: 10,
   };
-}
+};
+
+export default Posts;

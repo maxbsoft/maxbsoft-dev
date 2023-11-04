@@ -12,6 +12,8 @@ import type { BreadcrumbPath } from '@/components/elements/Breadcrumb';
 import { Layout } from '@/components/layout';
 import { Spinner } from '@/components/utils';
 import Comments from '@/components/utils/Comments';
+import { GetStaticPaths } from 'next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 export interface PostPageProps {
   title: string;
@@ -117,24 +119,35 @@ const PostPage = ({ title, date, cover, category, content }: PostPageProps) => {
   );
 };
 
-export default PostPage;
-
-export function getStaticPaths() {
+export const getStaticPaths: GetStaticPaths = ({ locales = ['en'] }) => {
   const paths = getPostsPath();
 
   return {
-    paths,
+    paths: paths.flatMap((path) => locales.map((locale) => ({ ...path, locale }))),
     fallback: false,
   };
+};
+
+interface StaticPostDetailsProps {
+  params: {
+    slug: string;
+  };
+  locale: string;
 }
 
-export function getStaticProps({ params: { slug } }: { params: { slug: string } }) {
+export const getStaticProps = async ({
+  params: { slug },
+  locale,
+}: StaticPostDetailsProps) => {
   const postData = getSinglePost(slug);
 
   return {
     props: {
+      ...(await serverSideTranslations(locale ?? 'en', ['common', 'header', 'footer'])),
       ...postData,
     },
     revalidate: 10,
   };
-}
+};
+
+export default PostPage;

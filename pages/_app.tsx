@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import Head from 'next/head';
 import Router from 'next/router';
 import NProgress from 'nprogress';
-import { useRef } from 'react';
+import { appWithTranslation } from 'next-i18next';
 import { AppProvider } from '@/context/appContext';
 import { Hydrate, QueryClient, QueryClientProvider } from 'react-query';
 // import { ReactQueryDevtools } from 'react-query/devtools';
@@ -28,7 +28,6 @@ interface MyAppProps {
 }
 function MyApp({ Component, pageProps }: MyAppProps) {
   const queryClientRef = useRef<QueryClient | null>(null);
-
   if (!queryClientRef.current) {
     queryClientRef.current = new QueryClient();
   }
@@ -66,4 +65,4 @@ function MyApp({ Component, pageProps }: MyAppProps) {
   );
 }
 
-export default MyApp;
+export default appWithTranslation(MyApp);

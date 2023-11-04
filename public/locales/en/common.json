@@ -1,0 +1,21 @@
+{
+  "welcomeMessage": "Welcome to My App!",
+  "aboutMe": "About Me",
+  "about": "About",
+  "mySkills": "My Skills",
+  "skills": "Skills",
+  "myServices": "My Services",
+  "services": "Services",
+  "myResume": "My Resume",
+  "resume": "Resume",
+  "myWorks": "My Works",
+  "works": "Works",
+  "clientReviews": "Client Reviews",
+  "reviews": "Reviews",
+  "latestBlogs": "Latest Blogs",
+  "blogs": "Blogs",
+  "contactUs": "Contact Us",
+  "contact": "contact",
+  "pageNotFound": "Page Not Found",
+  "backToHome": "Back to home"
+}

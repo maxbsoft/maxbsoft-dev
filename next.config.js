@@ -2,6 +2,7 @@
 const withPlugins = require('next-compose-plugins');
 const withPWA = require('next-pwa');
 const runtimeCaching = require('next-pwa/cache');
+const { i18n } = require('./next-i18next.config');
 
 const nextConfig = {
   reactStrictMode: true,
@@ -10,6 +11,7 @@ const nextConfig = {
     loader: 'custom',
     path: '/',
   },
+  i18n,
 };
 
 module.exports = withPlugins(

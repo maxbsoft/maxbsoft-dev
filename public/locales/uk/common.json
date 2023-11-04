@@ -1,0 +1,21 @@
+{
+  "welcomeMessage": "Ласкаво просимо в Мій додаток!",
+  "aboutMe": "Про мене",
+  "about": "About",
+  "mySkills": "Мої вміння",
+  "skills": "Skills",
+  "myServices": "Мої послуги",
+  "services": "Services",
+  "myResume": "Моє резюме",
+  "resume": "Resume",
+  "myWorks": "Мої роботи",
+  "works": "Works",
+  "clientReviews": "Відгуки клієнтів",
+  "reviews": "Reviews",
+  "latestBlogs": "Останні блоги",
+  "blogs": "Blogs",
+  "contactUs": "Зв'яжіться зі мною",
+  "contact": "contact",
+  "pageNotFound": "Сторінку не знайдено",
+  "backToHome": "Повернутися до головної"
+}

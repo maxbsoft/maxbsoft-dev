@@ -3,12 +3,14 @@ import { Link as ScrollLink } from 'react-scroll';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { RiCloseLine } from 'react-icons/ri';
+import { useTranslation } from 'next-i18next';
 
 export interface MobileNavigationProps {
   changeState: (value: boolean) => void;
 }
 
 const MobileNavigation = ({ changeState }: MobileNavigationProps) => {
+  const { t } = useTranslation('header');
   const router = useRouter();
 
   const checkroute = router.route !== '/';
@@ -34,7 +36,7 @@ const MobileNavigation = ({ changeState }: MobileNavigationProps) => {
                   className="group relative inline-block cursor-pointer py-2 text-lg uppercase tracking-wider text-heading before:text-primary"
                   onClick={() => handleClick()}
                 >
-                  Home
+                  {t('home')}
                   <span className="absolute left-0 top-auto bottom-5 inline-block h-px w-full origin-top-right scale-0 bg-primary align-middle transition-transform duration-500 group-hover:origin-top-left group-hover:scale-100" />
                 </a>
               </Link>
@@ -49,7 +51,7 @@ const MobileNavigation = ({ changeState }: MobileNavigationProps) => {
                 className="group relative inline-block cursor-pointer py-2 text-lg uppercase tracking-wider text-heading before:text-primary"
                 onClick={() => handleClick()}
               >
-                Home
+                {t('home')}
                 <span className="absolute left-0 top-auto bottom-5 inline-block h-px w-full origin-top-right scale-0 bg-primary align-middle transition-transform duration-500 group-hover:origin-top-left group-hover:scale-100" />
               </ScrollLink>
             )}
@@ -61,7 +63,7 @@ const MobileNavigation = ({ changeState }: MobileNavigationProps) => {
                   className="group relative inline-block cursor-pointer py-2 text-lg uppercase tracking-wider text-heading before:text-primary"
                   onClick={() => handleClick()}
                 >
-                  About
+                  {t('about')}
                   <span className="absolute left-0 top-auto bottom-5 inline-block h-px w-full origin-top-right scale-0 bg-primary align-middle transition-transform duration-500 group-hover:origin-top-left group-hover:scale-100" />
                 </a>
               </Link>
@@ -76,7 +78,7 @@ const MobileNavigation = ({ changeState }: MobileNavigationProps) => {
                 className="group relative inline-block cursor-pointer py-2 text-lg uppercase tracking-wider text-heading before:text-primary"
                 onClick={() => handleClick()}
               >
-                About
+                {t('about')}
                 <span className="absolute left-0 top-auto bottom-5 inline-block h-px w-full origin-top-right scale-0 bg-primary align-middle transition-transform duration-500 group-hover:origin-top-left group-hover:scale-100" />
               </ScrollLink>
             )}
@@ -88,7 +90,7 @@ const MobileNavigation = ({ changeState }: MobileNavigationProps) => {
                   className="group relative inline-block cursor-pointer py-2 text-lg uppercase tracking-wider text-heading before:text-primary"
                   onClick={() => handleClick()}
                 >
-                  Resume
+                  {t('resume')}
                   <span className="absolute left-0 top-auto bottom-5 inline-block h-px w-full origin-top-right scale-0 bg-primary align-middle transition-transform duration-500 group-hover:origin-top-left group-hover:scale-100" />
                 </a>
               </Link>
@@ -103,7 +105,7 @@ const MobileNavigation = ({ changeState }: MobileNavigationProps) => {
                 className="group relative inline-block cursor-pointer py-2 text-lg uppercase tracking-wider text-heading before:text-primary"
                 onClick={() => handleClick()}
               >
-                Resume
+                {t('resume')}
                 <span className="absolute left-0 top-auto bottom-5 inline-block h-px w-full origin-top-right scale-0 bg-primary align-middle transition-transform duration-500 group-hover:origin-top-left group-hover:scale-100" />
               </ScrollLink>
             )}
@@ -115,7 +117,7 @@ const MobileNavigation = ({ changeState }: MobileNavigationProps) => {
                   className="group relative inline-block cursor-pointer py-2 text-lg uppercase tracking-wider text-heading before:text-primary"
                   onClick={() => handleClick()}
                 >
-                  Works
+                  {t('works')}
                   <span className="absolute left-0 top-auto bottom-5 inline-block h-px w-full origin-top-right scale-0 bg-primary align-middle transition-transform duration-500 group-hover:origin-top-left group-hover:scale-100" />
                 </a>
               </Link>
@@ -130,7 +132,7 @@ const MobileNavigation = ({ changeState }: MobileNavigationProps) => {
                 className="group relative inline-block cursor-pointer py-2 text-lg uppercase tracking-wider text-heading before:text-primary"
                 onClick={() => handleClick()}
               >
-                Works
+                {t('works')}
                 <span className="absolute left-0 top-auto bottom-5 inline-block h-px w-full origin-top-right scale-0 bg-primary align-middle transition-transform duration-500 group-hover:origin-top-left group-hover:scale-100" />
               </ScrollLink>
             )}
@@ -141,7 +143,7 @@ const MobileNavigation = ({ changeState }: MobileNavigationProps) => {
                 className="group relative inline-block cursor-pointer py-2 text-lg uppercase tracking-wider text-heading before:text-primary"
                 onClick={() => handleClick()}
               >
-                Blog
+                {t('blog')}
                 <span className="absolute left-0 top-auto bottom-5 inline-block h-px w-full origin-top-right scale-0 bg-primary align-middle transition-transform duration-500 group-hover:origin-top-left group-hover:scale-100" />
               </a>
             </Link>
@@ -153,7 +155,7 @@ const MobileNavigation = ({ changeState }: MobileNavigationProps) => {
                   className="group relative inline-block cursor-pointer py-2 text-lg uppercase tracking-wider text-heading before:text-primary"
                   onClick={() => handleClick()}
                 >
-                  Contact
+                  {t('contact')}
                   <span className="absolute left-0 top-auto bottom-5 inline-block h-px w-full origin-top-right scale-0 bg-primary align-middle transition-transform duration-500 group-hover:origin-top-left group-hover:scale-100" />
                 </a>
               </Link>
@@ -168,7 +170,7 @@ const MobileNavigation = ({ changeState }: MobileNavigationProps) => {
                 className="group relative inline-block cursor-pointer py-2 text-lg uppercase tracking-wider text-heading before:text-primary"
                 onClick={() => handleClick()}
               >
-                Contact
+                {t('contact')}
                 <span className="absolute left-0 top-auto bottom-5 inline-block h-px w-full origin-top-right scale-0 bg-primary align-middle transition-transform duration-500 group-hover:origin-top-left group-hover:scale-100" />
               </ScrollLink>
             )}
@@ -185,7 +187,7 @@ const MobileNavigation = ({ changeState }: MobileNavigationProps) => {
             className="btn btn-small"
             onClick={() => handleClick()}
           >
-            <span>Hire Me</span>
+            <span>{t('hireMe')}</span>
           </ScrollLink>
         </div>
       </nav>

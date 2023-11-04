@@ -4,8 +4,12 @@ import { Autoplay } from 'swiper/modules';
 import { Swiper, SwiperRef, SwiperSlide } from 'swiper/react';
 import { getClientReviews } from '@/fetchers';
 import { Review } from '@/components/elements';
+import { useRouter } from 'next/router';
+import { Locale } from '@/types';
 
 const ReviewsSection = () => {
+  const router = useRouter();
+  const { locale } = router;
   const { data } = useQuery('clientreviews', getClientReviews);
 
   const sliderRef = useRef<SwiperRef>(null);
@@ -48,7 +52,7 @@ const ReviewsSection = () => {
         {data?.map((review) => (
           <SwiperSlide key={review.id}>
             <div className="slider-item">
-              <Review locale="en" review={review} />
+              <Review locale={(locale ?? 'en') as Locale} review={review} />
             </div>
           </SwiperSlide>
         ))}

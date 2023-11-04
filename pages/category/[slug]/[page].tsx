@@ -14,6 +14,8 @@ import { childrenAnimation } from '@/lib/motion';
 import { createSlug } from '@/lib';
 import { Layout } from '@/components/layout';
 import { PostItemsModel } from '@/models';
+import { GetStaticPaths } from 'next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 export interface CategoryPostsProps {
   posts: PostItemsModel;
@@ -173,28 +175,32 @@ const CategoryPosts = ({ posts, hasMore, categories, recentPosts }: CategoryPost
   );
 };
 
-export default CategoryPosts;
-
-export function getStaticPaths() {
+export const getStaticPaths: GetStaticPaths = ({ locales = ['en'] }) => {
   const paths = getCategoryPaths();
-
   return {
-    paths,
+    paths: paths.flatMap((path) => locales.map((locale) => ({ ...path, locale }))),
     fallback: false,
   };
+};
+
+interface StaticCategoryProps {
+  params: {
+    slug: string;
+    page: number;
+  };
+  locale: string;
 }
 
-export function getStaticProps({
+export const getStaticProps = async ({
   params: { slug, page },
-}: {
-  params: { slug: string; page: number };
-}) {
+  locale,
+}: StaticCategoryProps) => {
   const { posts, hasMore } = getPostsByCategory(slug, page, 6);
   const categories = getAllCategories();
   const recentPosts = getRecentPosts();
-
   return {
     props: {
+      ...(await serverSideTranslations(locale ?? 'en', ['common', 'header', 'footer'])),
       posts,
       hasMore,
       categories,
@@ -202,4 +208,6 @@ export function getStaticProps({
     },
     revalidate: 10,
   };
-}
+};
+
+export default CategoryPosts;

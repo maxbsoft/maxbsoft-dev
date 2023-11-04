@@ -6,8 +6,10 @@ import { Logo } from '@/components/utils';
 import useEventListener from '@/hooks/useEventListener';
 import MobileNavigation from './MobileNavigation';
 import Navigation from './Navigation';
+import { useTranslation } from 'next-i18next';
 
 const Header = () => {
+  const { t } = useTranslation('header');
   const [sticky, setSticky] = useState(false);
   const [mobileMenu, setMobileMenu] = useState(false);
 
@@ -65,7 +67,7 @@ const Header = () => {
               duration={1000}
               className="btn"
             >
-              <span className="whitespace-nowrap">Hire Me</span>
+              <span className="whitespace-nowrap">{t('hireMe')}</span>
             </ScrollLink>
           </div>
         </div>

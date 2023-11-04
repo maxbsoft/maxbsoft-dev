@@ -2,8 +2,10 @@ import React from 'react';
 import { Link as ScrollLink } from 'react-scroll';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { useTranslation } from 'next-i18next';
 
 const Navigation = () => {
+  const { t } = useTranslation('header');
   const router = useRouter();
   const checkroute = router.route !== '/';
 
@@ -14,7 +16,7 @@ const Navigation = () => {
           {checkroute ? (
             <Link legacyBehavior href="/">
               <a className="group relative inline-block cursor-pointer py-6 text-sm font-medium uppercase tracking-wider text-heading before:text-primary">
-                Home
+                {t('home')}
                 <span className="absolute left-0 top-auto bottom-5 inline-block h-px w-full origin-top-right scale-0 bg-primary align-middle transition-transform duration-500 group-hover:origin-top-left group-hover:scale-100" />
               </a>
             </Link>
@@ -28,7 +30,7 @@ const Navigation = () => {
               duration={1000}
               className="group relative inline-block cursor-pointer py-6 text-sm font-medium uppercase tracking-wider text-heading before:text-primary"
             >
-              Home
+              {t('home')}
               <span className="absolute left-0 top-auto bottom-5 inline-block h-px w-full origin-top-right scale-0 bg-primary align-middle transition-transform duration-500 group-hover:origin-top-left group-hover:scale-100" />
             </ScrollLink>
           )}
@@ -37,7 +39,7 @@ const Navigation = () => {
           {checkroute ? (
             <Link legacyBehavior href="/">
               <a className="group relative inline-block cursor-pointer py-6 text-sm font-medium uppercase tracking-wider text-heading before:text-primary">
-                About
+                {t('about')}
                 <span className="absolute left-0 top-auto bottom-5 inline-block h-px w-full origin-top-right scale-0 bg-primary align-middle transition-transform duration-500 group-hover:origin-top-left group-hover:scale-100" />
               </a>
             </Link>
@@ -49,9 +51,9 @@ const Navigation = () => {
               smooth="easeInQuad"
               offset={-74}
               duration={1000}
-              className="group relative inline-block cursor-pointer py-6 text-sm font-medium uppercase tracking-wider text-heading before:text-primary"
+              className="group relative inline-block cursor-pointer py-6 text-sm font-medium uppercase tracking-wider text-heading before:text-primary whitespace-nowrap"
             >
-              About
+              {t('about')}
               <span className="absolute left-0 top-auto bottom-5 inline-block h-px w-full origin-top-right scale-0 bg-primary align-middle transition-transform duration-500 group-hover:origin-top-left group-hover:scale-100" />
             </ScrollLink>
           )}
@@ -60,7 +62,7 @@ const Navigation = () => {
           {checkroute ? (
             <Link legacyBehavior href="/">
               <a className="group relative inline-block cursor-pointer py-6 text-sm font-medium uppercase tracking-wider text-heading before:text-primary">
-                Resume
+                {t('resume')}
                 <span className="absolute left-0 top-auto bottom-5 inline-block h-px w-full origin-top-right scale-0 bg-primary align-middle transition-transform duration-500 group-hover:origin-top-left group-hover:scale-100" />
               </a>
             </Link>
@@ -74,7 +76,7 @@ const Navigation = () => {
               duration={1000}
               className="group relative inline-block cursor-pointer py-6 text-sm font-medium uppercase tracking-wider text-heading before:text-primary"
             >
-              Resume
+              {t('resume')}
               <span className="absolute left-0 top-auto bottom-5 inline-block h-px w-full origin-top-right scale-0 bg-primary align-middle transition-transform duration-500 group-hover:origin-top-left group-hover:scale-100" />
             </ScrollLink>
           )}
@@ -83,7 +85,7 @@ const Navigation = () => {
           {checkroute ? (
             <Link legacyBehavior href="/">
               <a className="group relative inline-block cursor-pointer py-6 text-sm font-medium uppercase tracking-wider text-heading before:text-primary">
-                Works
+                {t('works')}
                 <span className="absolute left-0 top-auto bottom-5 inline-block h-px w-full origin-top-right scale-0 bg-primary align-middle transition-transform duration-500 group-hover:origin-top-left group-hover:scale-100" />
               </a>
             </Link>
@@ -97,7 +99,7 @@ const Navigation = () => {
               duration={1000}
               className="group relative inline-block cursor-pointer py-6 text-sm font-medium uppercase tracking-wider text-heading before:text-primary"
             >
-              Works
+              {t('works')}
               <span className="absolute left-0 top-auto bottom-5 inline-block h-px w-full origin-top-right scale-0 bg-primary align-middle transition-transform duration-500 group-hover:origin-top-left group-hover:scale-100" />
             </ScrollLink>
           )}
@@ -105,16 +107,17 @@ const Navigation = () => {
         <li className="inline-block align-middle">
           <Link legacyBehavior href="/posts/1">
             <a className="group relative inline-block cursor-pointer py-6 text-sm font-medium uppercase tracking-wider text-heading before:text-primary">
-              Blog
+              {t('blog')}
               <span className="absolute left-0 top-auto bottom-5 inline-block h-px w-full origin-top-right scale-0 bg-primary align-middle transition-transform duration-500 group-hover:origin-top-left group-hover:scale-100" />
             </a>
           </Link>
         </li>
+        {/*
         <li className="inline-block align-middle">
           {checkroute ? (
             <Link legacyBehavior href="/">
               <a className="group relative inline-block cursor-pointer py-6 text-sm font-medium uppercase tracking-wider text-heading before:text-primary">
-                Contact
+                {t('contact')}
                 <span className="absolute left-0 top-auto bottom-5 inline-block h-px w-full origin-top-right scale-0 bg-primary align-middle transition-transform duration-500 group-hover:origin-top-left group-hover:scale-100" />
               </a>
             </Link>
@@ -128,11 +131,12 @@ const Navigation = () => {
               duration={1000}
               className="group relative inline-block cursor-pointer py-6 text-sm font-medium uppercase tracking-wider text-heading before:text-primary"
             >
-              Contact
+              {t('contact')}
               <span className="absolute left-0 top-auto bottom-5 inline-block h-px w-full origin-top-right scale-0 bg-primary align-middle transition-transform duration-500 group-hover:origin-top-left group-hover:scale-100" />
             </ScrollLink>
           )}
         </li>
+        */}
       </ul>
     </nav>
   );
