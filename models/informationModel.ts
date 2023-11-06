@@ -1,3 +1,5 @@
+import { LocalizedText } from '@/types';
+
 export type SocialNetworks =
   | 'facebook'
   | 'twitter'
@@ -12,17 +14,17 @@ export type SocialAddressMapModel = {
 };
 
 export interface InformationModel {
-  firstName: string;
-  lastName: string;
-  fullName: string;
+  firstName: string | LocalizedText;
+  lastName: string | LocalizedText;
+  fullName: string | LocalizedText;
   thumbImage?: string;
   largeImage?: string;
-  bio?: string;
+  bio?: string | LocalizedText;
   age?: string | number;
-  nationality?: string;
-  languages?: Array<string>;
-  address?: string;
-  freelance?: string | boolean;
+  nationality?: string | LocalizedText;
+  languages?: Array<string> | Array<LocalizedText>;
+  address?: string | LocalizedText;
+  freelance?: string | LocalizedText;
   socialAddress: SocialAddressMapModel;
   phoneNumbers: Array<string>;
   emailAddress: Array<string>;

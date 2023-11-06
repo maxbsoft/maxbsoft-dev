@@ -2,11 +2,11 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import type { GetStaticProps } from 'next';
+import { useTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { Breadcrumb } from '@/components/elements';
 import { Layout } from '@/components/layout';
 import { toBase64, shimmer, imageLoader } from '@/lib/utils';
-import { useTranslation } from 'next-i18next';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 interface Props {}
 const NotFound: React.FC<Props> = () => {

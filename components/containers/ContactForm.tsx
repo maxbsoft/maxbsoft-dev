@@ -2,8 +2,10 @@ import { LegacyRef, useRef, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import emailjs from '@emailjs/browser';
 import { settings } from '@/settings/settings';
+import { useTranslation } from 'next-i18next';
 
 const ContactForm = () => {
+  const { t } = useTranslation('common');
   const currentForm = useRef<HTMLFormElement | null | undefined>(null);
 
   const [serverSuccess, setServerSuccess] = useState<boolean | string>('');
@@ -27,12 +29,12 @@ const ContactForm = () => {
         (result) => {
           if (result.status === 200 && result.text) {
             setServerError(false);
-            setServerSuccess('Email successfully sent!');
+            setServerSuccess(t('emailSuccessfullySent'));
           }
         },
         (error: Error) => {
           setServerSuccess(false);
-          setServerError('Something is wrong while sending the message!');
+          setServerError(t('somethingIsWrongWhileSendingTheMessage'));
           console.error('error:' + error.message);
         },
       );
@@ -45,10 +47,10 @@ const ContactForm = () => {
       onSubmit={handleSubmit(onSubmit)}
     >
       <div className="inputbox">
-        <label htmlFor="name">Name</label>
+        <label htmlFor="name">{t('name')}</label>
         <input
           type="text"
-          placeholder="Enter your name..."
+          placeholder={t('enterYourName')}
           id="name"
           {...register('name', { required: true })}
         />
@@ -56,17 +58,17 @@ const ContactForm = () => {
           <>
             {errors.name.type === 'required' && (
               <p className="bg-red-500 bg-opacity-5 text-center text-sm text-red-500">
-                Name is required!
+                {t('nameIsRequired')}
               </p>
             )}
           </>
         )}
       </div>
       <div className="inputbox">
-        <label htmlFor="email">Email</label>
+        <label htmlFor="email">{t('email')}</label>
         <input
           type="email"
-          placeholder="Enter your email..."
+          placeholder={t('enterYourEmail')}
           id="email"
           {...register('email', {
             required: true,
@@ -77,22 +79,22 @@ const ContactForm = () => {
           <>
             {errors.email.type === 'required' && (
               <p className="bg-red-500 bg-opacity-5 text-center text-sm text-red-500">
-                Email is required!
+                {t('emailIsRequired')}
               </p>
             )}
             {errors.email.type === 'pattern' && (
               <p className="bg-red-500 bg-opacity-5 text-center text-sm text-red-500">
-                Invalid email address!
+                {t('invalidEmailAddress')}
               </p>
             )}
           </>
         )}
       </div>
       <div className="inputbox">
-        <label htmlFor="subject">Subject</label>
+        <label htmlFor="subject">{t('subject')}</label>
         <input
           type="text"
-          placeholder="Enter subject..."
+          placeholder={t('enterSubject')}
           id="subject"
           {...register('subject', { required: true })}
         />
@@ -100,16 +102,16 @@ const ContactForm = () => {
           <>
             {errors.subject.type === 'required' && (
               <p className="bg-red-500 bg-opacity-5 text-center text-sm text-red-500">
-                Subject is required!
+                {t('subjectIsRequired')}
               </p>
             )}
           </>
         )}
       </div>
       <div className="inputbox">
-        <label htmlFor="message">Message</label>
+        <label htmlFor="message">{t('message')}</label>
         <textarea
-          placeholder="Enter you message..."
+          placeholder={t('enterYouMessage')}
           cols={1}
           rows={5}
           id="message"
@@ -119,7 +121,7 @@ const ContactForm = () => {
           <>
             {errors.message.type === 'required' && (
               <p className="bg-red-500 bg-opacity-5 text-center text-sm text-red-500">
-                Message is required!
+                {t('messageIsRequired')}
               </p>
             )}
           </>
@@ -136,7 +138,7 @@ const ContactForm = () => {
         </p>
       )}
       <button type="submit" className="btn">
-        <span>Send Mail</span>
+        <span>{t('sendMail')}</span>
       </button>
     </form>
   );

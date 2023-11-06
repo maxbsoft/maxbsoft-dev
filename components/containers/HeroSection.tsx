@@ -2,13 +2,16 @@ import React from 'react';
 import Image from 'next/image';
 import { RiArrowDownLine } from 'react-icons/ri';
 import { Link } from 'react-scroll';
+import ReactTyped from 'react-typed';
+import { useTranslation } from 'next-i18next';
+import { useQuery } from 'react-query';
+import { motion } from 'framer-motion';
 import { SocialIcons } from '@/components/elements';
 import { imageLoader, shimmer, toBase64 } from '@/lib/utils';
-import { motion } from 'framer-motion';
 import { childrenAnimation } from '@/lib/motion';
-import { useQuery } from 'react-query';
 import { getInformation } from '@/fetchers';
-import ReactTyped from 'react-typed';
+import { getStringFromLocalizedText } from '@/utils';
+import useLocale from '@/hooks/useLocale';
 
 interface HeroSectionProps {
   blurred: boolean;
@@ -21,6 +24,8 @@ const HeroSection = ({
   scroll = true,
   typed = true,
 }: HeroSectionProps) => {
+  const { locale } = useLocale();
+  const { t } = useTranslation('hero');
   const { data } = useQuery('information', getInformation);
 
   if (!data) {
@@ -52,7 +57,7 @@ const HeroSection = ({
                     loader={imageLoader}
                     unoptimized={true}
                     src={data.thumbImage || ''}
-                    alt={data.fullName}
+                    alt={getStringFromLocalizedText(data.fullName, locale)}
                     height={150}
                     width={150}
                     layout="responsive"
@@ -69,7 +74,7 @@ const HeroSection = ({
                 variants={childrenAnimation}
                 className="mb-5 text-heading"
               >
-                <span className="block sm:inline">Hi, I am</span>{' '}
+                <span className="block sm:inline">{t('hiIam')}</span>{' '}
                 {typed ? (
                   <ReactTyped
                     loop
@@ -77,17 +82,20 @@ const HeroSection = ({
                     backSpeed={20}
                     backDelay={2000}
                     strings={[
-                      data.fullName,
+                      getStringFromLocalizedText(data.fullName, locale),
                       'Mobile App Developer',
                       'React Native Developer',
                       'Front-End Developer',
                       'React JS Developer',
+                      'Java Script Developer',
                       'Software Engineer',
                     ]}
                     className="text-primary"
                   />
                 ) : (
-                  <span className="text-primary">{data.fullName}</span>
+                  <span className="text-primary">
+                    {getStringFromLocalizedText(data.fullName, locale)}
+                  </span>
                 )}
               </motion.h1>
               <motion.p
@@ -98,7 +106,7 @@ const HeroSection = ({
                 variants={childrenAnimation}
                 className="lead mb-0"
               >
-                {data.bio}
+                {getStringFromLocalizedText(data.bio ?? '', locale)}
               </motion.p>
               <motion.div
                 initial="hidden"
@@ -131,7 +139,7 @@ const HeroSection = ({
                 className="cursor-pointer text-xs font-medium uppercase tracking-widest transition-all hover:text-primary"
               >
                 <RiArrowDownLine className="inline animate-bounce text-base" />
-                <span className="pl-2">Scroll Down</span>
+                <span className="pl-2">{t('scrollDown')}</span>
               </Link>
             </motion.div>
           ) : null}

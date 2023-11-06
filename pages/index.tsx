@@ -138,7 +138,13 @@ export const getStaticProps: GetStaticProps<HomeProps> = async ({ locale }) => {
   const { posts } = getPostsByPage();
   return {
     props: {
-      ...(await serverSideTranslations(locale ?? 'en', ['common', 'header', 'footer'])),
+      ...(await serverSideTranslations(locale ?? 'en', [
+        'common',
+        'header',
+        'footer',
+        'hero',
+        'about',
+      ])),
       posts,
     },
     revalidate: 10,

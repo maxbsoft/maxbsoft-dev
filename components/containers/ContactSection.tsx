@@ -2,11 +2,13 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { RiMailLine, RiMapPinLine } from 'react-icons/ri';
 import { useQuery } from 'react-query';
+import { useTranslation } from 'next-i18next';
 import { getInformation } from '@/fetchers';
 import { childrenAnimation } from '@/lib/motion';
 import ContactForm from './ContactForm';
 
 const ContactSection = () => {
+  const { t } = useTranslation('common');
   const { data } = useQuery('information', getInformation);
 
   if (!data) return null;
@@ -22,8 +24,8 @@ const ContactSection = () => {
         className="col-span-9 lg:col-span-4"
       >
         <div className="contact-information">
-          <h4>Contact Information</h4>
-          <p>Have questions or feedback? Get in touch with me.</p>
+          <h4>{t('contactInformation')}</h4>
+          <p>{t('haveQuestionsOrFeedbackGetInTouchWithMe')}</p>
           <span className="inline-block h-1 w-20 rounded-full bg-primary bg-opacity-20"></span>
           <div className="contact-blocks mt-5 space-y-5">
             {/*
@@ -48,7 +50,7 @@ const ContactSection = () => {
                 <RiMailLine />
               </span>
               <div className="content">
-                <h5 className="mb-2">Contact on mail</h5>
+                <h5 className="mb-2">{t('contactOnMail')}</h5>
                 {data.emailAddress.map((email, index) => (
                   <p className="mb-0" key={index}>
                     <Link href={`mailto:${email}`} legacyBehavior>
@@ -63,8 +65,8 @@ const ContactSection = () => {
                 <RiMapPinLine />
               </span>
               <div className="content">
-                <h5 className="mb-2">Contact address</h5>
-                <p className="mb-0">Odesa, Ukraine</p>
+                <h5 className="mb-2">{t('contactAddress')}</h5>
+                <p className="mb-0">{t('contactAddressValue')}</p>
               </div>
             </div>
           </div>

@@ -1,0 +1,12 @@
+{
+  "hiIam": "Привіт, я",
+  "firstName": "Ім'я",
+  "lastName": "Прізвище",
+  "nationality": "Національність",
+  "age": "Вік",
+  "yers": "років",
+  "languages": "Мови",
+  "address": "Адрес",
+  "freelance": "Фріланс",
+  "downloadResume": "Завантажити резюме"
+}

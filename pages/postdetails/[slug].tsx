@@ -4,6 +4,8 @@ import { useRouter } from 'next/router';
 import { marked } from 'marked';
 import Image from 'next/image';
 import Link from 'next/link';
+import { GetStaticPaths } from 'next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { createSlug } from '@/lib';
 import { getPostsPath, getSinglePost } from '@/lib/blogging';
 import { imageLoader, shimmer, toBase64 } from '@/lib/utils';
@@ -12,8 +14,6 @@ import type { BreadcrumbPath } from '@/components/elements/Breadcrumb';
 import { Layout } from '@/components/layout';
 import { Spinner } from '@/components/utils';
 import Comments from '@/components/utils/Comments';
-import { GetStaticPaths } from 'next';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 export interface PostPageProps {
   title: string;

@@ -5,6 +5,8 @@ import { RiCloseLine, RiMenuLine } from 'react-icons/ri';
 import { useQuery } from 'react-query';
 import { getInformation } from '@/fetchers';
 import { imageLoader } from '@/lib/utils';
+import useLocale from '@/hooks/useLocale';
+import { getStringFromLocalizedText } from '@/utils';
 
 export interface SidemenuProps {
   fullMenu: boolean;
@@ -12,6 +14,7 @@ export interface SidemenuProps {
 }
 
 const Sidemenu = ({ fullMenu, fullMenuHandler }: SidemenuProps) => {
+  const { locale } = useLocale();
   const { data } = useQuery('information', getInformation);
 
   if (!data) {
@@ -27,7 +30,7 @@ const Sidemenu = ({ fullMenu, fullMenuHandler }: SidemenuProps) => {
               loader={imageLoader}
               unoptimized={true}
               src={data.thumbImage || ''}
-              alt={data.fullName}
+              alt={getStringFromLocalizedText(data.fullName, locale)}
               height={60}
               width={60}
               layout="responsive"

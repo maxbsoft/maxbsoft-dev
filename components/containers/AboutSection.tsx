@@ -5,8 +5,13 @@ import { useQuery } from 'react-query';
 import { imageLoader, shimmer, toBase64 } from '@/lib/utils';
 import { childrenAnimation } from '@/lib/motion';
 import { getInformation } from '@/fetchers';
+import useLocale from '@/hooks/useLocale';
+import { getStringFromLocalizedText } from '@/utils';
+import { useTranslation } from 'next-i18next';
 
 const AboutSection = () => {
+  const { t } = useTranslation();
+  const { locale } = useLocale();
   const { data } = useQuery('information', getInformation);
 
   if (!data) {
@@ -36,7 +41,7 @@ const AboutSection = () => {
               height={422}
               width={660}
               layout="responsive"
-              alt={data.fullName}
+              alt={getStringFromLocalizedText(data.fullName, locale)}
               placeholder="blur"
               blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(660, 422))}`}
             />
@@ -53,64 +58,74 @@ const AboutSection = () => {
           className="about-content"
         >
           <h3>
-            Hi, I am <span className="text-primary">{data.fullName}</span>
+            {t('about:hiIam')}{' '}
+            <span className="text-primary">
+              {getStringFromLocalizedText(data.fullName, locale)}
+            </span>
           </h3>
           <ul className="styledlist">
             {data.firstName && (
               <li className="text-lg">
                 <strong className="inline-block min-w-[120px] font-medium">
-                  First Name{' '}
+                  {t('about:firstName')}{' '}
                 </strong>
-                : {data.firstName}
+                : {getStringFromLocalizedText(data.firstName, locale)}
               </li>
             )}
             {data.lastName && (
               <li className="text-lg">
                 <strong className="inline-block min-w-[120px] font-medium">
-                  Last Name{' '}
+                  {t('about:lastName')}{' '}
                 </strong>
-                : {data.lastName}
+                : {getStringFromLocalizedText(data.lastName, locale)}
               </li>
             )}
             {data.age && (
               <li className="text-lg">
-                <strong className="inline-block min-w-[120px] font-medium">Age </strong>:{' '}
-                {data.age} years
+                <strong className="inline-block min-w-[120px] font-medium">
+                  {t('about:age')}{' '}
+                </strong>
+                {data.age} {t('about:yers')}
               </li>
             )}
             {data.nationality && (
               <li className="text-lg">
                 <strong className="inline-block min-w-[120px] font-medium">
-                  Nationality{' '}
+                  {t('about:nationality')}{' '}
                 </strong>
-                : {data.nationality}
+                : {getStringFromLocalizedText(data.nationality, locale)}
               </li>
             )}
             {data.languages?.length ? (
               <li className="text-lg">
                 <strong className="inline-block min-w-[120px] font-medium">
-                  Languages{' '}
+                  {t('about:languages')}{' '}
                 </strong>
-                : {data.languages.join(', ')}
+                :{' '}
+                {data.languages
+                  .map((item) => getStringFromLocalizedText(item, locale))
+                  .join(', ')}
               </li>
             ) : null}
             {data.address && (
               <li className="text-lg">
-                <strong className="inline-block min-w-[120px] font-medium">Address </strong>
-                : {data.address}
+                <strong className="inline-block min-w-[120px] font-medium">
+                  {t('about:address')}{' '}
+                </strong>
+                : {getStringFromLocalizedText(data.address, locale)}
               </li>
             )}
             {data.freelance && (
               <li className="text-lg">
                 <strong className="inline-block min-w-[120px] font-medium">
-                  Freelance{' '}
+                  {t('about:freelance')}{' '}
                 </strong>
-                : {data.freelance}
+                : {getStringFromLocalizedText(data.freelance, locale)}
               </li>
             )}
           </ul>
           <a href="/resume.pdf" className="btn mt-3">
-            <span>Download Resume</span>
+            <span>{t('about:downloadResume')}</span>
           </a>
         </motion.div>
       </div>

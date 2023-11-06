@@ -1,28 +1,52 @@
 {
-    "firstName": "Max",
-    "lastName": "Balukh",
-    "fullName": "Max Balukh",
-    "thumbImage": "/images/formal-image.png",
-    "largeImage": "/images/about-image.jpg",
-    "bio": "I am a mobile app developer. I specialize in creating clean and efficient code, ensuring pixel-perfect designs, and enhancing user experiences with interactive mobile animations.",
-    "age": 39,
-    "nationality": "Ukrainian",
-    "languages": [
-        "Ukrainian",
-        "English"
-    ],
-    "address": "Odesa, Ukraine",
-    "freelance": "Available",
-    "socialAddress": {
-        "facebook": "https://facebook.com",
-        "twitter": "https://twitter.com",
-        "github": "https://github.com",
-        "linkedin": "https://linkedin.com"
-    },
-    "phoneNumbers": [
-        "+380-96-931-08-96"
-    ],
-    "emailAddress": [
-        "maxbsoft@gmail.com"
-    ]
+  "firstName": {
+    "en": "Max",
+    "uk": "Макс",
+    "ru": "Макс"
+  },
+  "lastName": {
+    "en": "Balukh",
+    "uk": "Balukh",
+    "ru": "Balukh"
+  },
+  "fullName": {
+    "en": "Max Balukh",
+    "uk": "Макс Балух",
+    "ru": "Макс Балух"
+  },
+  "thumbImage": "/images/formal-image.png",
+  "largeImage": "/images/about-image.jpg",
+  "bio": {
+    "en": "I am a mobile app developer. I specialize in creating clean and efficient code, ensuring pixel-perfect designs, and enhancing user experiences with interactive mobile animations.",
+    "uk": "Я розробник мобільних додатків. Я спеціалізуюся на створенні чистого та ефективного коду, забезпеченні бездоганного дизайну та покращенні користувацького досвіду за допомогою інтерактивної мобільної анімації.",
+    "ru": "Я разработчик мобильных приложений. Я специализируюсь на создании чистого и эффективного кода, обеспечении пиксельного дизайна и улучшении пользовательского опыта с помощью интерактивной мобильной анимации."
+  },
+  "age": 39,
+  "nationality": {
+    "en": "Ukraine",
+    "uk": "Українець",
+    "ru": "Украинец"
+  },
+  "languages": [
+    { "en": "Ukrainian", "uk": "Україньська", "ru": "Украинский" },
+    { "en": "English", "uk": "Англійська", "ru": "Английский" }
+  ],
+  "address": {
+    "en": "Odesa, Ukraine",
+    "uk": "Одеса, Україна",
+    "ru": "Одесса, Украина"
+  },
+  "freelance": {
+    "en": "Available",
+    "uk": "Доступний",
+    "ru": "Доступный"
+  },
+  "socialAddress": {
+    "facebook": "https://facebook.com",
+    "twitter": "https://twitter.com",
+    "github": "https://github.com",
+    "linkedin": "https://linkedin.com"
+  },
+  "phoneNumbers": ["+380-96-931-08-96"],
+  "emailAddress": ["maxbsoft@gmail.com"]
 }
