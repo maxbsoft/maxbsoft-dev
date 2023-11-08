@@ -1,17 +1,29 @@
 [
   {
     "id": 1,
-    "title": "Mobile App Development",
+    "title": {
+      "en": "Mobile App Development",
+      "uk": "Розробка мобільних додатків",
+      "ru": "Разработка мобильных приложений"
+    },
     "percentage": 95
   },
   {
     "id": 2,
-    "title": "Front-end Development",
+    "title": {
+      "en": "Front-end Development",
+      "uk": "Front-end розробка",
+      "ru": "Front-end разработка"
+    },
     "percentage": 90
   },
   {
     "id": 3,
-    "title": "Back-end Development",
+    "title": {
+      "en": "Back-end Development",
+      "uk": "Back-end розробка",
+      "ru": "Back-end разработка"
+    },
     "percentage": 80
   }
 ]

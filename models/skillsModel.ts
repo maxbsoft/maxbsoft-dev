@@ -1,6 +1,8 @@
+import { LocalizedText } from '@/types';
+
 export interface SkillModel {
   id: number;
-  title: string;
+  title: string | LocalizedText;
   percentage: number;
 }
 

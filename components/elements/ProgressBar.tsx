@@ -1,14 +1,18 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SkillModel } from '@/models';
+import { Locale } from '@/types';
+import { getStringFromLocalizedText } from '@/utils';
 
 export interface ProgressBarProps {
   skill: SkillModel;
+  locale: Locale;
 }
-const ProgressBar = ({ skill: { title, percentage } }: ProgressBarProps) => (
+const ProgressBar = ({ skill: { title, percentage }, locale }: ProgressBarProps) => (
   <div className="progress">
     <h5>
-      {title} - <span className="text-primary">({percentage}%)</span>
+      {getStringFromLocalizedText(title, locale)} -{' '}
+      <span className="text-primary">({percentage}%)</span>
     </h5>
     <div className="progress-bar relative h-4 w-full rounded-full bg-primary bg-opacity-20">
       <motion.span

@@ -1,11 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SkillModel } from '@/models';
+import { Locale } from '@/types';
+import { getStringFromLocalizedText } from '@/utils';
 
 export interface ProgressCircleProps {
   skill: SkillModel;
+  locale: Locale;
 }
-const ProgressCircle = ({ skill: { title, percentage } }: ProgressCircleProps) => {
+const ProgressCircle = ({ skill: { title, percentage }, locale }: ProgressCircleProps) => {
   const draw = {
     hidden: { pathLength: 0, opacity: 0 },
     visible: {
@@ -48,7 +51,7 @@ const ProgressCircle = ({ skill: { title, percentage } }: ProgressCircleProps) =
           {percentage}%
         </span>
       </div>
-      <h5>{title}</h5>
+      <h5>{getStringFromLocalizedText(title, locale)}</h5>
     </div>
   );
 };

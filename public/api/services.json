@@ -1,20 +1,44 @@
 [
   {
     "id": 1,
-    "title": "Mobile App Development",
-    "text": "I bring your mobile app visions to life by utilizing the potent capabilities of React Native, ensuring your application is seamless, engaging, and accessible across all platforms. Specializing in developing high-performance, secure, and scalable applications for both iOS and Android, I'm dedicated to tailoring each mobile app to meet the unique demands of your target audience and achieve your business objectives.",
+    "title": {
+      "en": "Mobile App Development",
+      "uk": "Розробка мобільних додатків",
+      "ru": "Разработка мобильных приложений"
+    },
+    "text": {
+      "en": "I bring your mobile app visions to life by utilizing the potent capabilities of React Native, ensuring your application is seamless, engaging, and accessible across all platforms. Specializing in developing high-performance, secure, and scalable applications for both iOS and Android, I'm dedicated to tailoring each mobile app to meet the unique demands of your target audience and achieve your business objectives.",
+      "uk": "Я втілюю ваші ідеї мобільних додатків у життя, використовуючи потужні можливості React Native, гарантуючи, що ваш додаток буде безшовним, цікавим та доступним на всіх платформах. Спеціалізуючись на розробці високопродуктивних, безпечних та масштабованих додатків як для iOS, так і для Android, я прагну адаптувати кожен мобільний додаток для задоволення унікальних потреб вашої цільової аудиторії та досягнення ваших бізнес-цілей.",
+      "ru": "Я воплощаю ваши идеи мобильных приложений в жизнь, используя мощные возможности React Native, гарантируя, что ваше приложение будет бесшовным, интересным и доступным на всех платформах. Специализируясь на разработке высокопроизводительных, безопасных и масштабируемых приложений как для iOS, так и для Android, я стремлюсь адаптировать каждое мобильное приложение для удовлетворения уникальных потребностей вашей целевой аудитории и достижения ваших бизнес-целей."
+    },
     "icon": "/icons/smartphone-line.svg"
   },
   {
     "id": 2,
-    "title": "Web Development",
-    "text": "Elevate your online presence with my specialized web development services. With a foundation in advanced technologies like ReactJS and NextJS, I design and implement websites and web applications that are not only visually compelling but also robust, secure, and optimized for all devices. My focus is on delivering an outstanding user experience, ensuring SEO effectiveness, and providing a digital platform that truly stands out in the competitive online environment.",
+    "title": {
+      "en": "Web Development",
+      "uk": "Веб-розробка",
+      "ru": "Веб-разработка"
+    },
+    "text": {
+      "en": "Elevate your online presence with my specialized web development services. With a foundation in advanced technologies like ReactJS and NextJS, I design and implement websites and web applications that are not only visually compelling but also robust, secure, and optimized for all devices. My focus is on delivering an outstanding user experience, ensuring SEO effectiveness, and providing a digital platform that truly stands out in the competitive online environment.",
+      "uk": "Підвищіть свою присутність в Інтернеті за допомогою моїх спеціалізованих послуг з веб-розробки. Використовуючи передові технології, такі як ReactJS та NextJS, я розробляю та впроваджую веб-сайти та веб-додатки, які є не лише візуально привабливими, але й надійними, безпечними та оптимізованими для всіх пристроїв. Я зосереджуюсь на створенні видатного користувацького досвіду, забезпеченні ефективності SEO та створенні цифрової платформи, яка дійсно виділяється в конкурентному онлайн-середовищі.",
+      "ru": "Повысьте уровень своего присутствия в Интернете с помощью моих специализированных услуг в области веб-разработки. Основываясь на таких передовых технологиях, как ReactJS и NextJS, я разрабатываю и внедряю веб-сайты и веб-приложения, которые не только визуально привлекательны, но и надежны, безопасны и оптимизированы для всех устройств. Я уделяю особое внимание обеспечению превосходного пользовательского опыта, обеспечению SEO-эффективности и созданию цифровой платформы, которая действительно выделяется в конкурентной среде Интернета."
+    },
     "icon": "/icons/code-s-slash-line.svg"
   },
   {
     "id": 3,
-    "title": "Product Maintenance and Support",
-    "text": "Ensure the enduring success and stability of your digital products with my meticulous product maintenance and support services. I prioritize keeping your platforms contemporary, secure, and functioning at peak performance through regular updates and vigilant problem management. With a commitment to preserving uninterrupted operation, I maintain user satisfaction and trust, guaranteeing your digital solution stands the test of time and evolves alongside technological advancements.",
+    "title": {
+      "en": "Product Maintenance and Support",
+      "uk": "Обслуговування та підтримка продукту",
+      "ru": "Обслуживание и поддержка продуктов"
+    },
+    "text": {
+      "en": "Ensure the enduring success and stability of your digital products with my meticulous product maintenance and support services. I prioritize keeping your platforms contemporary, secure, and functioning at peak performance through regular updates and vigilant problem management. With a commitment to preserving uninterrupted operation, I maintain user satisfaction and trust, guaranteeing your digital solution stands the test of time and evolves alongside technological advancements.",
+      "uk": "Забезпечте довготривалий успіх і стабільність ваших цифрових продуктів за допомогою моїх ретельних послуг з обслуговування та підтримки продуктів. Я надаю пріоритет підтримці ваших платформ у сучасному, безпечному стані та з максимальною продуктивністю завдяки регулярним оновленням і пильному управлінню проблемами. Прагнучи забезпечити безперебійну роботу, я підтримую задоволеність і довіру користувачів, гарантуючи, що ваше цифрове рішення витримає випробування часом і розвиватиметься разом з технологічним прогресом.",
+      "ru": "Обеспечьте длительный успех и стабильность ваших цифровых продуктов с помощью моих услуг по тщательному обслуживанию и поддержке продуктов. Я уделяю первостепенное внимание поддержанию современности, безопасности и максимальной производительности ваших платформ путем регулярного обновления и тщательного решения проблем. Стремясь обеспечить бесперебойную работу, я поддерживаю удовлетворенность и доверие пользователей, гарантируя, что ваши цифровые решения выдержат испытание временем и будут развиваться вместе с технологическим прогрессом."
+    },
     "icon": "/icons/support.svg"
   }
 ]

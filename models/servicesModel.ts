@@ -1,7 +1,9 @@
+import { LocalizedText } from '@/types';
+
 export interface ServiceModel {
   id: number;
-  title: string;
-  text: string;
+  title: string | LocalizedText;
+  text: string | LocalizedText;
   icon: string;
 }
 

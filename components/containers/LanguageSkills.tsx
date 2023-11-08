@@ -3,8 +3,10 @@ import { useQuery } from 'react-query';
 import { getLanguageskills } from '@/fetchers';
 import { childrenAnimation } from '@/lib/motion';
 import { ProgressBar } from '@/components/elements';
+import useLocale from '@/hooks/useLocale';
 
 const LanguageSkills = () => {
+  const { locale } = useLocale();
   const { data } = useQuery('language-skills', getLanguageskills);
 
   if (!data) return null;
@@ -21,7 +23,7 @@ const LanguageSkills = () => {
           className="col-span-2 md:col-span-1"
           key={skill.id}
         >
-          <ProgressBar skill={skill} />
+          <ProgressBar skill={skill} locale={locale} />
         </motion.div>
       ))}
     </div>

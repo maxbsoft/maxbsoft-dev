@@ -3,8 +3,10 @@ import { useQuery } from 'react-query';
 import { getServices } from '@/fetchers';
 import { childrenAnimation } from '@/lib/motion';
 import { Service } from '@/components/elements';
+import useLocale from '@/hooks/useLocale';
 
 const ServicesSection = () => {
+  const { locale } = useLocale();
   const { data } = useQuery('services', getServices);
 
   if (!data) return null;
@@ -21,7 +23,7 @@ const ServicesSection = () => {
           className="col-span-3 lg:col-span-1"
           key={service.id}
         >
-          <Service service={service} />
+          <Service service={service} locale={locale} />
         </motion.div>
       ))}
     </div>

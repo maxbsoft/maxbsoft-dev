@@ -3,8 +3,10 @@ import { useQuery } from 'react-query';
 import { getTechskills } from '@/fetchers';
 import { childrenAnimation } from '@/lib/motion';
 import { ProgressCircle } from '@/components/elements';
+import useLocale from '@/hooks/useLocale';
 
 const TechSkills = () => {
+  const { locale } = useLocale();
   const { data } = useQuery('tech-skills', getTechskills);
 
   if (!data) return null;
@@ -21,7 +23,7 @@ const TechSkills = () => {
           className="col-span-4 sm:col-span-2 lg:col-span-1"
           key={skill.id}
         >
-          <ProgressCircle skill={skill} />
+          <ProgressCircle skill={skill} locale={locale} />
         </motion.div>
       ))}
     </div>
