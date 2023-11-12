@@ -144,6 +144,7 @@ export const getStaticProps: GetStaticProps<HomeProps> = async ({ locale }) => {
         'footer',
         'hero',
         'about',
+        'resume',
       ])),
       posts,
     },

@@ -5,10 +5,14 @@ import { getJobExperience } from '@/fetchers';
 import { childrenAnimation } from '@/lib/motion';
 import { TimelineItem } from '@/components/elements';
 import { useState } from 'react';
+import { useTranslation } from 'next-i18next';
+import useLocale from '@/hooks/useLocale';
 
 export interface JobTimelineProps {}
 const RECORDS_LIMIT = 2;
 const JobTimeline: React.FC<JobTimelineProps> = () => {
+  const { t } = useTranslation();
+  const { locale } = useLocale();
   const [visibleFull, setVisibleFull] = useState<boolean>(false);
   const { data } = useQuery('job-experience', getJobExperience);
 
@@ -18,7 +22,7 @@ const JobTimeline: React.FC<JobTimelineProps> = () => {
     <div className="job-experience">
       <h4>
         <RiBriefcaseLine className="mr-2 inline-block text-primary" />
-        Working Experience
+        {t('resume:workingExperience')}
       </h4>
       {data
         ?.filter((_, index) => (!visibleFull ? index < RECORDS_LIMIT : true))
@@ -32,7 +36,7 @@ const JobTimeline: React.FC<JobTimelineProps> = () => {
             className="timeline-wrap"
             key={timeline.id}
           >
-            <TimelineItem timeline={timeline} />
+            <TimelineItem timeline={timeline} locale={locale} />
           </motion.div>
         ))}
 
@@ -42,7 +46,7 @@ const JobTimeline: React.FC<JobTimelineProps> = () => {
             className="btn btn-small"
             onClick={() => setVisibleFull((prevValue: boolean) => !prevValue)}
           >
-            <span>{!visibleFull ? 'Load More' : 'Hide'}</span>
+            <span>{!visibleFull ? t('common:loadMore') : t('common:hide')}</span>
           </button>
         </div>
       )}

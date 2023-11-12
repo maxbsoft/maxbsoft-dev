@@ -1,142 +1,462 @@
 [
   {
     "id": 12,
-    "title": "Senior React Native Developer",
-    "meta": "GeoRest Ltd.",
+    "title": {
+      "en": "Senior React Native Developer",
+      "uk": "Senior React Native розробник",
+      "ru": "Senior React Native разработчик"
+    },
+    "meta": {
+      "en": "GeoRest Ltd.",
+      "uk": "GeoRest Ltd.",
+      "ru": "GeoRest Ltd."
+    },
     "text": [
-      "Developed and maintained a comprehensive suite of mobile food delivery applications for both iOS and Android platforms using React Native.",
-      "Collaborated with front-end and back-end developers to create applications for businesses, couriers, and customers."
+      {
+        "en": "Developed and maintained a comprehensive suite of mobile food delivery applications for both iOS and Android platforms using React Native.",
+        "uk": "Розробив та підтримував комплексний набір мобільних додатків для доставки їжі для платформ iOS та Android з використанням React Native.",
+        "ru": "Разработал и поддерживал комплексный набор мобильных приложений для доставки еды для платформ iOS и Android с использованием React Native."
+      },
+      {
+        "en": "Collaborated with front-end and back-end developers to create applications for businesses, couriers, and customers.",
+        "uk": "Співпрацювала з фронтенд- та бекенд-розробниками над створенням додатків для бізнесу, кур'єрів та клієнтів.",
+        "ru": "В сотрудничестве с front-end и back-end разработчиками создавал приложения для предприятий, курьеров и клиентов."
+      }
     ],
-    "year": "2020 - Present"
+    "year": {
+      "en": "2020 - Present",
+      "uk": "2020 - зараз",
+      "ru": "2020 - сейчас"
+    }
   },
   {
     "id": 11,
-    "title": "Senior Front-End Developer",
-    "meta": "Dataforest.ai",
+    "title": {
+      "en": "Senior Front-End Developer",
+      "uk": "Senior Front-End розробник",
+      "ru": "Senior Front-End Developer"
+    },
+    "meta": {
+      "en": "Dataforest.ai",
+      "uk": "Dataforest.ai",
+      "ru": "Dataforest.ai"
+    },
     "text": [
-      "Led front-end development for web applications, including CRM system dashboards using React.js.",
-      "Specialized in React Native for mobile app development.",
-      "Collaborated with cross-functional teams, including UI/UX designers and developers.",
-      "Conducted technical interviews as part of the hiring process."
+      {
+        "en": "Led front-end development for web applications, including CRM system dashboards using React.js.",
+        "uk": "Керував розробкою фронтенду для веб-додатків, включаючи дашборди CRM-систем з використанням React.js.",
+        "ru": "Руководил front-end разработкой веб-приложений, в том числе информационных панелей CRM-системы, с использованием React.js."
+      },
+      {
+        "en": "Specialized in React Native for mobile app development.",
+        "uk": "Спеціалізується на React Native для розробки мобільних додатків.",
+        "ru": "Специализируется на React Native для разработки мобильных приложений."
+      },
+      {
+        "en": "Collaborated with cross-functional teams, including UI/UX designers and developers.",
+        "uk": "Співпрацював з крос-функціональними командами, включаючи UI/UX дизайнерів та розробників.",
+        "ru": "Сотрудничал с кросс-функциональными командами, включая дизайнеров UI/UX и разработчиков."
+      },
+      {
+        "en": "Conducted technical interviews as part of the hiring process.",
+        "uk": "Проводила технічні співбесіди в рамках процесу найму.",
+        "ru": "Проводил технические собеседования в рамках процесса найма."
+      }
     ],
-    "year": "2019 - 2020"
+    "year": {
+      "en": "2019 - 2020",
+      "uk": "2019 - 2020",
+      "ru": "2019 - 2020"
+    }
   },
   {
     "id": 10,
-    "title": "Lead Developer",
-    "meta": "Self-Employed (Balukh M. FOP)",
+    "title": {
+      "en": "Lead Developer",
+      "uk": "Провідний розробник",
+      "ru": "Ведущий разработчик"
+    },
+    "meta": {
+      "en": "Self-Employed (Balukh M. FOP)",
+      "uk": "ФОП Балух М.А",
+      "ru": "ФОП Балух М.А"
+    },
     "text": [
-      "Led technical project leadership with responsibilities spanning cross-platform mobile app development in React Native.",
-      "Engineered high-performing web applications using React JS and Electron JS.",
-      "Contributed to native iOS app development in Objective-C and Swift.",
-      "Managed server-side development in Node.js and Java.",
-      "Directed a team of three developers, assigning tasks, ensuring project deadlines, and maintaining coding standards.",
-      "Achieved successful project completions with high user engagement and positive client feedback."
+      {
+        "en": "Led technical project leadership with responsibilities spanning cross-platform mobile app development in React Native.",
+        "uk": "Очолював технічне керівництво проектами з обов'язками, що охоплюють розробку крос-платформних мобільних додатків на React Native.",
+        "ru": "Осуществлял техническое руководство проектами, в обязанности которого входила разработка кросс-платформенных мобильных приложений на базе React Native."
+      },
+      {
+        "en": "Engineered high-performing web applications using React JS and Electron JS.",
+        "uk": "Створював високопродуктивні веб-додатки за допомогою React JS та Electron JS.",
+        "ru": "Разрабатывал высокопроизводительные веб-приложения с использованием React JS и Electron JS."
+      },
+      {
+        "en": "Contributed to native iOS app development in Objective-C and Swift.",
+        "uk": "Брав участь у розробці нативних додатків для iOS на Objective-C та Swift.",
+        "ru": "Участвовал в разработке нативных приложений для iOS на языках Objective-C и Swift."
+      },
+      {
+        "en": "Managed server-side development in Node.js and Java.",
+        "uk": "Керована серверна розробка на Node.js та Java.",
+        "ru": "Управлял разработкой серверной части на Node.js и Java."
+      },
+      {
+        "en": "Directed a team of three developers, assigning tasks, ensuring project deadlines, and maintaining coding standards.",
+        "uk": "Керував командою з трьох розробників, розподіляючи завдання, забезпечуючи дотримання термінів виконання проектів та стандартів кодування.",
+        "ru": "Руководил командой из трех разработчиков, распределяя задачи, обеспечивая соблюдение сроков выполнения проектов и поддерживая стандарты кодирования."
+      },
+      {
+        "en": "Achieved successful project completions with high user engagement and positive client feedback.",
+        "uk": "Досягнуто успішних завершень проектів з високим рівнем залучення користувачів та позитивними відгуками клієнтів.",
+        "ru": "Успешное завершение проектов с высоким уровнем вовлеченности пользователей и положительными отзывами клиентов."
+      }
     ],
-    "year": "2013 - 2019"
+    "year": {
+      "en": "2013 - 2019",
+      "uk": "2013 - 2019",
+      "ru": "2013 - 2019"
+    }
   },
   {
     "id": 9,
-    "title": "React Native Developer",
-    "meta": "WannaFight mobile app, Freelance",
+    "title": {
+      "en": "React Native Developer",
+      "uk": "React Native розробник",
+      "ru": "React Native разработчик"
+    },
+    "meta": {
+      "en": "WannaFight mobile app, Freelance",
+      "uk": "WannaFight mobile app, Фріланс",
+      "ru": "WannaFight mobile app, Фриланс"
+    },
     "text": [
-      "Developed WannaFight, a mobile app for iOS and Android, offering a realistic combat experience based on user and opponent data like weight, height, pull-ups count, and reaction strength, measured via device accelerometer.",
-      "Led the creation of a project management dashboard.",
-      "Utilized technologies such as React Native, Spine Animation, PHP, Laravel, JavaScript, PixiJs, HTML, CSS, Firebase, and Postgres.",
-      "Managed a team of artists and animators, defining technical requirements for character and animation development."
+      {
+        "en": "Developed WannaFight, a mobile app for iOS and Android, offering a realistic combat experience based on user and opponent data like weight, height, pull-ups count, and reaction strength, measured via device accelerometer.",
+        "uk": "Розробив WannaFight, мобільний додаток для iOS та Android, що пропонує реалістичний бойовий досвід на основі даних користувача та супротивника, таких як вага, зріст, кількість підтягувань та сила реакції, що вимірюється за допомогою акселерометра пристрою.",
+        "ru": "Разработано мобильное приложение WannaFight для iOS и Android, предлагающее реалистичный бой на основе данных о пользователе и сопернике, таких как вес, рост, количество подтягиваний и сила реакции, измеряемых с помощью акселерометра устройства."
+      },
+      {
+        "en": "Led the creation of a project management dashboard.",
+        "uk": "Керував створенням інформаційної панелі управління проектами.",
+        "ru": "Руководил созданием инструментальной панели управления проектами."
+      },
+      {
+        "en": "Utilized technologies such as React Native, Spine Animation, PHP, Laravel, JavaScript, PixiJs, HTML, CSS, Firebase, and Postgres.",
+        "uk": "Використані технології: React Native, Spine Animation, PHP, Laravel, JavaScript, PixiJs, HTML, CSS, Firebase та Postgres.",
+        "ru": "Использовал такие технологии, как React Native, Spine Animation, PHP, Laravel, JavaScript, PixiJs, HTML, CSS, Firebase и Postgres."
+      },
+      {
+        "en": "Managed a team of artists and animators, defining technical requirements for character and animation development.",
+        "uk": "Керував командою художників та аніматорів, визначаючи технічні вимоги до розробки персонажів та анімації.",
+        "ru": "Руководил группой художников и аниматоров, определяя технические требования к разработке персонажей и анимации."
+      }
     ],
-    "year": "2017 - 2018"
+    "year": {
+      "en": "2017 - 2018",
+      "uk": "2017 - 2018",
+      "ru": "2017 - 2018"
+    }
   },
   {
     "id": 8,
-    "title": "iOS Developer",
-    "meta": "Fitness mobile app, Freelance",
+    "title": {
+      "en": "iOS Developer",
+      "uk": "iOS Developer",
+      "ru": "iOS Developer"
+    },
+    "meta": {
+      "en": "Fitness mobile app, Freelance",
+      "uk": "Fitness mobile app, Фріланс",
+      "ru": "Fitness mobile app, Фриланс"
+    },
     "text": [
-      "Developed pulse measurement module for iOS in Objective-C.",
-      "Designed and implemented a dashboard for displaying measurement results and statistics using PHP with Laravel."
+      {
+        "en": "Developed pulse measurement module for iOS in Objective-C.",
+        "uk": "Розроблено модуль вимірювання пульсу для iOS на Objective-C.",
+        "ru": "Разработал модуль измерения пульса для iOS на языке Objective-C."
+      },
+      {
+        "en": "Designed and implemented a dashboard for displaying measurement results and statistics using PHP with Laravel.",
+        "uk": "Розроблено та реалізовано дашборд для відображення результатів вимірювань та статистики за допомогою PHP з Laravel.",
+        "ru": "Спроектировал и реализовал приборную панель для отображения результатов измерений и статистики, используя PHP с Laravel."
+      }
     ],
-    "year": "2017"
+    "year": {
+      "en": "2017",
+      "uk": "2017",
+      "ru": "2017"
+    }
   },
   {
     "id": 7,
-    "title": "Java Developer",
-    "meta": "MisterLauncher desktop application, Freelance",
+    "title": {
+      "en": "Java Developer",
+      "uk": "Java Developer",
+      "ru": "Java Developer"
+    },
+    "meta": {
+      "en": "MisterLauncher desktop application, Freelance",
+      "uk": "MisterLauncher desktop application, Фріланс",
+      "ru": "MisterLauncher desktop application, Фриланс"
+    },
     "text": [
-      "Developed the Minecraft Launcher for Windows, Mac OS, and Linux platforms using Java."
+      {
+        "en": "Developed the Minecraft Launcher for Windows, Mac OS, and Linux platforms using Java.",
+        "uk": "Розробив Minecraft Launcher для платформ Windows, Mac OS та Linux, використовуючи Java.",
+        "ru": "Разработал программу Minecraft Launcher для платформ Windows, Mac OS и Linux с использованием языка Java."
+      }
     ],
-    "year": "2016"
+    "year": {
+      "en": "2016",
+      "uk": "2016",
+      "ru": "2016"
+    }
   },
   {
     "id": 6,
-    "title": "Mobile App Developer, JavaScript Developer, PHP Developer, Java Developer, Action Script 3 Developer",
-    "meta": "Freelance",
+    "title": {
+      "en": "Mobile App Developer, JavaScript Developer, PHP Developer, Java Developer, Action Script 3 Developer",
+      "uk": "Розробник мобільних додатків, JavaScript розробник, PHP розробник, Java розробник, Action Script 3 розробник",
+      "ru": "Разработчик мобильных приложений, Разработчик JavaScript, Разработчик PHP, Разработчик Java, Разработчик Action Script 3"
+    },
+    "meta": {
+      "en": "Freelance",
+      "uk": "Фріланс",
+      "ru": "Фриланс"
+    },
     "text": [
-      "Specialized in mobile app development using Adobe AIR technology.",
-      "Created iOS applications in Objective-C.",
-      "Developed video chat applications similar to Chatroulette.com.",
-      "Worked on the development of e-commerce websites and a social network for dating.",
-      "Designed websites for various companies."
+      {
+        "en": "Specialized in mobile app development using Adobe AIR technology.",
+        "uk": "Спеціалізується на розробці мобільних додатків з використанням технології Adobe AIR.",
+        "ru": "Специализируется на разработке мобильных приложений с использованием технологии Adobe AIR."
+      },
+      {
+        "en": "Created iOS applications in Objective-C.",
+        "uk": "Створював iOS-додатки на Objective-C.",
+        "ru": "Создавал iOS-приложения на языке Objective-C."
+      },
+      {
+        "en": "Developed video chat applications similar to Chatroulette.com.",
+        "uk": "Розроблені додатки для відеочату, подібні до Chatroulette.com.",
+        "ru": "Разработаны приложения для видеочатов, аналогичные Chatroulette.com."
+      },
+      {
+        "en": "Worked on the development of e-commerce websites and a social network for dating.",
+        "uk": "Працював над розробкою веб-сайтів електронної комерції та соціальної мережі для знайомств.",
+        "ru": "Работал над созданием сайтов электронной коммерции и социальной сети для знакомств."
+      },
+      {
+        "en": "Designed websites for various companies.",
+        "uk": "Створював веб-сайти для різних компаній.",
+        "ru": "Разработка веб-сайтов для различных компаний."
+      }
     ],
-    "year": "2012 - 2013"
+    "year": {
+      "en": "2012 - 2013",
+      "uk": "2012 - 2013",
+      "ru": "2012 - 2013"
+    }
   },
   {
     "id": 5,
-    "title": "iOS Developer, Android Developer, Front-End Developer",
-    "meta": "3DTuning, LLC",
+    "title": {
+      "en": "iOS Developer, Android Developer, Front-End Developer",
+      "uk": "iOS Developer, Android Developer, Front-End Developer",
+      "ru": "iOS Developer, Android Developer, Front-End Developer"
+    },
+    "meta": {
+      "en": "3DTuning, LLC",
+      "uk": "3DTuning, LLC",
+      "ru": "3DTuning, LLC"
+    },
     "text": [
-      "Developed 3DTuning mobile application for iOS and Android.",
-      "Allowed users to customize hundreds of vehicles with photorealistic quality and detail.",
-      "Utilized Adobe AIR, ActionScript 3, Objective-C, Java, Starling, and Feathers UI.",
-      "Implemented in-app purchases and subscriptions."
+      {
+        "en": "Developed 3DTuning mobile application for iOS and Android.",
+        "uk": "Розроблено мобільний додаток 3DTuning для iOS та Android.",
+        "ru": "Разработано мобильное приложение 3DTuning для iOS и Android."
+      },
+      {
+        "en": "Allowed users to customize hundreds of vehicles with photorealistic quality and detail.",
+        "uk": "Дозволяє користувачам налаштовувати сотні транспортних засобів з фотореалістичною якістю та деталями.",
+        "ru": "Позволило пользователям настраивать сотни транспортных средств с фотореалистичным качеством и детализацией."
+      },
+      {
+        "en": "Utilized Adobe AIR, ActionScript 3, Objective-C, Java, Starling, and Feathers UI.",
+        "uk": "Використано Adobe AIR, ActionScript 3, Objective-C, Java, Starling і Feathers UI.",
+        "ru": "Использовались Adobe AIR, ActionScript 3, Objective-C, Java, Starling и Feathers UI."
+      },
+      {
+        "en": "Implemented in-app purchases and subscriptions.",
+        "uk": "Впроваджено внутрішньоаплікаційні покупки та підписки.",
+        "ru": "Реализованы внутриприложенческие покупки и подписки."
+      }
     ],
-    "year": "2013 - 2018"
+    "year": {
+      "en": "2013 - 2018",
+      "uk": "2013 - 2018",
+      "ru": "2013 - 2018"
+    }
   },
   {
     "id": 4,
-    "title": "Action Script 3 Developer, Java Developer, PHP Developer",
-    "meta": "Vizual Technologies, Inc",
+    "title": {
+      "en": "Action Script 3 Developer, Java Developer, PHP Developer",
+      "uk": "Розробник Action Script 3, Розробник Java, Розробник PHP",
+      "ru": "Разработчик Action Script 3, Разработчик Java, Разработчик PHP"
+    },
+    "meta": {
+      "en": "Vizual Technologies, Inc",
+      "uk": "Vizual Technologies, Inc",
+      "ru": "Vizual Technologies, Inc"
+    },
     "text": [
-      "Developed a video chat system using the Red5 Media Server with Flash technology and ActionScript 3.",
-      "Created an online video editor for producing promotional videos using Red5, Flash, CakePHP, PHP, and ActionScript 3.",
-      "Built mobile apps with Adobe AIR technology.",
-      "Designed and implemented native extensions for Adobe AIR using Objective-C and Java for iOS and Android."
+      {
+        "en": "Developed a video chat system using the Red5 Media Server with Flash technology and ActionScript 3.",
+        "uk": "Розроблено систему відеочату з використанням медіасервера Red5, технології Flash та ActionScript 3.",
+        "ru": "Разработана система видеочата с использованием медиасервера Red5, технологии Flash и ActionScript 3."
+      },
+      {
+        "en": "Created an online video editor for producing promotional videos using Red5, Flash, CakePHP, PHP, and ActionScript 3.",
+        "uk": "Створено онлайн-відеоредактор для виробництва рекламних роликів за допомогою Red5, Flash, CakePHP, PHP та ActionScript 3.",
+        "ru": "Создан онлайн-видеоредактор для производства промо-видео с использованием Red5, Flash, CakePHP, PHP и ActionScript 3."
+      },
+      {
+        "en": "Built mobile apps with Adobe AIR technology.",
+        "uk": "Побудовано мобільні додатки на технології Adobe AIR.",
+        "ru": "Построено мобильные приложения на технологии Adobe AIR."
+      },
+      {
+        "en": "Designed and implemented native extensions for Adobe AIR using Objective-C and Java for iOS and Android.",
+        "uk": "Розроблено та реалізовано нативні розширення для Adobe AIR за допомогою Objective-C та Java для iOS та Android.",
+        "ru": "Спроектированы и реализованы нативные расширения для Adobe AIR с использованием Objective-C и Java для iOS и Android."
+      }
     ],
-    "year": "2009 - 2012"
+    "year": {
+      "en": "2009 - 2012",
+      "uk": "2009 - 2012",
+      "ru": "2009 - 2012"
+    }
   },
   {
     "id": 3,
-    "title": "Action Script 3 Developer, Java Developer",
-    "meta": "Freelance",
+    "title": {
+      "en": "Action Script 3 Developer, Java Developer",
+      "uk": "Розробник Action Script 3, Розробник Java",
+      "ru": "Разработчик Action Script 3, Разработчик Java"
+    },
+    "meta": {
+      "en": "Freelance",
+      "uk": "Фріланс",
+      "ru": "Фриланс"
+    },
     "text": [
-      "Developed an online video chat with an interactive whiteboard using ActionScript 3 and Red5 (Java).",
-      "Created e-commerce websites with PHP, HTML, CSS, and JavaScript.",
-      "Designed websites for various companies."
+      {
+        "en": "Developed an online video chat with an interactive whiteboard using ActionScript 3 and Red5 (Java).",
+        "uk": "Розробив онлайн-відеочат з інтерактивною білою дошкою на базі ActionScript 3 та Red5 (Java).",
+        "ru": "Разработал онлайн-видеочат с интерактивной доской на основе ActionScript 3 и Red5 (Java)."
+      },
+      {
+        "en": "Created e-commerce websites with PHP, HTML, CSS, and JavaScript.",
+        "uk": "Створив веб-сайти для електронної комерції з використанням PHP, HTML, CSS та JavaScript.",
+        "ru": "Создал веб-сайты электронной коммерции на PHP, HTML, CSS и JavaScript."
+      },
+      {
+        "en": "Designed websites for various companies.",
+        "uk": "Розробив веб-сайти для різних компаній.",
+        "ru": "Спроектировал веб-сайты для различных компаний."
+      }
     ],
-    "year": "2009"
+    "year": {
+      "en": "2009",
+      "uk": "2009",
+      "ru": "2009"
+    }
   },
   {
     "id": 2,
-    "title": "Graphic Designer, Web Developer, System Administrator",
-    "meta": "Elton, LLC (Printing house)",
+    "title": {
+      "en": "Graphic Designer, Web Developer, System Administrator",
+      "uk": "Графічний дизайнер, Веб-розробник, Системний адміністратор",
+      "ru": "Графический дизайнер, Веб-разработчик, Системный администратор"
+    },
+    "meta": {
+      "en": "Elton, LLC (Printing house)",
+      "uk": "Elton, LLC (Друкарня)",
+      "ru": "Elton, LLC (Типография)"
+    },
     "text": [
-      "Specialized in Graphic Design, creating print layouts using software such as Corel Draw, Adobe Illustrator, Page Maker, Adobe Photoshop, and Microsoft Office.",
-      "Designed various materials like flyers, brochures, catalogs, and business cards.",
-      "Developed logos and prepared layouts for offset printing.",
-      "Worked as a Web Developer, focusing on the design and development of company websites.",
-      "Responsible for Network Design and Implementation, designing and establishing the company's internal network and handling network administration tasks."
+      {
+        "en": "Specialized in Graphic Design, creating print layouts using software such as Corel Draw, Adobe Illustrator, Page Maker, Adobe Photoshop, and Microsoft Office.",
+        "uk": "Спеціалізувався на графічному дизайні, створенні друкованих макетів за допомогою такого програмного забезпечення, як Corel Draw, Adobe Illustrator, Page Maker, Adobe Photoshop та Microsoft Office.",
+        "ru": "Специализировался на графическом дизайне, создании печатных макетов с использованием такого программного обеспечения, как Corel Draw, Adobe Illustrator, Page Maker, Adobe Photoshop и Microsoft Office."
+      },
+      {
+        "en": "Designed various materials like flyers, brochures, catalogs, and business cards.",
+        "uk": "Розробив різні матеріали, такі як листівки, брошури, каталоги та візитні картки.",
+        "ru": "Разработал различные материалы, включая флаеры, брошюры, каталоги и визитные карточки."
+      },
+      {
+        "en": "Developed logos and prepared layouts for offset printing.",
+        "uk": "Розробляв логотипи та готував макети для офсетного друку.",
+        "ru": "Разрабатывал логотипы и подготавливал макеты для офсетной печати."
+      },
+      {
+        "en": "Worked as a Web Developer, focusing on the design and development of company websites.",
+        "uk": "Працював веб-розробником, зосереджуючись на дизайні та розробці веб-сайтів компанії.",
+        "ru": "Работал веб-разработчиком, сосредоточившись на дизайне и разработке веб-сайтов компании."
+      },
+      {
+        "en": "Responsible for Network Design and Implementation, designing and establishing the company's internal network and handling network administration tasks.",
+        "uk": "Відповідальний за проектування та впровадження мережі, створення внутрішньої мережі компанії та виконання адміністративних завдань мережі.",
+        "ru": "Ответственный за проектирование и внедрение сети, создание внутренней сети компании и выполнение задач по администрированию сети."
+      }
     ],
-    "year": "2002 - 2008"
+    "year": {
+      "en": "2002 - 2008",
+      "uk": "2002 - 2008",
+      "ru": "2002 - 2008"
+    }
   },
   {
     "id": 1,
-    "title": "1C Developer, System Administrator",
-    "meta": "Avtomehstroy (Auto transport enterprise)",
+    "title": {
+      "en": "1C Developer, System Administrator",
+      "uk": "Розробник 1С, Системний адміністратор",
+      "ru": "Разработчик 1С, Системный администратор"
+    },
+    "meta": {
+      "en": "Avtomehstroy (Auto transport enterprise)",
+      "uk": "Avtomehstroy (Auto transport enterprise)",
+      "ru": "Avtomehstroy (Auto transport enterprise)"
+    },
     "text": [
-      "Contributed to the development and implementation of a Document Management System, including the design of a system for inputting primary company documents.",
-      "Engineered an automated payroll calculation system for employees, factoring in tax deductions, using 1C Enterprise software.",
-      "Responsible for Network Design and Implementation, successfully designing and establishing the company's internal network.",
-      "Managed network administration tasks."
+      {
+        "en": "Contributed to the development and implementation of a Document Management System, including the design of a system for inputting primary company documents.",
+        "uk": "Вніс вклад у розробку та впровадження системи управління документами, включаючи проектування системи для введення первинних документів компанії.",
+        "ru": "Принес вклад в разработку и внедрение системы управления документами, включая проектирование системы для ввода первичных документов компании."
+      },
+      {
+        "en": "Engineered an automated payroll calculation system for employees, factoring in tax deductions, using 1C Enterprise software.",
+        "uk": "Розробив автоматизовану систему розрахунку заробітної плати для працівників, з урахуванням податкових вирахувань, використовуючи програмне забезпечення 1С Підприємство.",
+        "ru": "Разработал автоматизированную систему расчета заработной платы для сотрудников с учетом налоговых вычетов на программе 1С Предприятие."
+      },
+      {
+        "en": "Responsible for Network Design and Implementation, successfully designing and establishing the company's internal network.",
+        "uk": "Відповідальний за проектування та впровадження мережі, успішно створив внутрішню мережу компанії.",
+        "ru": "Ответственный за проектирование и внедрение сети, успешно спроектировав и организовав внутреннюю сеть компании."
+      },
+      {
+        "en": "Managed network administration tasks.",
+        "uk": "Керував задачами адміністрування мережі.",
+        "ru": "Управлял задачами сетевого администрирования."
+      }
     ],
-    "year": "2001 - 2002"
+    "year": {
+      "en": "2001 - 2002",
+      "uk": "2001 - 2002",
+      "ru": "2001 - 2002"
+    }
   }
 ]

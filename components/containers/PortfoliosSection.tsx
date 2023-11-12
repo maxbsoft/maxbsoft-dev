@@ -5,8 +5,10 @@ import { getPortfolios } from '@/fetchers';
 import { Portfolio } from '@/components/elements';
 import { PortfolioFilters } from '@/components/utils';
 import { PortfolioItemsModel } from '@/models';
+import { useTranslation } from 'next-i18next';
 
 const PortfoliosSection = () => {
+  const { t } = useTranslation();
   // States
   const [visiblePortfolios, setVisiblePortfolios] = useState<PortfolioItemsModel>([]);
   const [currentFilter, setCurrentFilter] = useState<string>('');
@@ -76,7 +78,7 @@ const PortfoliosSection = () => {
       {visiblePortfolios < data ? (
         <div className="mt-12 text-center">
           <button className="btn btn-small" onClick={() => handleLoadmore()}>
-            <span>Load More</span>
+            <span>{t('common:loadMore')}</span>
           </button>
         </div>
       ) : null}

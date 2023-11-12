@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import { GetStaticPaths } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useTranslation } from 'next-i18next';
 import { Blog, Breadcrumb } from '@/components/elements';
 import { createSlug } from '@/lib';
 import {
@@ -25,6 +26,7 @@ export interface PostsProps {
   recentPosts: PostItemsModel;
 }
 const Posts = ({ posts, hasMore, categories, recentPosts }: PostsProps) => {
+  const { t } = useTranslation();
   const [mounted, setMounted] = useState(false);
   const [uniqueCategories, setUniqueCategories] = useState<string[]>([]);
 
@@ -39,7 +41,7 @@ const Posts = ({ posts, hasMore, categories, recentPosts }: PostsProps) => {
     setUniqueCategories([...new Set(categories)]);
   }, [categories]);
 
-  if (!mounted) return <p className="text-center">Loading...</p>;
+  if (!mounted) return <p className="text-center">{t('blog:loading')}</p>;
   if (!posts) return null;
 
   return (
@@ -48,15 +50,15 @@ const Posts = ({ posts, hasMore, categories, recentPosts }: PostsProps) => {
         <title>Blogs - Max Balukh - Mobile App Developer</title>
       </Head>
       <Breadcrumb
-        title="Blogs"
+        title={t('blog:blogs')}
         paths={
           [
             {
-              name: 'Home',
+              name: t('blog:home'),
               link: '/',
             },
             {
-              name: 'Blogs',
+              name: t('blog:blogs'),
               link: '',
             },
           ] as BreadcrumbPath[]
@@ -90,7 +92,7 @@ const Posts = ({ posts, hasMore, categories, recentPosts }: PostsProps) => {
                     legacyBehavior
                   >
                     <a className="btn btn-small">
-                      <span>Prev</span>
+                      <span>{t('blog:prev')}</span>
                     </a>
                   </Link>
                 )}
@@ -100,7 +102,7 @@ const Posts = ({ posts, hasMore, categories, recentPosts }: PostsProps) => {
                     legacyBehavior
                   >
                     <a className="btn btn-small">
-                      <span>Next</span>
+                      <span>{t('blog:next')}</span>
                     </a>
                   </Link>
                 )}
@@ -117,7 +119,7 @@ const Posts = ({ posts, hasMore, categories, recentPosts }: PostsProps) => {
                   className="widget widget-category card rounded p-4"
                 >
                   <h5 className="border-b border-white border-opacity-20 pb-2 font-medium text-primary">
-                    Categories
+                    {t('blog:categories')}
                   </h5>
                   <ul className="styledlist mb-0 list-none pl-0">
                     {uniqueCategories.map((category, i) => (
@@ -143,7 +145,7 @@ const Posts = ({ posts, hasMore, categories, recentPosts }: PostsProps) => {
                   className="widget widget-recentpost card rounded p-4"
                 >
                   <h5 className="border-b border-white border-opacity-20 pb-2 font-medium text-primary">
-                    Recent Posts
+                    {t('blog:recentPosts')}
                   </h5>
                   <ul className="mb-0 list-none pl-0">
                     {recentPosts.map((post, index) => (
@@ -204,7 +206,12 @@ export const getStaticProps = async ({ params: { slug }, locale }: StaticPostsPr
 
   return {
     props: {
-      ...(await serverSideTranslations(locale ?? 'en', ['common', 'header', 'footer'])),
+      ...(await serverSideTranslations(locale ?? 'en', [
+        'common',
+        'header',
+        'footer',
+        'blog',
+      ])),
       ...resultProps,
     },
     revalidate: 10,

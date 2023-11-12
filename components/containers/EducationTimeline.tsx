@@ -5,12 +5,16 @@ import { useQuery } from 'react-query';
 import { getEducationBackground } from '@/fetchers';
 import { childrenAnimation } from '@/lib/motion';
 import { TimelineItem } from '@/components/elements';
+import { useTranslation } from 'next-i18next';
+import useLocale from '@/hooks/useLocale';
 
 export interface EducationTimelineProps {
   visibleFull?: boolean;
 }
 const RECORDS_LIMIT = 3;
 const EducationTimeline: React.FC<EducationTimelineProps> = () => {
+  const { t } = useTranslation();
+  const { locale } = useLocale();
   const [visibleFull, setVisibleFull] = useState<boolean>(false);
   const { data } = useQuery('education-background', getEducationBackground);
 
@@ -20,7 +24,7 @@ const EducationTimeline: React.FC<EducationTimelineProps> = () => {
     <div className="education-timeline">
       <h4>
         <RiBookLine className="mr-2 inline-block text-primary" />
-        Educational Qualification
+        {t('resume:educationalQualification')}
       </h4>
       {data
         ?.filter((_, index) => (!visibleFull ? index < RECORDS_LIMIT : true))
@@ -34,7 +38,7 @@ const EducationTimeline: React.FC<EducationTimelineProps> = () => {
             className="timeline-wrap"
             key={timeline.id}
           >
-            <TimelineItem timeline={timeline} />
+            <TimelineItem timeline={timeline} locale={locale} />
           </motion.div>
         ))}
       {!visibleFull && (
@@ -43,7 +47,7 @@ const EducationTimeline: React.FC<EducationTimelineProps> = () => {
             className="btn btn-small"
             onClick={() => setVisibleFull((prevValue: boolean) => !prevValue)}
           >
-            <span>{!visibleFull ? 'Load More' : 'Hide'}</span>
+            <span>{!visibleFull ? t('common:loadMore') : t('common:hide')}</span>
           </button>
         </div>
       )}

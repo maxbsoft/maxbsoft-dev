@@ -5,6 +5,7 @@ import { marked } from 'marked';
 import Image from 'next/image';
 import Link from 'next/link';
 import { GetStaticPaths } from 'next';
+import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { createSlug } from '@/lib';
 import { getPostsPath, getSinglePost } from '@/lib/blogging';
@@ -24,6 +25,7 @@ export interface PostPageProps {
 }
 
 const PostPage = ({ title, date, cover, category, content }: PostPageProps) => {
+  const { t } = useTranslation();
   const [mounted, setMounted] = useState(false);
   const router = useRouter();
   const { slug } = router.query;
@@ -49,11 +51,11 @@ const PostPage = ({ title, date, cover, category, content }: PostPageProps) => {
         paths={
           [
             {
-              name: 'Home',
+              name: t('blog:home'),
               link: '/',
             },
             {
-              name: 'Blogs',
+              name: t('blog:blogs'),
               link: '/posts/1',
             },
             {
@@ -83,7 +85,7 @@ const PostPage = ({ title, date, cover, category, content }: PostPageProps) => {
             </div>
             <div className="flex flex-wrap justify-between gap-x-4">
               <div className="mb-0 flex gap-2 text-heading">
-                Category :{' '}
+                {t('blog:category')}{' '}
                 <div className="inline-flex list-none gap-1.5">
                   {category.map((cat, i) => (
                     <span key={i} className="after:content-[','] last:after:hidden">
@@ -95,7 +97,7 @@ const PostPage = ({ title, date, cover, category, content }: PostPageProps) => {
                 </div>
               </div>
               <p className="mb-0 text-heading">
-                Published on :
+                {t('blog:publishedOn')}
                 <span className="ml-1.5 text-body">
                   {`${new Date(date).toLocaleDateString('en-us', {
                     month: 'short',
@@ -143,7 +145,12 @@ export const getStaticProps = async ({
 
   return {
     props: {
-      ...(await serverSideTranslations(locale ?? 'en', ['common', 'header', 'footer'])),
+      ...(await serverSideTranslations(locale ?? 'en', [
+        'common',
+        'header',
+        'footer',
+        'blog',
+      ])),
       ...postData,
     },
     revalidate: 10,

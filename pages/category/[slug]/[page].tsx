@@ -16,6 +16,7 @@ import { Layout } from '@/components/layout';
 import { PostItemsModel } from '@/models';
 import { GetStaticPaths } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useTranslation } from 'next-i18next';
 
 export interface CategoryPostsProps {
   posts: PostItemsModel;
@@ -24,6 +25,7 @@ export interface CategoryPostsProps {
   recentPosts: PostItemsModel;
 }
 const CategoryPosts = ({ posts, hasMore, categories, recentPosts }: CategoryPostsProps) => {
+  const { t } = useTranslation();
   const [mounted, setMounted] = useState(false);
   const [uniqueCategories, setUniqueCategories] = useState<string[]>([]);
   const router = useRouter();
@@ -38,7 +40,7 @@ const CategoryPosts = ({ posts, hasMore, categories, recentPosts }: CategoryPost
 
   const { page: pageNumber, slug } = router.query;
 
-  if (!mounted) return <p className="text-center">Loading...</p>;
+  if (!mounted) return <p className="text-center">{t('blog:loading')}</p>;
   if (!posts) return null;
 
   return (
@@ -50,11 +52,11 @@ const CategoryPosts = ({ posts, hasMore, categories, recentPosts }: CategoryPost
         title={slug as string}
         paths={[
           {
-            name: 'Home',
+            name: t('blog:home'),
             link: '/',
           },
           {
-            name: 'Blogs',
+            name: t('blog:blogs'),
             link: '/posts/1',
           },
           {
@@ -90,7 +92,7 @@ const CategoryPosts = ({ posts, hasMore, categories, recentPosts }: CategoryPost
                     legacyBehavior
                   >
                     <a className="btn btn-small">
-                      <span>Prev</span>
+                      <span>{t('blog:prev')}</span>
                     </a>
                   </Link>
                 )}
@@ -100,7 +102,7 @@ const CategoryPosts = ({ posts, hasMore, categories, recentPosts }: CategoryPost
                     legacyBehavior
                   >
                     <a className="btn btn-small">
-                      <span>Next</span>
+                      <span>{t('blog:next')}</span>
                     </a>
                   </Link>
                 )}
@@ -117,7 +119,7 @@ const CategoryPosts = ({ posts, hasMore, categories, recentPosts }: CategoryPost
                   className="widget widget-category card rounded p-4"
                 >
                   <h5 className="border-b border-white border-opacity-20 pb-2 font-medium text-primary">
-                    Categories
+                    {t('blog:categories')}
                   </h5>
                   <ul className="styledlist mb-0 list-none pl-0">
                     {uniqueCategories.map((category, i) => (
@@ -143,7 +145,7 @@ const CategoryPosts = ({ posts, hasMore, categories, recentPosts }: CategoryPost
                   className="widget widget-recentpost card rounded p-4"
                 >
                   <h5 className="border-b border-white border-opacity-20 pb-2 font-medium text-primary">
-                    Recent Posts
+                    {t('blog:recentPosts')}
                   </h5>
                   <ul className="mb-0 list-none pl-0">
                     {recentPosts.map((post, index) => (
@@ -200,7 +202,12 @@ export const getStaticProps = async ({
   const recentPosts = getRecentPosts();
   return {
     props: {
-      ...(await serverSideTranslations(locale ?? 'en', ['common', 'header', 'footer'])),
+      ...(await serverSideTranslations(locale ?? 'en', [
+        'common',
+        'header',
+        'footer',
+        'blog',
+      ])),
       posts,
       hasMore,
       categories,

@@ -1,46 +1,83 @@
 [
   {
     "id": 1,
-    "title": "Bachelor of Science",
-    "meta": "Odesa I.I. Mechnikov National University.",
-    "text": ["Faculty of Computer Networks and Systems"],
+    "title": {
+      "en": "Bachelor of Science in Computer Systems and Networks",
+      "uk": "Бакалавр у комп'ютерних системах і мережах",
+      "ru": "Бакалавр в компьтерных системах и сетях"
+    },
+    "meta": {
+      "en": "I. I. Mechnikov National University. Odesa, Ukraine.",
+      "uk": "ОНУ імені І.І. Мечникова.",
+      "ru": "ОНУ имени И.И. Мечникова."
+    },
+    "text": "",
     "year": "2002 - 2005"
   },
   {
     "id": 2,
-    "title": "Associate's Degree",
-    "meta": "Odesa I.I. Mechnikov National University.",
-    "text": ["Faculty of Computer Networks and Systems"],
+    "title": {
+      "en": "Associate's Degree in Computer Science",
+      "uk": "Молодший спеціаліста з комп'ютерних наук",
+      "ru": "Младший специалист по компьютерным наукам"
+    },
+    "meta": {
+      "en": "I.I. Mechnikov National University. Odesa, Ukraine.",
+      "uk": "ОНУ імені І.І. Мечникова.",
+      "ru": "ОНУ имени И.И. Мечникова."
+    },
+    "text": "",
     "year": "1999 - 2002"
   },
   {
     "id": 3,
-    "title": "Programming Competition Award",
-    "meta": "Junior Academy of Sciences of Ukraine",
+    "title": {
+      "en": "Programming Competition Award",
+      "uk": "Нагорода за перемогу у конкурсі з програмування",
+      "ru": "Награда за победу в конкурсе по программированию"
+    },
+    "meta": {
+      "en": "Junior Academy of Sciences of Ukraine",
+      "uk": "Мала академія наук України",
+      "ru": "Малая академия наук Украины"
+    },
     "text": [
-      "Awarded for creating a telephone directory database and its user interface for my city using Turbo Pascal. This implementation included easy navigation through the database, swift searches for names and phone numbers, and the ability to edit entries."
+      {
+        "en": "Awarded for creating a telephone directory database and its user interface for my city using Turbo Pascal. This implementation included easy navigation through the database, swift searches for names and phone numbers, and the ability to edit entries.",
+        "uk": "Нагороджений за створення бази даних телефонного довідника та її користувацького інтерфейсу для мого міста за допомогою Turbo Pascal. Ця реалізація включала зручну навігацію по базі даних, швидкий пошук імен та телефонних номерів, а також можливість редагування записів.",
+        "ru": "Награжден за создание базы данных телефонного справочника и его пользовательского интерфейса для моего города с использованием Turbo Pascal. Эта реализация включала в себя удобную навигацию по базе данных, быстрый поиск имен и телефонных номеров, возможность редактирования записей."
+      }
     ],
     "year": "2001"
   },
   {
     "id": 4,
-    "title": "High School Diploma",
-    "meta": "Illichivsk School, No. 6",
+    "title": {
+      "en": "Certificate of Complete General Secondary Education",
+      "uk": "Атестат про повну загальну середню освіту",
+      "ru": "Аттестат о полном общем среднем образовании"
+    },
+    "meta": {
+      "en": "Illichivsk School, No. 6, Odesa region, Ukraine",
+      "uk": "Іллічівська школа № 6",
+      "ru": "Ильичевская школа № 6"
+    },
     "text": [],
     "year": "1999 - 2001"
   },
   {
     "id": 5,
-    "title": "Middle School Diploma",
-    "meta": "Illichivsk School, No. 4",
+    "title": {
+      "en": "Certificate of Secondary Education",
+      "uk": "Атестат про середню освіту",
+      "ru": "Аттестат о среднем образовании"
+    },
+    "meta": {
+      "en": "Illichivsk School, No. 4, Odesa region, Ukraine",
+      "uk": "Іллічівська школа № 4",
+      "ru": "Ильичевская школа № 4"
+    },
     "text": [],
     "year": "1994 - 1999"
-  },
-  {
-    "id": 6,
-    "title": "Elementary School Diploma",
-    "meta": "Illichivsk, Malodolynska School",
-    "text": [],
-    "year": "1991 - 1994"
   }
 ]
