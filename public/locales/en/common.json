@@ -38,5 +38,9 @@
   "contactOnMail": "Contact on mail",
   "contactAddress": "Contact address",
   "contactAddressValue": "Odesa, Ukraine",
-  "loadMore": "Load More"
+  "loadMore": "Load More",
+  "readMore": "Read more",
+  "hide": "Hide",
+  "translatedShowOriginal": "translated - show original",
+  "originalShowTranslation": "original - show translation"
 }

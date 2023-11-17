@@ -12,3 +12,7 @@ export const isLocalizedText = (input: string | LocalizedText): input is Localiz
     'ru' in input
   );
 };
+
+export const stringToLocale = (locale: string | undefined): Locale => {
+  return locale === 'uk' || locale === 'ru' ? locale : 'en';
+};

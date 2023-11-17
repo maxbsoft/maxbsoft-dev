@@ -18,6 +18,7 @@ import { childrenAnimation } from '@/lib/motion';
 import { Layout } from '@/components/layout';
 import { PostItemsModel } from '@/models';
 import { BreadcrumbPath } from '@/components/elements/Breadcrumb';
+import { stringToLocale } from '@/types';
 
 export interface PostsProps {
   posts: PostItemsModel;
@@ -193,9 +194,10 @@ interface StaticPostsProps {
   locale: string;
 }
 export const getStaticProps = async ({ params: { slug }, locale }: StaticPostsProps) => {
-  const { posts, hasMore } = getPostsByPage(parseInt(slug));
-  const categories = getAllCategories();
-  const recentPosts = getRecentPosts();
+  const tLocale = stringToLocale(locale);
+  const { posts, hasMore } = getPostsByPage(tLocale, parseInt(slug));
+  const categories = getAllCategories(tLocale);
+  const recentPosts = getRecentPosts(tLocale);
 
   const resultProps: PostsProps = {
     posts,

@@ -3,6 +3,7 @@ import matter from 'gray-matter';
 import path from 'path';
 import { PostItemModel, PostItemsModel } from '@/models';
 import { filterPostsByPage, sortPostByDate, createSlug } from '.';
+import { Locale } from '@/types';
 
 const LIMIT = 6;
 
@@ -11,21 +12,23 @@ const getAllPosts = () => fs.readdirSync(path.join(process.cwd(), 'posts'));
 
 // get all posts slug
 const getAllPostsSlug = () => {
-  const files = getAllPosts();
-  return files.map((filename) => filename.replace(/\.(md|mdx)$/, ''));
+  const postDirs = getAllPosts();
+  return postDirs;
 };
 
 // Get all posts data
-const getAllPostsData = (): PostItemsModel => {
-  const files = getAllPosts();
-  const posts: PostItemsModel = files.map((filename) => {
-    const slug = filename.replace(/\.(md|mdx)$/, '');
+const getAllPostsData = (locale: Locale, defaultLocale: Locale = 'en'): PostItemsModel => {
+  const postDirs = getAllPosts();
+  const posts: PostItemsModel = postDirs.map((postDir) => {
+    const slug = postDir;
+    // We need to check if there is a required locale for this post,
+    // if there is, read it, if not, then read the default locale.
+    let postPath: string = path.join(process.cwd(), 'posts', postDir, `${locale}.md`);
+    if (!fs.existsSync(postPath)) {
+      postPath = path.join(process.cwd(), 'posts', postDir, `${defaultLocale}.md`);
+    }
 
-    const markdownWithMeta = fs.readFileSync(
-      path.join(process.cwd(), 'posts', filename),
-      'utf-8',
-    );
-
+    const markdownWithMeta = fs.readFileSync(postPath, 'utf-8');
     const { data: frontmatter } = matter(markdownWithMeta);
     return {
       slug,
@@ -42,8 +45,8 @@ export interface PostPathType {
 }
 
 // Get posts by page
-const getPostsByPage = (page = 1, limit = 6) => {
-  const tempPosts: PostItemsModel = getAllPostsData();
+const getPostsByPage = (locale: Locale, page = 1, limit = 6) => {
+  const tempPosts: PostItemsModel = getAllPostsData(locale);
   const posts: PostItemsModel = filterPostsByPage(tempPosts, page, limit);
   return {
     posts,
@@ -81,8 +84,11 @@ const getPostsPath = (): PostPathType[] => {
 };
 
 // Get single post data
-const getSinglePost = (slug: string): PostItemModel => {
-  const post = fs.readFileSync(path.join(process.cwd(), 'posts', `${slug}.md`), 'utf-8');
+const getSinglePost = (locale: Locale, slug: string): PostItemModel => {
+  const post = fs.readFileSync(
+    path.join(process.cwd(), 'posts', slug, `${locale}.md`),
+    'utf-8',
+  );
   const { data: frontmatter, content } = matter(post);
   return {
     ...frontmatter,
@@ -91,30 +97,28 @@ const getSinglePost = (slug: string): PostItemModel => {
 };
 
 // Get all Categories
-const getAllCategories = (): string[] => {
-  const posts = getAllPostsData();
-  // eslint-disable-next-line
+const getAllCategories = (locale: Locale): string[] => {
+  const posts = getAllPostsData(locale);
   const categories = posts.map((post) => post.category);
   return categories.flat();
 };
 
 // Get category paths (for nextjs getStaticPaths)
-const getCategoryPaths = () => {
-  const allPosts = getAllPostsData();
-  const allCategories = getAllCategories();
+const getCategoryPaths = (locale: Locale) => {
+  const allPosts = getAllPostsData(locale);
+  const allCategories = getAllCategories(locale);
   const categories = [...new Set<string>(allCategories)];
   const paths = categories.map((category) => {
     const filteredPosts = allPosts.filter((post) => {
       const temp = post.category.map((cat: string) => createSlug(cat));
-      return temp.includes(category.toLowerCase());
+      return temp.includes(createSlug(category));
     });
     const pages = Math.ceil(filteredPosts.length / LIMIT);
-
     const tempPath = [];
     for (let i = 1; i <= pages; i++) {
       tempPath.push({
         params: {
-          slug: category.toLowerCase(),
+          slug: createSlug(category),
           page: String(i),
         },
       });
@@ -125,9 +129,8 @@ const getCategoryPaths = () => {
 };
 
 // Get all posts by category
-const getPostsByCategory = (category: string, page = 1, limit = 6) => {
-  const allPosts: PostItemsModel = getAllPostsData();
-
+const getPostsByCategory = (category: string, locale: Locale, page = 1, limit = 6) => {
+  const allPosts: PostItemsModel = getAllPostsData(locale);
   const filteredPosts = allPosts.filter((post) => {
     const temp = post.category.map((cat) => createSlug(cat));
     return temp.includes(category);
@@ -142,9 +145,8 @@ const getPostsByCategory = (category: string, page = 1, limit = 6) => {
 };
 
 // Get recent posts
-const getRecentPosts = (): PostItemsModel => {
-  const allPosts: PostItemsModel = getAllPostsData();
-
+const getRecentPosts = (locale: Locale): PostItemsModel => {
+  const allPosts: PostItemsModel = getAllPostsData(locale);
   return allPosts.slice(0, 5);
 };
 

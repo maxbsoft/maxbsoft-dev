@@ -19,6 +19,7 @@ import { Layout } from '@/components/layout';
 import { SectionHeading } from '@/components/utils';
 import { getPostsByPage } from '@/lib/blogging';
 import { PostItemsModel } from '@/models';
+import { stringToLocale } from '@/types';
 
 export interface HomeProps {
   posts: PostItemsModel;
@@ -135,7 +136,7 @@ function Home({ posts }: HomeProps) {
 }
 
 export const getStaticProps: GetStaticProps<HomeProps> = async ({ locale }) => {
-  const { posts } = getPostsByPage();
+  const { posts } = getPostsByPage(stringToLocale(locale));
   return {
     props: {
       ...(await serverSideTranslations(locale ?? 'en', [

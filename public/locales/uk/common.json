@@ -38,5 +38,9 @@
   "contactOnMail": "Контакти на email",
   "contactAddress": "Контактна адреса",
   "contactAddressValue": "Одеса, Україна",
-  "loadMore": "Завантажити ще"
+  "loadMore": "Завантажити ще",
+  "readMore": "Далі",
+  "hide": "Сховати",
+  "translatedShowOriginal": "перекладено - показати оригінал",
+  "originalShowTranslation": "оригінал - показати переклад"
 }

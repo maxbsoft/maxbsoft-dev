@@ -1,7 +1,10 @@
 import { useState, useEffect } from 'react';
+import { GetStaticPaths } from 'next';
 import Link from 'next/link';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useTranslation } from 'next-i18next';
 import { motion } from 'framer-motion';
 import { Blog, Breadcrumb } from '@/components/elements';
 import {
@@ -14,9 +17,7 @@ import { childrenAnimation } from '@/lib/motion';
 import { createSlug } from '@/lib';
 import { Layout } from '@/components/layout';
 import { PostItemsModel } from '@/models';
-import { GetStaticPaths } from 'next';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import { useTranslation } from 'next-i18next';
+import { Locale, stringToLocale } from '@/types';
 
 export interface CategoryPostsProps {
   posts: PostItemsModel;
@@ -177,10 +178,13 @@ const CategoryPosts = ({ posts, hasMore, categories, recentPosts }: CategoryPost
   );
 };
 
-export const getStaticPaths: GetStaticPaths = ({ locales = ['en'] }) => {
-  const paths = getCategoryPaths();
+export const getStaticPaths: GetStaticPaths = ({ locales = ['en', 'uk'] }) => {
+  const paths = getCategoryPaths('en');
+  const resultPaths = paths.flatMap((path) =>
+    locales.map((locale) => ({ ...path, locale })),
+  );
   return {
-    paths: paths.flatMap((path) => locales.map((locale) => ({ ...path, locale }))),
+    paths: resultPaths,
     fallback: false,
   };
 };
@@ -197,9 +201,10 @@ export const getStaticProps = async ({
   params: { slug, page },
   locale,
 }: StaticCategoryProps) => {
-  const { posts, hasMore } = getPostsByCategory(slug, page, 6);
-  const categories = getAllCategories();
-  const recentPosts = getRecentPosts();
+  const tLocale: Locale = stringToLocale(locale);
+  const { posts, hasMore } = getPostsByCategory(slug, tLocale, page, 6);
+  const categories = getAllCategories(tLocale);
+  const recentPosts = getRecentPosts(tLocale);
   return {
     props: {
       ...(await serverSideTranslations(locale ?? 'en', [

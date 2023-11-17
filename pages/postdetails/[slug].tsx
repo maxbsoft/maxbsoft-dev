@@ -15,6 +15,7 @@ import type { BreadcrumbPath } from '@/components/elements/Breadcrumb';
 import { Layout } from '@/components/layout';
 import { Spinner } from '@/components/utils';
 import Comments from '@/components/utils/Comments';
+import { stringToLocale } from '@/types';
 
 export interface PostPageProps {
   title: string;
@@ -141,7 +142,7 @@ export const getStaticProps = async ({
   params: { slug },
   locale,
 }: StaticPostDetailsProps) => {
-  const postData = getSinglePost(slug);
+  const postData = getSinglePost(stringToLocale(locale), slug);
 
   return {
     props: {

@@ -1,10 +1,11 @@
+import { useLayoutEffect, useState, useRef, useEffect } from 'react';
+import Link from 'next/link';
+import { useTranslation } from 'next-i18next';
 import Image from 'next/image';
 import StarRatings from 'react-star-ratings';
 import { imageLoader, shimmer, toBase64 } from '@/lib/utils';
 import { ClientReviewItemModel } from '@/models';
 import { Locale } from '@/types';
-import { useLayoutEffect, useState, useRef, useEffect } from 'react';
-import Link from 'next/link';
 
 export interface ReviewProps {
   locale: Locale;
@@ -14,6 +15,7 @@ const Review = ({
   locale = 'en',
   review: { name, meta, rate, avatar, projectName, profileUrl, originLocale, feedbackText },
 }: ReviewProps) => {
+  const { t } = useTranslation();
   const [isExpanded, setIsExpanded] = useState(false);
   const [showMoreButton, setShowMoreButton] = useState(false);
   const [currentLocale, setCurrentLocale] = useState(locale);
@@ -79,7 +81,7 @@ const Review = ({
             className="text-primary mt-2 hover:underline focus:outline-none"
             onClick={() => setIsExpanded(!isExpanded)}
           >
-            <small>{isExpanded ? 'Hide' : 'Read more'}</small>
+            <small>{isExpanded ? t('common:hide') : t('common:readMore')}</small>
           </a>
         )}
         {originLocale !== locale && (
@@ -91,8 +93,8 @@ const Review = ({
           >
             <small>
               {originLocale !== currentLocale
-                ? 'translated - show original'
-                : 'original - show translation'}
+                ? t('common:translatedShowOriginal')
+                : t('common:originalShowTranslation')}
             </small>
           </a>
         )}
