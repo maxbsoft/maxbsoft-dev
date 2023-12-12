@@ -85,7 +85,7 @@ const AboutSection = () => {
                 <strong className="inline-block min-w-[120px] font-medium">
                   {t('about:age')}{' '}
                 </strong>
-                {data.age} {t('about:yers')}
+                : {data.age} {t('about:yers')}
               </li>
             )}
             {data.nationality && (
@@ -124,7 +124,7 @@ const AboutSection = () => {
               </li>
             )}
           </ul>
-          <a href="/resume.pdf" className="btn mt-3">
+          <a href="/MaxBalukh_CV_Sep2023.pdf" target="_blank" className="btn mt-3">
             <span>{t('about:downloadResume')}</span>
           </a>
         </motion.div>
