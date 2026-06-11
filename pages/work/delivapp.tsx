@@ -97,6 +97,7 @@ const DelivappCase = () => {
                   <div className="overflow-hidden rounded-xl border border-white/10 shadow-2xl">
                     <Image
                       loader={imageLoader}
+                      unoptimized={true}
                       src={shot.src}
                       width={shot.width}
                       height={shot.height}
@@ -124,6 +125,7 @@ const DelivappCase = () => {
                   <div className="relative mx-auto mt-6 w-2/3 overflow-hidden rounded-2xl shadow-xl transition group-hover:scale-[1.02]">
                     <Image
                       loader={imageLoader}
+                      unoptimized={true}
                       src={app.image}
                       width={600}
                       height={1300}
