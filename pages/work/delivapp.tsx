@@ -167,12 +167,6 @@ const DelivappCase = () => {
 
             <h4 className="mb-4 mt-12 text-2xl font-semibold">Stack</h4>
             <p>{stack.join(' · ')}</p>
-
-            <p className="mt-10 text-sm opacity-60">
-              Most of this work is covered by NDA, so this page describes only what is
-              publicly visible in the app stores. Happy to walk through architecture
-              decisions on a call.
-            </p>
           </div>
         </div>
       </Section>
