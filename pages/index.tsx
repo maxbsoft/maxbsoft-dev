@@ -34,13 +34,17 @@ function Home({ posts }: HomeProps) {
       </Head>
 
       {/* Start Hero Section */}
-      <Section name="section-home">
+      <Section name="section-home" id="section-home">
         <HeroSection blurred scroll={true} typed={true} />
       </Section>
       {/* End Hero Section */}
 
       {/* Start About Section */}
-      <Section name="section-about" className="about-section pt-24 lg:pt-28 xl:pt-32">
+      <Section
+        name="section-about"
+        id="section-about"
+        className="about-section pt-24 lg:pt-28 xl:pt-32"
+      >
         <div className="container mx-auto">
           <SectionHeading animated={false} title={t('aboutMe')} watermark={t('about')} />
           <AboutSection />
@@ -49,7 +53,11 @@ function Home({ posts }: HomeProps) {
       {/* End About Section */}
 
       {/* Start Skills Section */}
-      <Section name="section-skills" className="skills-section pt-24 lg:pt-28 xl:pt-32">
+      <Section
+        name="section-skills"
+        id="section-skills"
+        className="skills-section pt-24 lg:pt-28 xl:pt-32"
+      >
         <div className="container mx-auto">
           <SectionHeading animated={false} title={t('mySkills')} watermark={t('skills')} />
           <SkillsSection />
@@ -58,7 +66,11 @@ function Home({ posts }: HomeProps) {
       {/* End Skills Section */}
 
       {/* Start Service Section */}
-      <Section name="section-service" className="services-section pt-24 lg:pt-28 xl:pt-32">
+      <Section
+        name="section-service"
+        id="section-service"
+        className="services-section pt-24 lg:pt-28 xl:pt-32"
+      >
         <div className="container mx-auto">
           <SectionHeading
             animated={false}
@@ -71,7 +83,11 @@ function Home({ posts }: HomeProps) {
       {/* End Service Section */}
 
       {/* Start Resume Section */}
-      <Section name="section-resume" className="resume-section pt-24 lg:pt-28 xl:pt-32">
+      <Section
+        name="section-resume"
+        id="section-resume"
+        className="resume-section pt-24 lg:pt-28 xl:pt-32"
+      >
         <div className="container mx-auto">
           <SectionHeading animated={false} title={t('myResume')} watermark={t('resume')} />
           <ResumeSection />
@@ -82,6 +98,7 @@ function Home({ posts }: HomeProps) {
       {/* Start Portfolios Section */}
       <Section
         name="section-portfolios"
+        id="section-portfolios"
         className="portfolios-section pt-24 lg:pt-28 xl:pt-32"
       >
         <div className="container mx-auto">
@@ -92,7 +109,11 @@ function Home({ posts }: HomeProps) {
       {/* End Portfolios Section */}
 
       {/* Start Reviews Section */}
-      <Section name="section-reviews" className="reviews-section pt-24 lg:pt-28 xl:pt-32">
+      <Section
+        name="section-reviews"
+        id="section-reviews"
+        className="reviews-section pt-24 lg:pt-28 xl:pt-32"
+      >
         <div className="container mx-auto">
           <SectionHeading
             animated={false}
@@ -105,7 +126,11 @@ function Home({ posts }: HomeProps) {
       {/* End Reviews Section */}
 
       {/* Start Blog Section */}
-      <Section name="section-blog" className="news-section pt-24 lg:pt-28 xl:pt-32">
+      <Section
+        name="section-blog"
+        id="section-blog"
+        className="news-section pt-24 lg:pt-28 xl:pt-32"
+      >
         <div className="container mx-auto">
           <SectionHeading
             animated={false}
@@ -118,7 +143,11 @@ function Home({ posts }: HomeProps) {
       {/* End Blog Section */}
 
       {/* Start Contact Section */}
-      <Section name="section-contact" className="contact-section pt-24 lg:pt-28 xl:pt-32">
+      <Section
+        name="section-contact"
+        id="section-contact"
+        className="contact-section pt-24 lg:pt-28 xl:pt-32"
+      >
         <div className="container mx-auto">
           <SectionHeading
             animated={false}
