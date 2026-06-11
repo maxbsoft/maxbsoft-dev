@@ -158,6 +158,38 @@ const DelivappCase = () => {
               white-label codebase and published to the App Store and Google Play.
             </p>
 
+            <div className="mt-8 grid gap-6 md:grid-cols-2">
+              {[
+                {
+                  src: '/images/work/delivapp/golda-home.jpg',
+                  alt: 'Golda branded app: home screen',
+                },
+                {
+                  src: '/images/work/delivapp/golda-branches.jpg',
+                  alt: 'Golda branded app: branch selection',
+                },
+              ].map((shot) => (
+                <div
+                  key={shot.src}
+                  className="mx-auto w-3/4 overflow-hidden rounded-2xl shadow-xl md:w-2/3"
+                >
+                  <Image
+                    loader={imageLoader}
+                    unoptimized={true}
+                    src={shot.src}
+                    width={600}
+                    height={1298}
+                    alt={shot.alt}
+                    className="h-auto w-full"
+                  />
+                </div>
+              ))}
+            </div>
+            <p className="mt-3 text-center text-sm opacity-70">
+              Golda, an Italian gelato chain, is one of the 30+ consumer brands running on
+              the platform.
+            </p>
+
             <h4 className="mb-4 mt-12 text-2xl font-semibold">What I built and ran</h4>
             <ul className="list-disc space-y-2 pl-6">
               {highlights.map((h) => (
