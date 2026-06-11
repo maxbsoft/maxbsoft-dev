@@ -1,5 +1,7 @@
 import Head from 'next/head';
+import Image from 'next/image';
 import { Element as Section } from 'react-scroll';
+import { imageLoader } from '@/lib/utils';
 import { Layout2 } from '@/components/layout';
 import { SectionHeading } from '@/components/utils';
 
@@ -8,16 +10,36 @@ const apps = [
     name: 'DelivApp Business',
     role: 'For restaurants: manage marketplace listing, accept orders, control readiness, dispatch to delivery, run promotions.',
     url: 'https://apps.apple.com/us/app/delivapp-business/id1564044502',
+    image: '/images/work/delivapp/app-business.webp',
   },
   {
     name: 'DelivApp Manager',
     role: 'For operations teams: live logistics control, courier dispatching, order flow monitoring across the whole network.',
     url: 'https://apps.apple.com/il/app/delivapp-manager/id6550921488',
+    image: '/images/work/delivapp/app-manager.webp',
   },
   {
     name: 'DelivApp Courier',
     role: 'For couriers: route assignments, real-time order tracking, delivery confirmation and earnings.',
     url: 'https://apps.apple.com/us/app/delivapp-courier/id1033519561',
+    image: '/images/work/delivapp/app-courier.webp',
+  },
+];
+
+const webScreens = [
+  {
+    src: '/images/work/delivapp/web-logistics.jpg',
+    width: 1800,
+    height: 997,
+    caption:
+      'Live logistics dashboard: delivery zones, courier fleet states and route building in real time.',
+  },
+  {
+    src: '/images/work/delivapp/web-orders.jpg',
+    width: 1800,
+    height: 1003,
+    caption:
+      'Order management: the full order lifecycle from approval to courier assignment, with live order details.',
   },
 ];
 
@@ -33,6 +55,7 @@ const highlights = [
 
 const stack = [
   'React Native (iOS + Android)',
+  'React (web)',
   'Node.js services',
   'PostgreSQL + PostGIS',
   'Firebase',
@@ -58,7 +81,7 @@ const DelivappCase = () => {
             animated={false}
           />
 
-          <div className="mx-auto max-w-4xl">
+          <div className="mx-auto max-w-5xl">
             <p className="mb-6 text-lg">
               For several years I worked as a lead engineer on a large food delivery
               platform (DelivApp / GeoRest Ltd) that powers restaurant chains and delivery
@@ -67,7 +90,28 @@ const DelivappCase = () => {
               running on a shared real-time backend.
             </p>
 
-            <h4 className="mb-4 mt-10 text-2xl font-semibold">The ecosystem</h4>
+            <h4 className="mb-6 mt-12 text-2xl font-semibold">The web platform</h4>
+            <div className="space-y-10">
+              {webScreens.map((shot) => (
+                <figure key={shot.src}>
+                  <div className="overflow-hidden rounded-xl border border-white/10 shadow-2xl">
+                    <Image
+                      loader={imageLoader}
+                      src={shot.src}
+                      width={shot.width}
+                      height={shot.height}
+                      alt={shot.caption}
+                      className="h-auto w-full"
+                    />
+                  </div>
+                  <figcaption className="mt-3 text-center text-sm opacity-70">
+                    {shot.caption}
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+
+            <h4 className="mb-6 mt-12 text-2xl font-semibold">The mobile ecosystem</h4>
             <div className="grid gap-6 md:grid-cols-3">
               {apps.map((app) => (
                 <a
@@ -75,15 +119,30 @@ const DelivappCase = () => {
                   href={app.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block rounded-lg border border-white/10 p-5 transition hover:border-primary"
+                  className="group block overflow-hidden rounded-xl border border-white/10 transition hover:border-primary"
                 >
-                  <h5 className="mb-2 text-lg font-semibold">{app.name}</h5>
-                  <p className="text-sm opacity-80">{app.role}</p>
+                  <div className="relative mx-auto mt-6 w-2/3 overflow-hidden rounded-2xl shadow-xl transition group-hover:scale-[1.02]">
+                    <Image
+                      loader={imageLoader}
+                      src={app.image}
+                      width={600}
+                      height={1300}
+                      alt={`${app.name} screenshot`}
+                      className="h-auto w-full"
+                    />
+                  </div>
+                  <div className="p-5">
+                    <h5 className="mb-2 text-lg font-semibold">{app.name}</h5>
+                    <p className="text-sm opacity-80">{app.role}</p>
+                    <span className="mt-3 inline-block text-sm underline opacity-80">
+                      View on the App Store
+                    </span>
+                  </div>
                 </a>
               ))}
             </div>
 
-            <p className="mt-6">
+            <p className="mt-8">
               On top of these, the platform ships{' '}
               <a
                 href="https://apps.apple.com/us/developer/georest-ltd/id1033519560"
@@ -97,14 +156,14 @@ const DelivappCase = () => {
               white-label codebase and published to the App Store and Google Play.
             </p>
 
-            <h4 className="mb-4 mt-10 text-2xl font-semibold">What I built and ran</h4>
+            <h4 className="mb-4 mt-12 text-2xl font-semibold">What I built and ran</h4>
             <ul className="list-disc space-y-2 pl-6">
               {highlights.map((h) => (
                 <li key={h}>{h}</li>
               ))}
             </ul>
 
-            <h4 className="mb-4 mt-10 text-2xl font-semibold">Stack</h4>
+            <h4 className="mb-4 mt-12 text-2xl font-semibold">Stack</h4>
             <p>{stack.join(' · ')}</p>
 
             <p className="mt-10 text-sm opacity-60">
